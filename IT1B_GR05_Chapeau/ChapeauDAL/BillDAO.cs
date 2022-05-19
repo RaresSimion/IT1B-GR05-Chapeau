@@ -18,60 +18,40 @@ namespace ChapeauDAL
 
         }
 
-        //public List<Bill> GetAll()
-        //{
-        //    databaseConnection.Open();
-        //    SqlCommand command = new SqlCommand("SELECT * FROM Bill", databaseConnection);
-        //    SqlDataReader dataReader = command.ExecuteReader();
-        //    List<Bill> bills = new List<Bill>();
-
-        //    while (dataReader.Read())
-        //    {
-        //        //Bill bill = Readbill(dataReader);
-        //        //employees.Add(employee);
-        //    }
-
-        //    dataReader.Close();
-        //    databaseConnection.Close();
-
-        //    return;
-        //}
-
-        private Employee Reademployee(SqlDataReader dataReader)
+        public List<Bill> GetAllBills()
         {
-            int Employee_Number = (int)dataReader["employee_number"];
-            string Employee_Name = (string)dataReader["employee_name"];
-            EmployeeRole Employee_Role = (EmployeeRole)dataReader["employee_role"];
-            string Employee_Password = (string)dataReader["employee_password"];
-
-            return new Employee(Employee_Number, Employee_Name, Employee_Role, Employee_Password);
+            string query = "SELECT Bill_ID, Payment_Method, Order_ID, Table_Nr, Total_Price FROM Bill";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            List<Bill> bills = new List<Bill>();
+            return ReadBill(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private Employee ReadEmployee(DataTable dataTable)
+        private List<Bill> ReadBill(DataTable dataTable)
         {
-            Employee employee = null;
+            List<Bill> bills = new List<Bill>();
+            Bill bill = null;
             foreach (DataRow row in dataTable.Rows)
             {
-                employee = new Employee()
+                bill = new Bill()
                 {
-                    Employee_Number = (int)(row["employee_number"]),
-                    Employee_Name = (string)(row["employee_name"]),
-                    Employee_Role = (EmployeeRole)(row["employee_role"]),
-                    Employee_Password = ((string)row["employee_password"])
+                    Bill_ID = (int)(row["Bill_ID"]),
+                    Payment_Method = (PaymentType)(row["Payment_Method"]),
+                    Order_ID = (int)(row["Order_ID"]),
+                    Table_Nr = (int)(row["Table_Nr"]),
+                    Total_Price = ((double)row["Total_Price"])
                 };
+                bills.Add(bill);
             }
-            return employee;
+            return bills;
         }
 
-        ////public Employee GetEmployeeById(int employee_number)
-        //{
-
-        //}
-
-       //// public Employee GetEmployeeByPassword(string employee_password)
-       // {
-
-       // }
+        public List<Bill> GetBillByTableNrAndOrderID()
+        {
+            string query = "SELECT Bill_ID, Payment_Method, Order_ID, Table_Nr, Total_Price FROM Bill WHERE Table_Nr = @TableNR AND order_ID = @orderId";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            List<Bill> bills = new List<Bill>();
+            return ReadBill(ExecuteSelectQuery(query, sqlParameters));
+        }
     }
 }
 
