@@ -1,0 +1,17 @@
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\bin\Debug\net5.0\ChapeauLogic.deps.json
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\bin\Debug\net5.0\ChapeauLogic.dll
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\bin\Debug\net5.0\ChapeauLogic.pdb
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\bin\Debug\net5.0\ChapeauDAL.dll
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\bin\Debug\net5.0\ChapeauModel.dll
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\bin\Debug\net5.0\ChapeauDAL.pdb
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\bin\Debug\net5.0\ChapeauModel.pdb
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.csproj.AssemblyReference.cache
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.AssemblyInfoInputs.cache
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.AssemblyInfo.cs
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.csproj.CoreCompileInputs.cache
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.csproj.CopyComplete
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.dll
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\refint\ChapeauLogic.dll
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.pdb
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauLogic\obj\Debug\net5.0\ref\ChapeauLogic.dll
