@@ -762,11 +762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joelg\\Source\\Repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+      "projectUniqueName": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
       "projectName": "ChapeauDAL",
-      "projectPath": "C:\\Users\\joelg\\Source\\Repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+      "projectPath": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
       "packagesPath": "C:\\Users\\joelg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joelg\\Source\\Repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\obj\\",
+      "outputPath": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\joelg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -783,8 +783,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\joelg\\Source\\Repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "C:\\Users\\joelg\\Source\\Repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+            "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+              "projectPath": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj"
             }
           }
         }

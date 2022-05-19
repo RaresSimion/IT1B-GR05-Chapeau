@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vC5Nx3nlxhzVLolU7Qko4+8ptd9/jt0jz9RURa83HL/uqjs/jOpdg14wnB26HLZtzrd8fPnfBUPXUmwsV9sREg==",
+  "dgSpecHash": "rqrjj9c1LECxB0LjgfpytZ7Ughc7VAGglpEM83hlUgL9m3pUIl4LQDXj8yzObfSGAYLyaoLflwccK2SJJc5kKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joelg\\Source\\Repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+  "projectFilePath": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joelg\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\joelg\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
