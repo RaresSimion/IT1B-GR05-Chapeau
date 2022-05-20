@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LoginScreenMark2
+namespace ChapeauUI
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         //permitted users:
         // Waiter. Username: 1. Password: 1234.
@@ -19,7 +19,7 @@ namespace LoginScreenMark2
         // Manager. Username: 4. Password: 6241. (Note: Our group doesn't have a manager as we have 4 memebers).
 
 
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -30,13 +30,16 @@ namespace LoginScreenMark2
             {
                 MessageBox.Show($"Welcome Back, Test!");
                 this.Close();
+                
             }
 
             //waiter, opens table view
             else if (textBoxUser.Text == "1" && textBoxPass.Text == "1234")
             {
                 MessageBox.Show($"Welcome Back, Barry! Let's go take some orders.");
-                this.Close();
+                this.Hide();
+                OrderViewForm orderViewForm = new OrderViewForm();
+                orderViewForm.Show();
             }
 
             //bartender, opens bar view

@@ -61,9 +61,11 @@
             this.btnDinnerEntremets = new System.Windows.Forms.Button();
             this.btnDinnerStarters = new System.Windows.Forms.Button();
             this.btnRemoveOrder = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSubmitOrder = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlHamburgerMenu.SuspendLayout();
             this.pnlSubDrinks.SuspendLayout();
             this.pnlSubLunch.SuspendLayout();
             this.pnlSubDinner.SuspendLayout();
@@ -106,6 +108,7 @@
             // pnlHamburgerMenu
             // 
             this.pnlHamburgerMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(186)))));
+            this.pnlHamburgerMenu.Controls.Add(this.btnPayment);
             this.pnlHamburgerMenu.Location = new System.Drawing.Point(1072, 96);
             this.pnlHamburgerMenu.Name = "pnlHamburgerMenu";
             this.pnlHamburgerMenu.Size = new System.Drawing.Size(250, 241);
@@ -436,23 +439,37 @@
             this.btnRemoveOrder.UseVisualStyleBackColor = false;
             this.btnRemoveOrder.Click += new System.EventHandler(this.btnRemoveOrder_Click);
             // 
-            // button1
+            // btnSubmitOrder
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(186)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(726, 683);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 58);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Submit order";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSubmitOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(186)))));
+            this.btnSubmitOrder.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSubmitOrder.Location = new System.Drawing.Point(726, 683);
+            this.btnSubmitOrder.Name = "btnSubmitOrder";
+            this.btnSubmitOrder.Size = new System.Drawing.Size(238, 58);
+            this.btnSubmitOrder.TabIndex = 16;
+            this.btnSubmitOrder.Text = "Submit order";
+            this.btnSubmitOrder.UseVisualStyleBackColor = false;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(186)))));
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPayment.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPayment.Location = new System.Drawing.Point(0, 0);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(250, 55);
+            this.btnPayment.TabIndex = 0;
+            this.btnPayment.Text = "Payment";
+            this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // OrderViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1322, 753);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pnlHamburgerMenu);
+            this.Controls.Add(this.btnSubmitOrder);
             this.Controls.Add(this.btnRemoveOrder);
             this.Controls.Add(this.pnlSubDinner);
             this.Controls.Add(this.pnlSubLunch);
@@ -465,12 +482,12 @@
             this.Controls.Add(this.listViewOrder);
             this.Controls.Add(this.lblMenu);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.pnlHamburgerMenu);
             this.Name = "OrderViewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order #";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlHamburgerMenu.ResumeLayout(false);
             this.pnlSubDrinks.ResumeLayout(false);
             this.pnlSubLunch.ResumeLayout(false);
             this.pnlSubDinner.ResumeLayout(false);
@@ -512,8 +529,9 @@
         private System.Windows.Forms.Button btnDinnerEntremets;
         private System.Windows.Forms.Button btnDinnerStarters;
         private System.Windows.Forms.Button btnRemoveOrder;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSubmitOrder;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderItemQuantity;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderItemComment;
+        private System.Windows.Forms.Button btnPayment;
     }
 }

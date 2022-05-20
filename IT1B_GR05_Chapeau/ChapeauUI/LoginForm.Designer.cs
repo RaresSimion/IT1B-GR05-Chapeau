@@ -1,6 +1,6 @@
-﻿namespace LoginScreenMark2
+﻿namespace ChapeauUI
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.

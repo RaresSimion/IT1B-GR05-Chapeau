@@ -220,5 +220,12 @@ namespace ChapeauUI
         {
             listViewOrder.Items.Clear();
         }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            this.Hide();
+            form.Show();
+        }
     }
 }

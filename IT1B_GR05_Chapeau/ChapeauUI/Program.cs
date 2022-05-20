@@ -17,7 +17,7 @@ namespace ChapeauUI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderViewForm());
+            Application.Run(new LoginForm());
         }
     }
 }
