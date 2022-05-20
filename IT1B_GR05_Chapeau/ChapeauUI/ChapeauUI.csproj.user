@@ -13,5 +13,8 @@
     <Compile Update="OrderViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TableOverView.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

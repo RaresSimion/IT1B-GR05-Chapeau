@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\joelg\\.nuget\\packages\\": {}
+    "C:\\Users\\Conor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+      "projectUniqueName": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
       "projectName": "ChapeauModel",
-      "projectPath": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
-      "packagesPath": "C:\\Users\\joelg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joelg\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\obj\\",
+      "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+      "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\joelg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

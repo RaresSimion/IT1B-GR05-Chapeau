@@ -19,35 +19,7 @@ namespace ChapeauDAL
                 
         }
 
-        public List<Employee> GetAll()
-        {
-            databaseConnection.Open();
-            SqlCommand command = new SqlCommand("SELECT * FROM Employee", databaseConnection);
-            SqlDataReader dataReader = command.ExecuteReader();
-            List<Employee> employees = new List<Employee>();
-
-            while (dataReader.Read())
-            {
-                Employee employee = Reademployee(dataReader);
-                employees.Add(employee);
-            }
-
-            dataReader.Close();
-            databaseConnection.Close();
-
-            return employees;
-        }
-
-        private Employee Reademployee(SqlDataReader dataReader)
-        {
-            int Employee_Number = (int)dataReader["employee_number"];
-            string Employee_Name = (string)dataReader["employee_name"];
-            EmployeeRole Employee_Role = (EmployeeRole)dataReader["employee_role"];
-            string Employee_Password = (string)dataReader["employee_password"];
-
-            return new Employee(Employee_Number, Employee_Name, Employee_Role, Employee_Password);
-        }
-
+ 
         private Employee ReadEmployee(DataTable dataTable)
         {
             Employee employee = null;
@@ -55,39 +27,22 @@ namespace ChapeauDAL
             {
                 employee = new Employee()
                 {
-                    Employee_Number = (int)(row["employee_number"]),
-                    Employee_Name = (string)(row["employee_name"]),
-                    Employee_Role = (EmployeeRole)(row["employee_role"]),
-                    Employee_Password = ((string)row["employee_password"])
+                    Employee_Number = (int)(row["EMPLOYEE_NUMBER"]),
+                    Employee_Name = (string)(row["EMPLOYEE_NAME"]),
+                    Employee_Role = (EmployeeRole)(row["EMPLOYEE_ROLE"]),
+                    Employee_Password = ((string)row["EMPLOYEE_PASSWORD"])
                 };
             }
             return employee;
         }
 
-
-        //public Employee GetEmployeeById(int employee_number)
-        //{
-        //    databaseConnection.Open();
-        //    SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Employee WHERE employee_number = @emploee_number", databaseConnection);
-
-        //    sqlCommand.Parameters.AddWithValue("@Id", employee_number);
-
-        //    SqlDataReader dataReader = sqlCommand.ExecuteReader();
-        //    Employee employee = null;
-
-        //    if (dataReader.Read())
-        //    {
-        //        employee = ReadEmployee(dataReader);
-        //    }
-
-        //    dataReader.Close();
-        //    databaseConnection.Close();
-        //    return employee;
-        //}
-
-        //public Employee GetEmployeeByPassword(string employee_password)
-        //{
-
-        //}
+        //for login
+        public Employee GetEmployeeByIdAndPassword(int employee_number, string employee_password)
+        {
+            string query = "SELECT EMPLOYEE_NUMBER, EMPLOYEE_NAME, EMPLOYEE_ROLE, EMPLOYEE_PASSWORD FROM EMPLOYEE WHERE EMPLOYEE_NUMBER = @EMPLOYEE_NUMBER AND EMPLOYEE_PASSWORD = @EMPLOYEE_PASSWORD";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            List<Bill> bills = new List<Bill>();
+            return ReadEmployee(ExecuteSelectQuery(query, sqlParameters));
+        }
     }
 }
