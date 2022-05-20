@@ -140,3 +140,4 @@ C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\De
 C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
 C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
 C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Form1.resources
