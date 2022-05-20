@@ -18,3 +18,33 @@ Time: 19/05/2022 03:47:40 PM
 Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=112; handshake=77; [Login] initialization=11; authentication=7; [Post-Login] complete=14017; 
 -----------------------------------------------------------
 
+Time: 20/05/2022 10:55:00 AM
+-----------------------------------------------------------
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=146; handshake=72; [Login] initialization=11; authentication=15; [Post-Login] complete=14022; 
+-----------------------------------------------------------
+
+Time: 20/05/2022 10:55:00 AM
+-----------------------------------------------------------
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=146; handshake=72; [Login] initialization=11; authentication=15; [Post-Login] complete=14022; 
+-----------------------------------------------------------
+
+Time: 20/05/2022 10:55:31 AM
+-----------------------------------------------------------
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=147; handshake=156; [Login] initialization=15; authentication=12; [Post-Login] complete=14016; 
+-----------------------------------------------------------
+
+Time: 20/05/2022 10:55:31 AM
+-----------------------------------------------------------
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=147; handshake=156; [Login] initialization=15; authentication=12; [Post-Login] complete=14016; 
+-----------------------------------------------------------
+
+Time: 20/05/2022 10:56:02 AM
+-----------------------------------------------------------
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=142; handshake=79; [Login] initialization=12; authentication=11; [Post-Login] complete=14022; 
+-----------------------------------------------------------
+
+Time: 20/05/2022 10:56:02 AM
+-----------------------------------------------------------
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=142; handshake=79; [Login] initialization=12; authentication=11; [Post-Login] complete=14022; 
+-----------------------------------------------------------
+

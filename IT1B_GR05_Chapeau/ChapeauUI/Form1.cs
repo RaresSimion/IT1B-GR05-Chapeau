@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Payment
+namespace ChapeauUI
 {
     public partial class Form1 : Form
     {
@@ -16,7 +16,5 @@ namespace Payment
         {
             InitializeComponent();
         }
-
-        
     }
 }
