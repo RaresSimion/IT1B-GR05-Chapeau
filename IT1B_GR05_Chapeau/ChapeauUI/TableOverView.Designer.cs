@@ -1,4 +1,4 @@
-﻿namespace TableOverView2
+﻿namespace ChapeauUI
 {
     partial class TableOverView
     {

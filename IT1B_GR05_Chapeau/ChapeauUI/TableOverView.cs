@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TableOverView2
+namespace ChapeauUI
 {
     public partial class TableOverView : Form
     {
@@ -20,7 +20,7 @@ namespace TableOverView2
         string titleReserved = "Reserved Table";
 
         MessageBoxButtons buttons = MessageBoxButtons.YesNo; 
-
+        private OrderViewForm orderViewForm = new OrderViewForm();
         public TableOverView()
         {
             InitializeComponent();
@@ -37,6 +37,8 @@ namespace TableOverView2
             if (result == DialogResult.Yes)
             {
                 // new order open
+                this.Hide();
+                orderViewForm.Show();
             }
             else
             {
@@ -50,6 +52,8 @@ namespace TableOverView2
             if (result == DialogResult.Yes)
             {
                 // new order open
+                this.Hide();
+                orderViewForm.Show();
             }
             else
             {
