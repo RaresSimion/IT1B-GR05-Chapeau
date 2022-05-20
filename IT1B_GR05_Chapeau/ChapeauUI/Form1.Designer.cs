@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewOrder = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -37,26 +37,26 @@
             this.listView2 = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbtnCash = new System.Windows.Forms.RadioButton();
+            this.rbtnDebitcard = new System.Windows.Forms.RadioButton();
+            this.rbtnCreditcard = new System.Windows.Forms.RadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.listView3 = new System.Windows.Forms.ListView();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.rbtnTipNo = new System.Windows.Forms.RadioButton();
+            this.rbtnTipYes = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTipAmount = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.listViewBill = new System.Windows.Forms.ListView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
+            this.txtTip = new System.Windows.Forms.TextBox();
+            this.txtVAT6 = new System.Windows.Forms.TextBox();
+            this.txtVAT21 = new System.Windows.Forms.TextBox();
+            this.txtOrder = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -82,15 +82,15 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Order";
             // 
-            // listView1
+            // listViewOrder
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(74, 219);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(365, 729);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewOrder.HideSelection = false;
+            this.listViewOrder.Location = new System.Drawing.Point(74, 219);
+            this.listViewOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listViewOrder.Name = "listViewOrder";
+            this.listViewOrder.Size = new System.Drawing.Size(365, 729);
+            this.listViewOrder.TabIndex = 5;
+            this.listViewOrder.UseCompatibleStateImageBehavior = false;
             // 
             // panel1
             // 
@@ -169,44 +169,44 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Choose payment method:";
             // 
-            // radioButton1
+            // rbtnCash
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.SystemColors.Window;
-            this.radioButton1.Location = new System.Drawing.Point(681, 279);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 24);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Cash";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rbtnCash.AutoSize = true;
+            this.rbtnCash.BackColor = System.Drawing.SystemColors.Window;
+            this.rbtnCash.Location = new System.Drawing.Point(681, 279);
+            this.rbtnCash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbtnCash.Name = "rbtnCash";
+            this.rbtnCash.Size = new System.Drawing.Size(61, 24);
+            this.rbtnCash.TabIndex = 10;
+            this.rbtnCash.TabStop = true;
+            this.rbtnCash.Text = "Cash";
+            this.rbtnCash.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rbtnDebitcard
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.SystemColors.Window;
-            this.radioButton2.Location = new System.Drawing.Point(681, 387);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(96, 24);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Debitcard";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rbtnDebitcard.AutoSize = true;
+            this.rbtnDebitcard.BackColor = System.Drawing.SystemColors.Window;
+            this.rbtnDebitcard.Location = new System.Drawing.Point(681, 387);
+            this.rbtnDebitcard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbtnDebitcard.Name = "rbtnDebitcard";
+            this.rbtnDebitcard.Size = new System.Drawing.Size(96, 24);
+            this.rbtnDebitcard.TabIndex = 11;
+            this.rbtnDebitcard.TabStop = true;
+            this.rbtnDebitcard.Text = "Debitcard";
+            this.rbtnDebitcard.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // rbtnCreditcard
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.SystemColors.Window;
-            this.radioButton3.Location = new System.Drawing.Point(681, 333);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(99, 24);
-            this.radioButton3.TabIndex = 12;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Creditcard";
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.rbtnCreditcard.AutoSize = true;
+            this.rbtnCreditcard.BackColor = System.Drawing.SystemColors.Window;
+            this.rbtnCreditcard.Location = new System.Drawing.Point(681, 333);
+            this.rbtnCreditcard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbtnCreditcard.Name = "rbtnCreditcard";
+            this.rbtnCreditcard.Size = new System.Drawing.Size(99, 24);
+            this.rbtnCreditcard.TabIndex = 12;
+            this.rbtnCreditcard.TabStop = true;
+            this.rbtnCreditcard.Text = "Creditcard";
+            this.rbtnCreditcard.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -240,31 +240,31 @@
             this.listView3.TabIndex = 13;
             this.listView3.UseCompatibleStateImageBehavior = false;
             // 
-            // radioButton4
+            // rbtnTipNo
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.BackColor = System.Drawing.SystemColors.Window;
-            this.radioButton4.Location = new System.Drawing.Point(778, 716);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(50, 24);
-            this.radioButton4.TabIndex = 14;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "No";
-            this.radioButton4.UseVisualStyleBackColor = false;
+            this.rbtnTipNo.AutoSize = true;
+            this.rbtnTipNo.BackColor = System.Drawing.SystemColors.Window;
+            this.rbtnTipNo.Location = new System.Drawing.Point(778, 716);
+            this.rbtnTipNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbtnTipNo.Name = "rbtnTipNo";
+            this.rbtnTipNo.Size = new System.Drawing.Size(50, 24);
+            this.rbtnTipNo.TabIndex = 14;
+            this.rbtnTipNo.TabStop = true;
+            this.rbtnTipNo.Text = "No";
+            this.rbtnTipNo.UseVisualStyleBackColor = false;
             // 
-            // radioButton5
+            // rbtnTipYes
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.BackColor = System.Drawing.SystemColors.Window;
-            this.radioButton5.Location = new System.Drawing.Point(623, 716);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(51, 24);
-            this.radioButton5.TabIndex = 15;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Yes";
-            this.radioButton5.UseVisualStyleBackColor = false;
+            this.rbtnTipYes.AutoSize = true;
+            this.rbtnTipYes.BackColor = System.Drawing.SystemColors.Window;
+            this.rbtnTipYes.Location = new System.Drawing.Point(623, 716);
+            this.rbtnTipYes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbtnTipYes.Name = "rbtnTipYes";
+            this.rbtnTipYes.Size = new System.Drawing.Size(51, 24);
+            this.rbtnTipYes.TabIndex = 15;
+            this.rbtnTipYes.TabStop = true;
+            this.rbtnTipYes.Text = "Yes";
+            this.rbtnTipYes.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -276,13 +276,13 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Amount:";
             // 
-            // textBox1
+            // txtTipAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(778, 861);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 27);
-            this.textBox1.TabIndex = 17;
+            this.txtTipAmount.Location = new System.Drawing.Point(778, 861);
+            this.txtTipAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTipAmount.Name = "txtTipAmount";
+            this.txtTipAmount.Size = new System.Drawing.Size(114, 27);
+            this.txtTipAmount.TabIndex = 17;
             // 
             // panel5
             // 
@@ -306,26 +306,26 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Bill";
             // 
-            // listView4
+            // listViewBill
             // 
-            this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(1057, 219);
-            this.listView4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(365, 476);
-            this.listView4.TabIndex = 18;
-            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listViewBill.HideSelection = false;
+            this.listViewBill.Location = new System.Drawing.Point(1057, 219);
+            this.listViewBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listViewBill.Name = "listViewBill";
+            this.listViewBill.Size = new System.Drawing.Size(365, 476);
+            this.listViewBill.TabIndex = 18;
+            this.listViewBill.UseCompatibleStateImageBehavior = false;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Window;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.textBox6);
-            this.panel6.Controls.Add(this.textBox5);
-            this.panel6.Controls.Add(this.textBox4);
-            this.panel6.Controls.Add(this.textBox3);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.btnPay);
+            this.panel6.Controls.Add(this.txtTotalPrice);
+            this.panel6.Controls.Add(this.txtTip);
+            this.panel6.Controls.Add(this.txtVAT6);
+            this.panel6.Controls.Add(this.txtVAT21);
+            this.panel6.Controls.Add(this.txtOrder);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label10);
@@ -337,70 +337,71 @@
             this.panel6.Size = new System.Drawing.Size(365, 253);
             this.panel6.TabIndex = 19;
             // 
-            // button1
+            // btnPay
             // 
-            this.button1.Location = new System.Drawing.Point(122, 200);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 31);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "PAY BILL";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPay.Location = new System.Drawing.Point(122, 200);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(150, 31);
+            this.btnPay.TabIndex = 10;
+            this.btnPay.Text = "PAY BILL";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // txtTotalPrice
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(231, 153);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(114, 20);
-            this.textBox6.TabIndex = 9;
+            this.txtTotalPrice.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTotalPrice.Location = new System.Drawing.Point(231, 153);
+            this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.Size = new System.Drawing.Size(114, 20);
+            this.txtTotalPrice.TabIndex = 9;
             // 
-            // textBox5
+            // txtTip
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(231, 120);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(114, 20);
-            this.textBox5.TabIndex = 8;
+            this.txtTip.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTip.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTip.Location = new System.Drawing.Point(231, 120);
+            this.txtTip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTip.Name = "txtTip";
+            this.txtTip.ReadOnly = true;
+            this.txtTip.Size = new System.Drawing.Size(114, 20);
+            this.txtTip.TabIndex = 8;
             // 
-            // textBox4
+            // txtVAT6
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(231, 88);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(114, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtVAT6.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVAT6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVAT6.Location = new System.Drawing.Point(231, 88);
+            this.txtVAT6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtVAT6.Name = "txtVAT6";
+            this.txtVAT6.ReadOnly = true;
+            this.txtVAT6.Size = new System.Drawing.Size(114, 20);
+            this.txtVAT6.TabIndex = 7;
             // 
-            // textBox3
+            // txtVAT21
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(231, 56);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtVAT21.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVAT21.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVAT21.Location = new System.Drawing.Point(231, 56);
+            this.txtVAT21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtVAT21.Name = "txtVAT21";
+            this.txtVAT21.ReadOnly = true;
+            this.txtVAT21.Size = new System.Drawing.Size(114, 20);
+            this.txtVAT21.TabIndex = 6;
             // 
-            // textBox2
+            // txtOrder
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(231, 21);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtOrder.BackColor = System.Drawing.SystemColors.Window;
+            this.txtOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOrder.Location = new System.Drawing.Point(231, 21);
+            this.txtOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtOrder.Name = "txtOrder";
+            this.txtOrder.ReadOnly = true;
+            this.txtOrder.Size = new System.Drawing.Size(114, 20);
+            this.txtOrder.TabIndex = 5;
             // 
             // label12
             // 
@@ -453,22 +454,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1531, 1067);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.listView4);
+            this.Controls.Add(this.listViewBill);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTipAmount);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.rbtnTipYes);
+            this.Controls.Add(this.rbtnTipNo);
             this.Controls.Add(this.listView3);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbtnCreditcard);
+            this.Controls.Add(this.rbtnDebitcard);
+            this.Controls.Add(this.rbtnCash);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewOrder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
@@ -492,7 +493,7 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewOrder;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -500,30 +501,30 @@
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rbtnCash;
+        private System.Windows.Forms.RadioButton rbtnDebitcard;
+        private System.Windows.Forms.RadioButton rbtnCreditcard;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton rbtnTipNo;
+        private System.Windows.Forms.RadioButton rbtnTipYes;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTipAmount;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView listViewBill;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotalPrice;
+        private System.Windows.Forms.TextBox txtTip;
+        private System.Windows.Forms.TextBox txtVAT6;
+        private System.Windows.Forms.TextBox txtVAT21;
+        private System.Windows.Forms.TextBox txtOrder;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPay;
     }
 }
