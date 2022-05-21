@@ -13,21 +13,26 @@ namespace ChapeauDAL
     {
         private SqlConnection databaseConnection;
 
-        //public Table GetTable(int tablenr)
-        //{
-        //    //UPDATE LATER   string query = "SELECT FROM [TABLE]"
-        //    // SqlParameter[] sqlParameter = { new SqlParameter("@table_id", tablenr) };
-        //    //  return ReadTable(ExecuteSelectQuery(query, sqlParameter));
-        //}
+        public Table GetTable(int tablenr)
+        {
+            string query = $"SELECT TABLE_ID, TABLE_CAPACITY, TABLE_AVAILABILITY FROM [TABLE] WHERE TABLE_ID = {tablenr}";
+                SqlParameter[] sqlParameter = { new SqlParameter("@TABLE_ID", tablenr) };
+            return ReadTable(ExecuteSelectQuery(query, sqlParameter));
+        }
 
+
+        /* NOT SURE IF NECESSARY, DISCUSS WITH GROUP
         public List<Table> GetAllTables()
         {
             string query = "SELECT * FROM [TABLE]";
             SqlParameter[] sqlParameter = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameter));
         }
+        */
 
-        //update later
+
+        //read 1 
+
         private Table ReadTable(DataTable dataTable)
         {
             Table table = null;
@@ -36,15 +41,15 @@ namespace ChapeauDAL
             {
                 table = new Table()
                 {
-                    Table_Number = (int)(dataRow[""]),
-                    Table_Capacity = (int)(dataRow[""]),
-                    Table_Availability = (TableAvailability)Enum.Parse(typeof(TableAvailability), dataRow[""].ToString())
+                    Table_Number = (int)(dataRow["TABLE_ID"]),
+                    Table_Capacity = (int)(dataRow["TABLE_CAPACITY"]),
+                    Table_Availability = (TableAvailability)Enum.Parse(typeof(TableAvailability), dataRow["TABLE_AVAILABILITY"].ToString())
                 };
             }
             return table;
         }
-        
-        //update later
+
+        /* NOT SURE IF NECESSARY, DISCUSS WITH GROUP
         private List<Table> ReadTables(DataTable dataTable)
         {
             List<Table> tables = new List<Table>();
@@ -53,15 +58,16 @@ namespace ChapeauDAL
             {
                 Table table = new Table()
                 {
-                    Table_Number = (int)(dataRow[""]),
-                    Table_Capacity = (int)(dataRow[""]),
-                    Table_Availability = (TableAvailability)Enum.Parse(typeof(TableAvailability), dataRow[""].ToString())
+                    Table_Number = (int)(dataRow["TABLE_ID"]),
+                    Table_Capacity = (int)(dataRow["TABLE_CAPACITY"]),
+                    Table_Availability = (TableAvailability)Enum.Parse(typeof(TableAvailability), dataRow["TABLE_AVAILABILITY"].ToString())
                 };
                 tables.Add(table);
             }
             return tables;
         }
-        //update later
+        */
+
         public void UpdateTable(Table table)
         {
 
