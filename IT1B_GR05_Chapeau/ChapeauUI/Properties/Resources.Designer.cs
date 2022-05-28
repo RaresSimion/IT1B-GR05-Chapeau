@@ -63,9 +63,79 @@ namespace ChapeauUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_left_circle {
+            get {
+                object obj = ResourceManager.GetObject("arrow-left-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Beer_Mug_png {
+            get {
+                object obj = ResourceManager.GetObject("Beer Mug.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bread_Baguette {
+            get {
+                object obj = ResourceManager.GetObject("Bread Baguette", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chapeau_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Chapeau Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Chapeau_original {
             get {
                 object obj = ResourceManager.GetObject("Chapeau original", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Coffee_Cup_Hot_png {
+            get {
+                object obj = ResourceManager.GetObject("Coffee Cup Hot.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drink {
+            get {
+                object obj = ResourceManager.GetObject("drink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Food_Restaurant_Drink_Whiskey_png {
+            get {
+                object obj = ResourceManager.GetObject("Food Restaurant Drink Whiskey.png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +156,26 @@ namespace ChapeauUI.Properties {
         internal static System.Drawing.Bitmap png_transparent_profile_logo_computer_icons_user_user_blue_heroes_logo {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Restaurant_Fork_Knife {
+            get {
+                object obj = ResourceManager.GetObject("Restaurant Fork Knife", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Soft_Drinks_Glass_png {
+            get {
+                object obj = ResourceManager.GetObject("Soft Drinks Glass.png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
