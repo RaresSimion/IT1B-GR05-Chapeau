@@ -118,20 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Chapeau Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chapeau Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Restaurant Fork Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Restaurant Fork Knife.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bread Baguette" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bread Baguette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="table" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Beer Mug.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Beer Mug.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Food Restaurant Drink Whiskey.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Food Restaurant Drink Whiskey.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Vegetables Mushroom Soup.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vegetables Mushroom Soup.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Soft Drinks Glass.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Soft Drinks Glass.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,22 +136,52 @@
   <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Beer Mug.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beer Mug.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bread Baguette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bread Baguette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minus.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minus.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coffee Cup Hot.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coffee Cup Hot.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="table" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Food Restaurant Drink Whiskey.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Food Restaurant Drink Whiskey.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Food Soup Bowl.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Food Soup Bowl.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="drink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\drink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chapeau Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chapeau Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Barbecue Steak.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Barbecue Steak.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chapeau original" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chapeau original.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ice Cream Bowl.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ice Cream Bowl.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x-circle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-circle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x-circle.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-circle.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-left-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-left-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Restaurant Fork Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Restaurant Fork Knife.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chapeau original" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chapeau original.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Coffee Cup Hot.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coffee Cup Hot.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="x-circle3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-circle3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

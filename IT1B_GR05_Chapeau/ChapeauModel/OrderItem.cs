@@ -8,6 +8,7 @@ namespace ChapeauModel
 		private const decimal ALCOHOLIC_VAT = 0.21M;
 		private const decimal NONALCOHOLIC_VAT = 0.06M;
 
+		public int OrderID { get; set; }
 		public MenuItem MenuItem { get; set; }
 		private decimal order_Item_Price_With_VAT;
 		public int Order_Item_Quantity { get; set; }
@@ -36,8 +37,9 @@ namespace ChapeauModel
 			}
 		}
 
-		public OrderItem(MenuItem item, int quantity, string comment)
+		public OrderItem(int orderID, MenuItem item, int quantity, string comment)
 		{
+			OrderID = orderID;
 			MenuItem = item;
 			Order_Item_Quantity = quantity;
 			Order_Item_Comment = comment;

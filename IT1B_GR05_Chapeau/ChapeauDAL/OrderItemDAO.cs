@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace ChapeauDAL
 {
-    public class OrderDAO : BaseDao
+    public class OrderItemDAO : BaseDao
     {
         private SqlConnection databaseConnection;
 
@@ -18,31 +18,6 @@ namespace ChapeauDAL
             string query = $"INSERT INTO ORDER_ITEM (ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT) VALUES ({orderItem.OrderID}, {orderItem.MenuItem.Menu_Item_Id}, {orderItem.Order_Item_Quantity}, '{orderItem.Order_Item_Comment}');";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
-        }
-
-        public void InsertOrder()
-        {
-
-        }
-
-        public void UpdateOrder()
-        {
-
-        }
-
-        public List<Order> GetOrders()
-        {
-            return null;
-        }
-
-        public Order GetOrdersById()
-        {
-            return null;
-        }
-
-        public List<Order> ReadOrders()
-        {
-            return null;
         }
     }
 }
