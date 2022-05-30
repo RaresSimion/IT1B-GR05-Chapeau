@@ -38,6 +38,11 @@
             this.btnDrinks = new System.Windows.Forms.Button();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pnlOrder = new System.Windows.Forms.Panel();
+            this.btnRemoveOrder = new System.Windows.Forms.Button();
+            this.lblTotalWithVATValue = new System.Windows.Forms.Label();
+            this.lblTotalValue = new System.Windows.Forms.Label();
+            this.lblWithVAT = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.btnSubmitOrder = new System.Windows.Forms.Button();
             this.listViewOrder = new System.Windows.Forms.ListView();
             this.columnHeaderOrderID = new System.Windows.Forms.ColumnHeader();
@@ -187,6 +192,11 @@
             // 
             // pnlOrder
             // 
+            this.pnlOrder.Controls.Add(this.btnRemoveOrder);
+            this.pnlOrder.Controls.Add(this.lblTotalWithVATValue);
+            this.pnlOrder.Controls.Add(this.lblTotalValue);
+            this.pnlOrder.Controls.Add(this.lblWithVAT);
+            this.pnlOrder.Controls.Add(this.lblTotal);
             this.pnlOrder.Controls.Add(this.btnSubmitOrder);
             this.pnlOrder.Controls.Add(this.listViewOrder);
             this.pnlOrder.Controls.Add(this.lblTable);
@@ -197,14 +207,69 @@
             this.pnlOrder.Size = new System.Drawing.Size(364, 849);
             this.pnlOrder.TabIndex = 3;
             // 
+            // btnRemoveOrder
+            // 
+            this.btnRemoveOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.btnRemoveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveOrder.Location = new System.Drawing.Point(100, 559);
+            this.btnRemoveOrder.Name = "btnRemoveOrder";
+            this.btnRemoveOrder.Size = new System.Drawing.Size(173, 49);
+            this.btnRemoveOrder.TabIndex = 9;
+            this.btnRemoveOrder.Text = "Remove order";
+            this.btnRemoveOrder.UseVisualStyleBackColor = false;
+            this.btnRemoveOrder.Click += new System.EventHandler(this.btnRemoveOrder_Click);
+            // 
+            // lblTotalWithVATValue
+            // 
+            this.lblTotalWithVATValue.AutoSize = true;
+            this.lblTotalWithVATValue.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalWithVATValue.Location = new System.Drawing.Point(206, 729);
+            this.lblTotalWithVATValue.Name = "lblTotalWithVATValue";
+            this.lblTotalWithVATValue.Size = new System.Drawing.Size(0, 44);
+            this.lblTotalWithVATValue.TabIndex = 8;
+            // 
+            // lblTotalValue
+            // 
+            this.lblTotalValue.AutoSize = true;
+            this.lblTotalValue.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalValue.Location = new System.Drawing.Point(206, 683);
+            this.lblTotalValue.Name = "lblTotalValue";
+            this.lblTotalValue.Size = new System.Drawing.Size(0, 44);
+            this.lblTotalValue.TabIndex = 7;
+            // 
+            // lblWithVAT
+            // 
+            this.lblWithVAT.AutoSize = true;
+            this.lblWithVAT.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWithVAT.Location = new System.Drawing.Point(7, 729);
+            this.lblWithVAT.Name = "lblWithVAT";
+            this.lblWithVAT.Size = new System.Drawing.Size(180, 44);
+            this.lblWithVAT.TabIndex = 6;
+            this.lblWithVAT.Text = "With VAT:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotal.Location = new System.Drawing.Point(3, 671);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(149, 58);
+            this.lblTotal.TabIndex = 5;
+            this.lblTotal.Text = "Total:";
+            // 
             // btnSubmitOrder
             // 
-            this.btnSubmitOrder.Location = new System.Drawing.Point(113, 742);
+            this.btnSubmitOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(176)))), ((int)(((byte)(174)))));
+            this.btnSubmitOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSubmitOrder.ForeColor = System.Drawing.Color.Black;
+            this.btnSubmitOrder.Location = new System.Drawing.Point(111, 783);
             this.btnSubmitOrder.Name = "btnSubmitOrder";
-            this.btnSubmitOrder.Size = new System.Drawing.Size(130, 49);
+            this.btnSubmitOrder.Size = new System.Drawing.Size(152, 49);
             this.btnSubmitOrder.TabIndex = 4;
             this.btnSubmitOrder.Text = "Submit order";
-            this.btnSubmitOrder.UseVisualStyleBackColor = true;
+            this.btnSubmitOrder.UseVisualStyleBackColor = false;
             this.btnSubmitOrder.Click += new System.EventHandler(this.btnSubmitOrder_Click);
             // 
             // listViewOrder
@@ -222,7 +287,7 @@
             this.listViewOrder.HideSelection = false;
             this.listViewOrder.Location = new System.Drawing.Point(7, 143);
             this.listViewOrder.Name = "listViewOrder";
-            this.listViewOrder.Size = new System.Drawing.Size(354, 281);
+            this.listViewOrder.Size = new System.Drawing.Size(354, 395);
             this.listViewOrder.TabIndex = 3;
             this.listViewOrder.TileSize = new System.Drawing.Size(3, 3);
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
@@ -696,5 +761,10 @@
         private System.Windows.Forms.ColumnHeader columnHeaderQuantity;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderID;
         private System.Windows.Forms.Button btnSubmitOrder;
+        private System.Windows.Forms.Label lblTotalValue;
+        private System.Windows.Forms.Label lblWithVAT;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblTotalWithVATValue;
+        private System.Windows.Forms.Button btnRemoveOrder;
     }
 }

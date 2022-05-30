@@ -90,7 +90,30 @@ namespace ChapeauUI
             li.SubItems.Add(orderItem.Order_Item_Quantity.ToString());
 
             orderForm.OrderListView.Items.Add(li);
+            UpdateTotal();
+            orderForm.EnableButtons();
             this.Close();
+        }
+
+        private void UpdateTotal()
+        {
+            List<OrderItem> items = orderForm.GetOrderItems();
+            decimal valueOfItems = 0;
+            decimal valueOfItemsWithVat = 0;
+
+            foreach(OrderItem item in items)
+            {
+                valueOfItems += item.MenuItem.Menu_Item_Price * item.Order_Item_Quantity;
+                valueOfItemsWithVat += item.Order_Item_Price_With_VAT * item.Order_Item_Quantity;
+            }
+
+            SetNewTotal(valueOfItems, valueOfItemsWithVat);
+        }
+
+        private void SetNewTotal(decimal value, decimal valueWithVat)
+        {
+            orderForm.TotalValue.Text = $"€{value:0.00}";
+            orderForm.TotalWithVatValue.Text = $"€{valueWithVat:0.00}";
         }
     }
 }

@@ -16,6 +16,7 @@ namespace ChapeauUI
     {
         private MenuItemService menuItemService = new MenuItemService();
         private OrderItemService orderItemService = new OrderItemService();
+        private OrderService orderService = new OrderService();
         private Panel currentPanel = new Panel();
 
         public ListView OrderListView
@@ -23,11 +24,35 @@ namespace ChapeauUI
             get { return listViewOrder; }
         }
 
+        public Label TotalValue
+        {
+            get { return lblTotalValue; }
+        }
+
+        public Label TotalWithVatValue
+        {
+            get { return lblTotalWithVATValue; }
+        }
+
         public OrderForm()
         {
             InitializeComponent();
             ShowPanel("Menu");
+            DisableButtons();
         }
+
+        private void DisableButtons()
+        {
+            btnRemoveOrder.Visible = false;
+            btnSubmitOrder.Visible = false;
+        }
+
+        public void EnableButtons()
+        {
+            btnRemoveOrder.Visible = true;
+            btnSubmitOrder.Visible = true;
+        }
+
         private void HidePanels()
         {
             pnlMenu.Hide();
@@ -140,13 +165,13 @@ namespace ChapeauUI
         private void BackToPreviousPanel(Panel panel)
         {
             HidePanels();
-            if (panel == pnlDrinks || panel == pnlLunch)
+            if (panel == pnlDrinks || panel == pnlLunch || panel == pnlDinner)
                 ShowPanel("Menu");
             else if (panel == pnlSubMenu && IsLunchSubmenu(textBoxSubmenu.Text))
                 ShowPanel("Lunch");
             else if (panel == pnlSubMenu && IsDinnerSubmenu(textBoxSubmenu.Text))
                 ShowPanel("Dinner");
-            else
+            else if (panel == pnlSubMenu)
                 ShowPanel("Drinks");
         }
 
@@ -166,7 +191,7 @@ namespace ChapeauUI
             }
         }
 
-        private List<OrderItem> GetOrderItems()
+        public List<OrderItem> GetOrderItems()
         {
             List<OrderItem> orderItems = new List<OrderItem>();
 
@@ -177,6 +202,14 @@ namespace ChapeauUI
             }
             return orderItems;
         }
+
+        private void RemoveOrderItems()
+        {
+            listViewOrder.Items.Clear();
+            lblTotalValue.Text = "";
+            lblTotalWithVATValue.Text = "";
+        }
+
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -292,6 +325,18 @@ namespace ChapeauUI
             {
                 orderItemService.InsertOrderItem(item);
             }
+
+            Table table = new Table(1, TableAvailability.Available); //replace with current table
+            Employee employee = new Employee(1, "barry", EmployeeRole.Waiter, "1234"); //replace with current waiter
+
+            Order order = new Order(orderItems, table, employee, OrderStatus.Ordered, false, "no", DateTime.Now);
+            orderService.InsertOrder(order);
+        }
+
+        private void btnRemoveOrder_Click(object sender, EventArgs e)
+        {
+            RemoveOrderItems();
+            DisableButtons();
         }
     }
 }
