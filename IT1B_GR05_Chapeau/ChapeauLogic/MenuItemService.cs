@@ -17,12 +17,12 @@ namespace ChapeauLogic
             menuItemDB = new MenuItemDAO();
         }
 
-        public List<MenuItem> GetMenu()
+        /* public List<MenuItem> GetMenu()
         {
             List<MenuItem> menu = menuItemDB.GetMenu();
             return menu;
         }
-        public List<MenuItem> GetFoodItems()
+       public List<MenuItem> GetFoodItems()
         {
             List<MenuItem> foodItems = menuItemDB.GetFoodItems();
             return foodItems;
@@ -32,7 +32,7 @@ namespace ChapeauLogic
         {
             List<MenuItem> lunchItems = menuItemDB.GetLunchItems();
             return lunchItems;
-        }
+        }*/
 
         public List<MenuItem> GetLunchStarters()
         {
@@ -52,11 +52,11 @@ namespace ChapeauLogic
             return lunchDesserts;
         }
 
-        public List<MenuItem> GetDinnerItems()
-        {
-            List<MenuItem> dinnerItems = menuItemDB.GetDinnerItems();
-            return dinnerItems;
-        }
+        //public List<MenuItem> GetDinnerItems()
+        //{
+        //    List<MenuItem> dinnerItems = menuItemDB.GetDinnerItems();
+        //    return dinnerItems;
+        //}
 
         public List<MenuItem> GetDinnerStarters()
         {
@@ -82,11 +82,11 @@ namespace ChapeauLogic
             return dinnerDesserts;
         }
 
-        public List<MenuItem> GetDrinks()
-        {
-            List<MenuItem> drinks = menuItemDB.GetDrinks();
-            return drinks;
-        }
+        //public List<MenuItem> GetDrinks()
+        //{
+        //    List<MenuItem> drinks = menuItemDB.GetDrinks();
+        //    return drinks;
+        //}
 
         public List<MenuItem> GetSoftDrinks()
         {
