@@ -35,9 +35,9 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }*/
 
-        public List<MenuItem> GetSubmenu(int categoryID)
+        public List<MenuItem> GetSubmenu(Category category)
         {
-            string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID = {categoryID}";
+            string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID = {(int)category}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -175,7 +175,7 @@ namespace ChapeauDAL
                     Menu_Item_Name = (string)(dr["MENU_ITEM_NAME"]),
                     Menu_Item_Stock = (int)(dr["MENU_ITEM_STOCK"]),
                     Menu_Item_Price = (decimal)(dr["MENU_ITEM_PRICE"]),
-                    Category_Id = (int)(dr["CATEGORY_ID"])
+                    Category = (Category)(dr["CATEGORY_ID"])
                 };
                 menu.Add(menuItem);
             }
@@ -192,7 +192,7 @@ namespace ChapeauDAL
                 Menu_Item_Name = (string)(dr["MENU_ITEM_NAME"]),
                 Menu_Item_Stock = (int)(dr["MENU_ITEM_STOCK"]),
                 Menu_Item_Price = (decimal)(dr["MENU_ITEM_PRICE"]),
-                Category_Id = (int)(dr["CATEGORY_ID"])
+                Category = (Category)(dr["CATEGORY_ID"])
             };
             return menuItem;
         }

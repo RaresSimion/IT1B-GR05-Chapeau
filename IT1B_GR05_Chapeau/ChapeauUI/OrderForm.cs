@@ -184,7 +184,7 @@ namespace ChapeauUI
                 li.SubItems.Add(item.Menu_Item_Name);
                 li.SubItems.Add(item.Menu_Item_Stock.ToString());
                 li.SubItems.Add(item.Menu_Item_Price.ToString());
-                li.SubItems.Add(item.Category_Id.ToString());
+                li.SubItems.Add(item.Category.ToString());
 
                 listViewMenu.Items.Add(li);
             }
@@ -227,31 +227,31 @@ namespace ChapeauUI
         private void btnSoftDrinks_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Soft drinks");
-            AddItemsToMenu(menuItemService.GetSoftDrinks());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.SoftDrinks));
         }
 
         private void btnBeers_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Beers");
-            AddItemsToMenu(menuItemService.GetBeers());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.Beers));
         }
 
         private void btnWines_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Wines");
-            AddItemsToMenu(menuItemService.GetWines());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.Wines));
         }
 
         private void btnSpirits_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Spirits");
-            AddItemsToMenu(menuItemService.GetSpiritDrinks());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.SpiritDrinks));
         }
 
         private void btnCoffeeTea_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Coffee/Tea");
-            AddItemsToMenu(menuItemService.GetCoffeeTea());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.CoffeeTea));
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
@@ -262,43 +262,43 @@ namespace ChapeauUI
         private void btnLunchStarters_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Lunch Starters");
-            AddItemsToMenu(menuItemService.GetLunchStarters());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchStarters));
         }
 
         private void btnLunchMains_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Lunch Mains");
-            AddItemsToMenu(menuItemService.GetLunchMains());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchMains));
         }
 
         private void btnDesserts_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Lunch Desserts");
-            AddItemsToMenu(menuItemService.GetLunchDesserts());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchDesserts));
         }
 
         private void btnDinnerStarters_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Dinner Starters");
-            AddItemsToMenu(menuItemService.GetDinnerStarters());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerStarters));
         }
 
         private void btnDinnerEntremets_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Dinner Entremets");
-            AddItemsToMenu(menuItemService.GetDinnerEntremets());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerEntremets));
         }
 
         private void btnDinnerMains_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Dinner Mains");
-            AddItemsToMenu(menuItemService.GetDinnerMains());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerMains));
         }
 
         private void btnDinnerDesserts_Click(object sender, EventArgs e)
         {
             ShowSubPanel("Dinner Desserts");
-            AddItemsToMenu(menuItemService.GetDinnerDesserts());
+            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerDesserts));
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
@@ -330,6 +330,8 @@ namespace ChapeauUI
 
             Order order = new Order(orderItems, table, employee, OrderStatus.Ordered, false, "no", DateTime.Now);
             orderService.InsertOrder(order);
+
+            RemoveOrderItems();
         }
 
         private void btnRemoveOrder_Click(object sender, EventArgs e)

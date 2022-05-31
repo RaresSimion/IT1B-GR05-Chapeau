@@ -15,6 +15,18 @@ namespace ChapeauModel
         public DateTime Order_Time { get; set; }
 
 
+        public int Item_Count
+        {
+            get
+            {
+                int count = 0;
+                foreach(OrderItem item in OrderedItems)
+                    count += item.Order_Item_Quantity;
+
+                return count;
+            }
+        }
+
         public Order(List<OrderItem> orderItems, Table table, Employee employee, OrderStatus status, bool isPaid, string comment, DateTime ordertime)
         {
             OrderedItems = orderItems;
