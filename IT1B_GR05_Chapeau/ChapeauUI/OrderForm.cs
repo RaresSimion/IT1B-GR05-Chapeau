@@ -164,7 +164,6 @@ namespace ChapeauUI
 
         private void BackToPreviousPanel(Panel panel)
         {
-            HidePanels();
             if (panel == pnlDrinks || panel == pnlLunch || panel == pnlDinner)
                 ShowPanel("Menu");
             else if (panel == pnlSubMenu && IsLunchSubmenu(textBoxSubmenu.Text))
