@@ -37,11 +37,10 @@ namespace ChapeauDAL
         }
 
         //for login
-        public Employee GetEmployeeByIdAndPassword(int employee_number, string employee_password)
+        public Employee GetEmployeeByPassword(string employee_password)
         {
-            string query = "SELECT EMPLOYEE_NUMBER, EMPLOYEE_NAME, EMPLOYEE_ROLE, EMPLOYEE_PASSWORD FROM EMPLOYEE WHERE EMPLOYEE_NUMBER = @EMPLOYEE_NUMBER AND EMPLOYEE_PASSWORD = @EMPLOYEE_PASSWORD";
+            string query = "SELECT EMPLOYEE_NUMBER, EMPLOYEE_NAME, EMPLOYEE_ROLE, EMPLOYEE_PASSWORD FROM EMPLOYEE WHERE EMPLOYEE_PASSWORD = @EMPLOYEE_PASSWORD";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            List<Bill> bills = new List<Bill>();
             return ReadEmployee(ExecuteSelectQuery(query, sqlParameters));
         }
     }
