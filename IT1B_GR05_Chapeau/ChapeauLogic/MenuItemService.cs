@@ -17,6 +17,12 @@ namespace ChapeauLogic
             menuItemDB = new MenuItemDAO();
         }
 
+        public List<MenuItem> GetSubmenu(Category category)
+        {
+            List<MenuItem> submenu = menuItemDB.GetSubmenu(category);
+            return submenu;
+        }
+
         /* public List<MenuItem> GetMenu()
         {
             List<MenuItem> menu = menuItemDB.GetMenu();

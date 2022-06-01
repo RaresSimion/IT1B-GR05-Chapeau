@@ -45,10 +45,9 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnSubmitOrder = new System.Windows.Forms.Button();
             this.listViewOrder = new System.Windows.Forms.ListView();
-            this.columnHeaderOrderID = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderOrderQuantity = new System.Windows.Forms.ColumnHeader();
             this.columnHeaderOrderItemName = new System.Windows.Forms.ColumnHeader();
             this.columnHeaderComment = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderQuantity = new System.Windows.Forms.ColumnHeader();
             this.lblTable = new System.Windows.Forms.Label();
             this.lblOrder = new System.Windows.Forms.Label();
             this.pnlDrinks = new System.Windows.Forms.Panel();
@@ -210,6 +209,7 @@
             // btnRemoveOrder
             // 
             this.btnRemoveOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.btnRemoveOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemoveOrder.Location = new System.Drawing.Point(100, 559);
@@ -261,6 +261,7 @@
             // btnSubmitOrder
             // 
             this.btnSubmitOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(176)))), ((int)(((byte)(174)))));
+            this.btnSubmitOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmitOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSubmitOrder.ForeColor = System.Drawing.Color.Black;
@@ -277,10 +278,9 @@
             this.listViewOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.listViewOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewOrder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderOrderID,
+            this.columnHeaderOrderQuantity,
             this.columnHeaderOrderItemName,
-            this.columnHeaderComment,
-            this.columnHeaderQuantity});
+            this.columnHeaderComment});
             this.listViewOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listViewOrder.FullRowSelect = true;
             this.listViewOrder.GridLines = true;
@@ -293,10 +293,10 @@
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
             this.listViewOrder.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeaderOrderID
+            // columnHeaderOrderQuantity
             // 
-            this.columnHeaderOrderID.Text = "ID";
-            this.columnHeaderOrderID.Width = 40;
+            this.columnHeaderOrderQuantity.Text = "Quantity";
+            this.columnHeaderOrderQuantity.Width = 100;
             // 
             // columnHeaderOrderItemName
             // 
@@ -307,11 +307,6 @@
             // 
             this.columnHeaderComment.Text = "Comment";
             this.columnHeaderComment.Width = 200;
-            // 
-            // columnHeaderQuantity
-            // 
-            this.columnHeaderQuantity.Text = "Quantity";
-            this.columnHeaderQuantity.Width = 40;
             // 
             // lblTable
             // 
@@ -697,6 +692,7 @@
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlDrinks);
             this.Name = "OrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.pnlHeader.ResumeLayout(false);
@@ -758,8 +754,7 @@
         private System.Windows.Forms.ListView listViewOrder;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderItemName;
         private System.Windows.Forms.ColumnHeader columnHeaderComment;
-        private System.Windows.Forms.ColumnHeader columnHeaderQuantity;
-        private System.Windows.Forms.ColumnHeader columnHeaderOrderID;
+        private System.Windows.Forms.ColumnHeader columnHeaderOrderQuantity;
         private System.Windows.Forms.Button btnSubmitOrder;
         private System.Windows.Forms.Label lblTotalValue;
         private System.Windows.Forms.Label lblWithVAT;

@@ -17,7 +17,7 @@ namespace ChapeauModel
 		{
 			get
 			{
-				return (MenuItem.Category_Id == 9 || MenuItem.Category_Id == 10 || MenuItem.Category_Id == 11);
+				return (MenuItem.Category == Category.Beers || MenuItem.Category == Category.Wines || MenuItem.Category == Category.SpiritDrinks);
 			}
 		}
 

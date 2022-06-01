@@ -44,7 +44,7 @@
             this.pictureBoxClosePopUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.pictureBoxClosePopUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxClosePopUp.Image = global::ChapeauUI.Properties.Resources.x_circle3;
-            this.pictureBoxClosePopUp.Location = new System.Drawing.Point(580, 12);
+            this.pictureBoxClosePopUp.Location = new System.Drawing.Point(471, 2);
             this.pictureBoxClosePopUp.Name = "pictureBoxClosePopUp";
             this.pictureBoxClosePopUp.Size = new System.Drawing.Size(68, 65);
             this.pictureBoxClosePopUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -55,10 +55,10 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblQuantity.Location = new System.Drawing.Point(179, 52);
+            this.lblQuantity.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblQuantity.Location = new System.Drawing.Point(159, 9);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(301, 78);
+            this.lblQuantity.Size = new System.Drawing.Size(222, 58);
             this.lblQuantity.TabIndex = 1;
             this.lblQuantity.Text = "Quantity";
             // 
@@ -68,7 +68,7 @@
             this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnPlus.Location = new System.Drawing.Point(358, 150);
+            this.btnPlus.Location = new System.Drawing.Point(307, 75);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(40, 40);
             this.btnPlus.TabIndex = 4;
@@ -81,7 +81,7 @@
             this.btnMinus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnMinus.Location = new System.Drawing.Point(257, 150);
+            this.btnMinus.Location = new System.Drawing.Point(184, 75);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(40, 40);
             this.btnMinus.TabIndex = 5;
@@ -91,10 +91,10 @@
             // lblComment
             // 
             this.lblComment.AutoSize = true;
-            this.lblComment.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblComment.Location = new System.Drawing.Point(205, 225);
+            this.lblComment.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblComment.Location = new System.Drawing.Point(170, 167);
             this.lblComment.Name = "lblComment";
-            this.lblComment.Size = new System.Drawing.Size(260, 58);
+            this.lblComment.Size = new System.Drawing.Size(199, 44);
             this.lblComment.TabIndex = 6;
             this.lblComment.Text = "Comment";
             // 
@@ -103,10 +103,10 @@
             this.textBoxComment.BackColor = System.Drawing.Color.White;
             this.textBoxComment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxComment.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxComment.Location = new System.Drawing.Point(70, 302);
+            this.textBoxComment.Location = new System.Drawing.Point(79, 214);
             this.textBoxComment.Multiline = true;
             this.textBoxComment.Name = "textBoxComment";
-            this.textBoxComment.Size = new System.Drawing.Size(518, 104);
+            this.textBoxComment.Size = new System.Drawing.Size(373, 104);
             this.textBoxComment.TabIndex = 7;
             // 
             // btnAddToOrder
@@ -114,9 +114,9 @@
             this.btnAddToOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(176)))), ((int)(((byte)(174)))));
             this.btnAddToOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToOrder.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddToOrder.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddToOrder.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddToOrder.Location = new System.Drawing.Point(205, 423);
+            this.btnAddToOrder.Location = new System.Drawing.Point(134, 355);
             this.btnAddToOrder.Name = "btnAddToOrder";
             this.btnAddToOrder.Size = new System.Drawing.Size(264, 58);
             this.btnAddToOrder.TabIndex = 8;
@@ -127,12 +127,13 @@
             // lblQuantityValue
             // 
             this.lblQuantityValue.AutoSize = true;
-            this.lblQuantityValue.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblQuantityValue.Location = new System.Drawing.Point(303, 141);
+            this.lblQuantityValue.Font = new System.Drawing.Font("Century Gothic", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblQuantityValue.Location = new System.Drawing.Point(240, 67);
             this.lblQuantityValue.Name = "lblQuantityValue";
-            this.lblQuantityValue.Size = new System.Drawing.Size(52, 58);
+            this.lblQuantityValue.Size = new System.Drawing.Size(46, 52);
             this.lblQuantityValue.TabIndex = 9;
             this.lblQuantityValue.Text = "1";
+            this.lblQuantityValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblQuantityValue.TextChanged += new System.EventHandler(this.lblQuantityValue_TextChanged);
             // 
             // MenuItemPopUp
@@ -140,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.ClientSize = new System.Drawing.Size(660, 493);
+            this.ClientSize = new System.Drawing.Size(539, 425);
             this.ControlBox = false;
             this.Controls.Add(this.lblQuantityValue);
             this.Controls.Add(this.btnAddToOrder);
@@ -151,6 +152,7 @@
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.pictureBoxClosePopUp);
             this.Name = "MenuItemPopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MenuItemPopUp";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClosePopUp)).EndInit();
             this.ResumeLayout(false);

@@ -81,17 +81,23 @@ namespace ChapeauUI
             int quantity = int.Parse(lblQuantityValue.Text);
             string comment = GetComment();
 
-            OrderItem orderItem = new OrderItem(2, menuItem, quantity, comment);
+            OrderItem orderItem = new OrderItem(3, menuItem, quantity, comment);
 
-            ListViewItem li = new ListViewItem(orderItem.MenuItem.Menu_Item_Id.ToString());
-            li.Tag = orderItem;
-            li.SubItems.Add(orderItem.MenuItem.Menu_Item_Name);
-            li.SubItems.Add(orderItem.Order_Item_Comment);
-            li.SubItems.Add(orderItem.Order_Item_Quantity.ToString());
+            if (!IsOrderItemInList(orderItem))
+            {
 
-            orderForm.OrderListView.Items.Add(li);
-            UpdateTotal();
-            orderForm.EnableButtons();
+                ListViewItem li = new ListViewItem(orderItem.Order_Item_Quantity.ToString());
+                li.Tag = orderItem;
+                li.SubItems.Add(orderItem.MenuItem.Menu_Item_Name);
+                li.SubItems.Add(orderItem.Order_Item_Comment);
+                //li.SubItems.Add(orderItem.Order_Item_Quantity.ToString());
+
+                orderForm.OrderListView.Items.Add(li);
+                UpdateTotal();
+                orderForm.EnableButtons();
+            }
+
+            //else dialog box
             this.Close();
         }
 
@@ -114,6 +120,18 @@ namespace ChapeauUI
         {
             orderForm.TotalValue.Text = $"€{value:0.00}";
             orderForm.TotalWithVatValue.Text = $"€{valueWithVat:0.00}";
+        }
+
+        private bool IsOrderItemInList(OrderItem orderItem)
+        {
+            List<OrderItem> orderItems = orderForm.GetOrderItems();
+            foreach(OrderItem item in orderItems)
+            {
+                if(item.MenuItem == orderItem.MenuItem)
+                    return true;
+            }
+
+            return false;
         }
     }
 }
