@@ -11,7 +11,12 @@ namespace ChapeauDAL
 {
     public class OrderDAO : BaseDao
     {
-        private SqlConnection databaseConnection;
+        public void InsertOrder(Order order)
+        {
+            string query = $"INSERT INTO [ORDER] VALUES ('{order.Order_Time:yyyy-MM-dd HH:mm:ss}', '{order.Order_Status}', '{order.Is_Paid}', {order.Table.Table_Number}, {order.Employee.Employee_Number}, {order.Item_Count});";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
         public void InsertOrder()
         {

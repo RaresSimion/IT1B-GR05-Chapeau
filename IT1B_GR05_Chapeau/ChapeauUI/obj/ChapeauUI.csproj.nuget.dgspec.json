@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj": {}
+    "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+    "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectUniqueName": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
         "projectName": "ChapeauDAL",
-        "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
-        "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\obj\\",
+        "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+        "packagesPath": "C:\\Users\\Rares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -68,21 +72,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
+    "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+        "projectUniqueName": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
         "projectName": "ChapeauLogic",
-        "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
-        "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\obj\\",
+        "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+        "packagesPath": "C:\\Users\\Rares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +104,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
+              "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
               }
             }
           }
@@ -126,21 +134,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+    "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
-        "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\obj\\",
+        "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "packagesPath": "C:\\Users\\Rares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,21 +192,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj": {
+    "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj",
+        "projectUniqueName": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj",
         "projectName": "ChapeauUI",
-        "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj",
-        "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\obj\\",
+        "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\ChapeauUI.csproj",
+        "packagesPath": "C:\\Users\\Rares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -208,14 +224,14 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
+              "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
-                "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj"
+              "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
+                "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauLogic\\ChapeauLogic.csproj"
               },
-              "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\Conor\\source\\repos\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\Rares\\Documents\\GitHub\\IT1B-GR05-Chapeau\\IT1B_GR05_Chapeau\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -229,6 +245,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.Win32.SystemEvents": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -247,7 +269,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
