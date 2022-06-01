@@ -20,10 +20,13 @@ namespace ChapeauUI
         string titleReserved = "Reserved Table";
 
         MessageBoxButtons buttons = MessageBoxButtons.YesNo; 
-       // private OrderViewForm orderViewForm = new OrderViewForm();
+        private OrderViewForm orderViewForm = new OrderViewForm();
         public TableOverView()
         {
             InitializeComponent();
+            panelNoOrder.Hide();
+            panelTable1Order.Hide();
+            panelTable6.Hide();
         }
 
         private void TableOverView_Load(object sender, EventArgs e)
@@ -31,286 +34,87 @@ namespace ChapeauUI
 
         }
 
-        private void labelTable1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageOccupied, titleOccupied, buttons);
-            if (result == DialogResult.Yes)
-            {
-                // new order open
-                this.Hide();
-                //orderViewForm.Show();
-            }
-            else
-            {
-                this.Close();
-            }
+
         }
 
-        private void pictureBoxTable1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageOccupied, titleOccupied, buttons);
-            if (result == DialogResult.Yes)
-            {
-                // new order open
-                this.Hide();
-                //orderViewForm.Show();
-            }
-            else
-            {
-                this.Close();
-            }
+
         }
 
-        private void labelTable2_Click(object sender, EventArgs e)
+        private void buttonTable1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageOccupied, titleOccupied, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
         }
 
-        private void pictureBoxTable2_Click(object sender, EventArgs e)
+        private void buttonTable2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageOccupied, titleOccupied, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void labelTable3_Click(object sender, EventArgs e)
+        private void buttonTable3_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void pictureBoxTable3_Click(object sender, EventArgs e)
+        private void buttonTable4_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void labelTable4_Click(object sender, EventArgs e)
+        private void buttonTable5_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void pictureBoxTable4_Click(object sender, EventArgs e)
+        private void buttonTable6_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelTable6.Show();
         }
 
-        private void labelTable5_Click(object sender, EventArgs e)
+        private void buttonTable7_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void pictureBoxTable5_Click(object sender, EventArgs e)
+        private void buttonTable8_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void pictureBoxTable6_Click(object sender, EventArgs e)
+        private void buttonTable9_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void labelTable6_Click(object sender, EventArgs e)
+        private void buttonTable10_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Show();
+
         }
 
-        private void labelTable7_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelTable1Order.Hide();
         }
 
-        private void pictureBoxTable7_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelTable6.Hide();
         }
 
-        private void labelTable8_Click(object sender, EventArgs e)
+        private void buttonReturnToTableView_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
-        }
-
-        private void pictureBoxTable8_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
-        }
-
-        private void labelTable9_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(messageAvailable, titleAvailable, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
-        }
-
-        private void pictureBoxTable9_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(messageReserved, titleReserved, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
-        }
-
-        private void labelTable10_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(messageReserved, titleReserved, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
-        }
-
-        private void pictureBoxTable10_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(messageReserved, titleReserved, buttons);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                // new order open
-            }
-            else
-            {
-                this.Close();
-            }
+            panelNoOrder.Hide();
         }
     }
 }
