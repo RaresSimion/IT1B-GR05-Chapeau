@@ -88,9 +88,10 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::ChapeauUI.Properties.Resources.Chapeau_Logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(252, 12);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(288, 16);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(223, 89);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(255, 119);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -101,17 +102,20 @@
             this.pnlHeader.Controls.Add(this.pictureBoxLogo);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(728, 112);
+            this.pnlHeader.Size = new System.Drawing.Size(832, 149);
             this.pnlHeader.TabIndex = 1;
             // 
             // pictureBoxBack
             // 
             this.pictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBack.Image = global::ChapeauUI.Properties.Resources.arrow_left_circle;
-            this.pictureBoxBack.Location = new System.Drawing.Point(27, 22);
+            this.pictureBoxBack.Location = new System.Drawing.Point(31, 29);
+            this.pictureBoxBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxBack.Name = "pictureBoxBack";
-            this.pictureBoxBack.Size = new System.Drawing.Size(68, 65);
+            this.pictureBoxBack.Size = new System.Drawing.Size(78, 87);
+            this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBack.TabIndex = 1;
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
@@ -123,9 +127,10 @@
             this.pnlMenu.Controls.Add(this.btnDrinks);
             this.pnlMenu.Controls.Add(this.lblMenu);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 112);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 149);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(364, 849);
+            this.pnlMenu.Size = new System.Drawing.Size(416, 906);
             this.pnlMenu.TabIndex = 2;
             // 
             // btnDinner
@@ -137,9 +142,10 @@
             this.btnDinner.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDinner.Image = global::ChapeauUI.Properties.Resources.Restaurant_Fork_Knife;
             this.btnDinner.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDinner.Location = new System.Drawing.Point(51, 340);
+            this.btnDinner.Location = new System.Drawing.Point(58, 453);
+            this.btnDinner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDinner.Name = "btnDinner";
-            this.btnDinner.Size = new System.Drawing.Size(254, 75);
+            this.btnDinner.Size = new System.Drawing.Size(290, 100);
             this.btnDinner.TabIndex = 3;
             this.btnDinner.Text = "  Dinner";
             this.btnDinner.UseVisualStyleBackColor = false;
@@ -154,9 +160,10 @@
             this.btnLunch.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLunch.Image = global::ChapeauUI.Properties.Resources.Bread_Baguette;
             this.btnLunch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLunch.Location = new System.Drawing.Point(51, 240);
+            this.btnLunch.Location = new System.Drawing.Point(58, 320);
+            this.btnLunch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLunch.Name = "btnLunch";
-            this.btnLunch.Size = new System.Drawing.Size(254, 75);
+            this.btnLunch.Size = new System.Drawing.Size(290, 100);
             this.btnLunch.TabIndex = 2;
             this.btnLunch.Text = "  Lunch";
             this.btnLunch.UseVisualStyleBackColor = false;
@@ -171,9 +178,10 @@
             this.btnDrinks.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDrinks.Image = global::ChapeauUI.Properties.Resources.drink;
             this.btnDrinks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDrinks.Location = new System.Drawing.Point(51, 143);
+            this.btnDrinks.Location = new System.Drawing.Point(58, 191);
+            this.btnDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDrinks.Name = "btnDrinks";
-            this.btnDrinks.Size = new System.Drawing.Size(254, 75);
+            this.btnDrinks.Size = new System.Drawing.Size(290, 100);
             this.btnDrinks.TabIndex = 1;
             this.btnDrinks.Text = "  Drinks";
             this.btnDrinks.UseVisualStyleBackColor = false;
@@ -183,9 +191,9 @@
             // 
             this.lblMenu.AutoSize = true;
             this.lblMenu.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMenu.Location = new System.Drawing.Point(77, 30);
+            this.lblMenu.Location = new System.Drawing.Point(88, 40);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(212, 78);
+            this.lblMenu.Size = new System.Drawing.Size(265, 96);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Menu";
             // 
@@ -201,9 +209,10 @@
             this.pnlOrder.Controls.Add(this.lblTable);
             this.pnlOrder.Controls.Add(this.lblOrder);
             this.pnlOrder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlOrder.Location = new System.Drawing.Point(364, 112);
+            this.pnlOrder.Location = new System.Drawing.Point(416, 149);
+            this.pnlOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlOrder.Name = "pnlOrder";
-            this.pnlOrder.Size = new System.Drawing.Size(364, 849);
+            this.pnlOrder.Size = new System.Drawing.Size(416, 906);
             this.pnlOrder.TabIndex = 3;
             // 
             // btnRemoveOrder
@@ -212,9 +221,10 @@
             this.btnRemoveOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRemoveOrder.Location = new System.Drawing.Point(100, 559);
+            this.btnRemoveOrder.Location = new System.Drawing.Point(114, 745);
+            this.btnRemoveOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRemoveOrder.Name = "btnRemoveOrder";
-            this.btnRemoveOrder.Size = new System.Drawing.Size(173, 49);
+            this.btnRemoveOrder.Size = new System.Drawing.Size(198, 65);
             this.btnRemoveOrder.TabIndex = 9;
             this.btnRemoveOrder.Text = "Remove order";
             this.btnRemoveOrder.UseVisualStyleBackColor = false;
@@ -224,27 +234,27 @@
             // 
             this.lblTotalWithVATValue.AutoSize = true;
             this.lblTotalWithVATValue.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotalWithVATValue.Location = new System.Drawing.Point(206, 729);
+            this.lblTotalWithVATValue.Location = new System.Drawing.Point(235, 972);
             this.lblTotalWithVATValue.Name = "lblTotalWithVATValue";
-            this.lblTotalWithVATValue.Size = new System.Drawing.Size(0, 44);
+            this.lblTotalWithVATValue.Size = new System.Drawing.Size(0, 57);
             this.lblTotalWithVATValue.TabIndex = 8;
             // 
             // lblTotalValue
             // 
             this.lblTotalValue.AutoSize = true;
             this.lblTotalValue.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotalValue.Location = new System.Drawing.Point(206, 683);
+            this.lblTotalValue.Location = new System.Drawing.Point(235, 911);
             this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.Size = new System.Drawing.Size(0, 44);
+            this.lblTotalValue.Size = new System.Drawing.Size(0, 57);
             this.lblTotalValue.TabIndex = 7;
             // 
             // lblWithVAT
             // 
             this.lblWithVAT.AutoSize = true;
             this.lblWithVAT.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblWithVAT.Location = new System.Drawing.Point(7, 729);
+            this.lblWithVAT.Location = new System.Drawing.Point(8, 972);
             this.lblWithVAT.Name = "lblWithVAT";
-            this.lblWithVAT.Size = new System.Drawing.Size(180, 44);
+            this.lblWithVAT.Size = new System.Drawing.Size(233, 57);
             this.lblWithVAT.TabIndex = 6;
             this.lblWithVAT.Text = "With VAT:";
             // 
@@ -252,9 +262,9 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotal.Location = new System.Drawing.Point(3, 671);
+            this.lblTotal.Location = new System.Drawing.Point(3, 895);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(149, 58);
+            this.lblTotal.Size = new System.Drawing.Size(189, 74);
             this.lblTotal.TabIndex = 5;
             this.lblTotal.Text = "Total:";
             // 
@@ -265,9 +275,10 @@
             this.btnSubmitOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSubmitOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmitOrder.Location = new System.Drawing.Point(111, 783);
+            this.btnSubmitOrder.Location = new System.Drawing.Point(127, 1044);
+            this.btnSubmitOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSubmitOrder.Name = "btnSubmitOrder";
-            this.btnSubmitOrder.Size = new System.Drawing.Size(152, 49);
+            this.btnSubmitOrder.Size = new System.Drawing.Size(174, 65);
             this.btnSubmitOrder.TabIndex = 4;
             this.btnSubmitOrder.Text = "Submit order";
             this.btnSubmitOrder.UseVisualStyleBackColor = false;
@@ -285,9 +296,10 @@
             this.listViewOrder.FullRowSelect = true;
             this.listViewOrder.GridLines = true;
             this.listViewOrder.HideSelection = false;
-            this.listViewOrder.Location = new System.Drawing.Point(7, 143);
+            this.listViewOrder.Location = new System.Drawing.Point(8, 191);
+            this.listViewOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listViewOrder.Name = "listViewOrder";
-            this.listViewOrder.Size = new System.Drawing.Size(354, 395);
+            this.listViewOrder.Size = new System.Drawing.Size(405, 527);
             this.listViewOrder.TabIndex = 3;
             this.listViewOrder.TileSize = new System.Drawing.Size(3, 3);
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
@@ -312,9 +324,9 @@
             // 
             this.lblTable.AutoSize = true;
             this.lblTable.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTable.Location = new System.Drawing.Point(90, 81);
+            this.lblTable.Location = new System.Drawing.Point(103, 108);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(194, 58);
+            this.lblTable.Size = new System.Drawing.Size(243, 74);
             this.lblTable.TabIndex = 2;
             this.lblTable.Text = "Table 1";
             // 
@@ -322,9 +334,9 @@
             // 
             this.lblOrder.AutoSize = true;
             this.lblOrder.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblOrder.Location = new System.Drawing.Point(45, 3);
+            this.lblOrder.Location = new System.Drawing.Point(51, 4);
             this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(266, 78);
+            this.lblOrder.Size = new System.Drawing.Size(331, 96);
             this.lblOrder.TabIndex = 1;
             this.lblOrder.Text = "Order 2";
             // 
@@ -336,9 +348,10 @@
             this.pnlDrinks.Controls.Add(this.btnBeers);
             this.pnlDrinks.Controls.Add(this.btnSoftDrinks);
             this.pnlDrinks.Controls.Add(this.lblDrinks);
-            this.pnlDrinks.Location = new System.Drawing.Point(0, 112);
+            this.pnlDrinks.Location = new System.Drawing.Point(0, 149);
+            this.pnlDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlDrinks.Name = "pnlDrinks";
-            this.pnlDrinks.Size = new System.Drawing.Size(364, 776);
+            this.pnlDrinks.Size = new System.Drawing.Size(416, 1035);
             this.pnlDrinks.TabIndex = 4;
             // 
             // btnCoffeeTea
@@ -350,9 +363,10 @@
             this.btnCoffeeTea.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCoffeeTea.Image = global::ChapeauUI.Properties.Resources.Coffee_Cup_Hot_png;
             this.btnCoffeeTea.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCoffeeTea.Location = new System.Drawing.Point(51, 541);
+            this.btnCoffeeTea.Location = new System.Drawing.Point(58, 721);
+            this.btnCoffeeTea.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCoffeeTea.Name = "btnCoffeeTea";
-            this.btnCoffeeTea.Size = new System.Drawing.Size(254, 75);
+            this.btnCoffeeTea.Size = new System.Drawing.Size(290, 100);
             this.btnCoffeeTea.TabIndex = 5;
             this.btnCoffeeTea.Text = "   Coffee/Tea";
             this.btnCoffeeTea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -368,9 +382,10 @@
             this.btnSpirits.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSpirits.Image = global::ChapeauUI.Properties.Resources.Food_Restaurant_Drink_Whiskey_png;
             this.btnSpirits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSpirits.Location = new System.Drawing.Point(51, 440);
+            this.btnSpirits.Location = new System.Drawing.Point(58, 587);
+            this.btnSpirits.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSpirits.Name = "btnSpirits";
-            this.btnSpirits.Size = new System.Drawing.Size(254, 75);
+            this.btnSpirits.Size = new System.Drawing.Size(290, 100);
             this.btnSpirits.TabIndex = 4;
             this.btnSpirits.Text = "   Spirits";
             this.btnSpirits.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -386,9 +401,10 @@
             this.btnWines.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnWines.Image = ((System.Drawing.Image)(resources.GetObject("btnWines.Image")));
             this.btnWines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWines.Location = new System.Drawing.Point(51, 340);
+            this.btnWines.Location = new System.Drawing.Point(58, 453);
+            this.btnWines.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnWines.Name = "btnWines";
-            this.btnWines.Size = new System.Drawing.Size(254, 75);
+            this.btnWines.Size = new System.Drawing.Size(290, 100);
             this.btnWines.TabIndex = 3;
             this.btnWines.Text = "   Wines";
             this.btnWines.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -404,9 +420,10 @@
             this.btnBeers.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBeers.Image = global::ChapeauUI.Properties.Resources.Beer_Mug_png;
             this.btnBeers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBeers.Location = new System.Drawing.Point(51, 240);
+            this.btnBeers.Location = new System.Drawing.Point(58, 320);
+            this.btnBeers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBeers.Name = "btnBeers";
-            this.btnBeers.Size = new System.Drawing.Size(254, 75);
+            this.btnBeers.Size = new System.Drawing.Size(290, 100);
             this.btnBeers.TabIndex = 2;
             this.btnBeers.Text = "   Beers";
             this.btnBeers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -422,9 +439,10 @@
             this.btnSoftDrinks.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSoftDrinks.Image = global::ChapeauUI.Properties.Resources.Soft_Drinks_Glass_png;
             this.btnSoftDrinks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSoftDrinks.Location = new System.Drawing.Point(51, 143);
+            this.btnSoftDrinks.Location = new System.Drawing.Point(58, 191);
+            this.btnSoftDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSoftDrinks.Name = "btnSoftDrinks";
-            this.btnSoftDrinks.Size = new System.Drawing.Size(254, 75);
+            this.btnSoftDrinks.Size = new System.Drawing.Size(290, 100);
             this.btnSoftDrinks.TabIndex = 1;
             this.btnSoftDrinks.Text = "Soft drinks";
             this.btnSoftDrinks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,9 +454,9 @@
             // 
             this.lblDrinks.AutoSize = true;
             this.lblDrinks.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDrinks.Location = new System.Drawing.Point(77, 30);
+            this.lblDrinks.Location = new System.Drawing.Point(88, 40);
             this.lblDrinks.Name = "lblDrinks";
-            this.lblDrinks.Size = new System.Drawing.Size(210, 78);
+            this.lblDrinks.Size = new System.Drawing.Size(261, 96);
             this.lblDrinks.TabIndex = 0;
             this.lblDrinks.Text = "Drinks";
             // 
@@ -448,9 +466,10 @@
             this.pnlLunch.Controls.Add(this.btnLunchMains);
             this.pnlLunch.Controls.Add(this.btnLunchStarters);
             this.pnlLunch.Controls.Add(this.lblLunch);
-            this.pnlLunch.Location = new System.Drawing.Point(0, 112);
+            this.pnlLunch.Location = new System.Drawing.Point(0, 149);
+            this.pnlLunch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlLunch.Name = "pnlLunch";
-            this.pnlLunch.Size = new System.Drawing.Size(364, 776);
+            this.pnlLunch.Size = new System.Drawing.Size(416, 1035);
             this.pnlLunch.TabIndex = 6;
             // 
             // btnDesserts
@@ -462,9 +481,10 @@
             this.btnDesserts.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDesserts.Image = global::ChapeauUI.Properties.Resources.Ice_Cream_Bowl_png;
             this.btnDesserts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDesserts.Location = new System.Drawing.Point(51, 340);
+            this.btnDesserts.Location = new System.Drawing.Point(58, 453);
+            this.btnDesserts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDesserts.Name = "btnDesserts";
-            this.btnDesserts.Size = new System.Drawing.Size(254, 75);
+            this.btnDesserts.Size = new System.Drawing.Size(290, 100);
             this.btnDesserts.TabIndex = 3;
             this.btnDesserts.Text = "   Desserts";
             this.btnDesserts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -480,9 +500,10 @@
             this.btnLunchMains.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLunchMains.Image = global::ChapeauUI.Properties.Resources.Barbecue_Steak_png;
             this.btnLunchMains.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLunchMains.Location = new System.Drawing.Point(51, 240);
+            this.btnLunchMains.Location = new System.Drawing.Point(58, 320);
+            this.btnLunchMains.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLunchMains.Name = "btnLunchMains";
-            this.btnLunchMains.Size = new System.Drawing.Size(254, 75);
+            this.btnLunchMains.Size = new System.Drawing.Size(290, 100);
             this.btnLunchMains.TabIndex = 2;
             this.btnLunchMains.Text = "   Mains";
             this.btnLunchMains.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -498,9 +519,10 @@
             this.btnLunchStarters.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLunchStarters.Image = global::ChapeauUI.Properties.Resources.Food_Soup_Bowl_png;
             this.btnLunchStarters.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLunchStarters.Location = new System.Drawing.Point(51, 143);
+            this.btnLunchStarters.Location = new System.Drawing.Point(58, 191);
+            this.btnLunchStarters.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLunchStarters.Name = "btnLunchStarters";
-            this.btnLunchStarters.Size = new System.Drawing.Size(254, 75);
+            this.btnLunchStarters.Size = new System.Drawing.Size(290, 100);
             this.btnLunchStarters.TabIndex = 1;
             this.btnLunchStarters.Text = "Starters";
             this.btnLunchStarters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -512,9 +534,9 @@
             // 
             this.lblLunch.AutoSize = true;
             this.lblLunch.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLunch.Location = new System.Drawing.Point(77, 30);
+            this.lblLunch.Location = new System.Drawing.Point(88, 40);
             this.lblLunch.Name = "lblLunch";
-            this.lblLunch.Size = new System.Drawing.Size(221, 78);
+            this.lblLunch.Size = new System.Drawing.Size(276, 96);
             this.lblLunch.TabIndex = 0;
             this.lblLunch.Text = "Lunch";
             // 
@@ -524,9 +546,9 @@
             this.lblBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBack.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.lblBack.ForeColor = System.Drawing.Color.Red;
-            this.lblBack.Location = new System.Drawing.Point(123, 900);
+            this.lblBack.Location = new System.Drawing.Point(141, 1200);
             this.lblBack.Name = "lblBack";
-            this.lblBack.Size = new System.Drawing.Size(108, 44);
+            this.lblBack.Size = new System.Drawing.Size(138, 57);
             this.lblBack.TabIndex = 6;
             this.lblBack.Text = "Back";
             this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
@@ -535,9 +557,10 @@
             // 
             this.pnlSubMenu.Controls.Add(this.textBoxSubmenu);
             this.pnlSubMenu.Controls.Add(this.listViewMenu);
-            this.pnlSubMenu.Location = new System.Drawing.Point(0, 112);
+            this.pnlSubMenu.Location = new System.Drawing.Point(0, 149);
+            this.pnlSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSubMenu.Name = "pnlSubMenu";
-            this.pnlSubMenu.Size = new System.Drawing.Size(364, 776);
+            this.pnlSubMenu.Size = new System.Drawing.Size(416, 1035);
             this.pnlSubMenu.TabIndex = 6;
             // 
             // textBoxSubmenu
@@ -545,9 +568,10 @@
             this.textBoxSubmenu.BackColor = System.Drawing.Color.White;
             this.textBoxSubmenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSubmenu.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSubmenu.Location = new System.Drawing.Point(12, 68);
+            this.textBoxSubmenu.Location = new System.Drawing.Point(14, 91);
+            this.textBoxSubmenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSubmenu.Name = "textBoxSubmenu";
-            this.textBoxSubmenu.Size = new System.Drawing.Size(346, 50);
+            this.textBoxSubmenu.Size = new System.Drawing.Size(395, 62);
             this.textBoxSubmenu.TabIndex = 2;
             this.textBoxSubmenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -562,9 +586,10 @@
             this.listViewMenu.FullRowSelect = true;
             this.listViewMenu.GridLines = true;
             this.listViewMenu.HideSelection = false;
-            this.listViewMenu.Location = new System.Drawing.Point(3, 143);
+            this.listViewMenu.Location = new System.Drawing.Point(3, 191);
+            this.listViewMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listViewMenu.Name = "listViewMenu";
-            this.listViewMenu.Size = new System.Drawing.Size(354, 281);
+            this.listViewMenu.Size = new System.Drawing.Size(405, 375);
             this.listViewMenu.TabIndex = 1;
             this.listViewMenu.TileSize = new System.Drawing.Size(3, 3);
             this.listViewMenu.UseCompatibleStateImageBehavior = false;
@@ -588,9 +613,10 @@
             this.pnlDinner.Controls.Add(this.btnDinnerEntremets);
             this.pnlDinner.Controls.Add(this.btnDinnerStarters);
             this.pnlDinner.Controls.Add(this.lblDinner);
-            this.pnlDinner.Location = new System.Drawing.Point(0, 112);
+            this.pnlDinner.Location = new System.Drawing.Point(0, 149);
+            this.pnlDinner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlDinner.Name = "pnlDinner";
-            this.pnlDinner.Size = new System.Drawing.Size(364, 776);
+            this.pnlDinner.Size = new System.Drawing.Size(416, 1035);
             this.pnlDinner.TabIndex = 7;
             // 
             // btnDinnerDesserts
@@ -602,9 +628,10 @@
             this.btnDinnerDesserts.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDinnerDesserts.Image = global::ChapeauUI.Properties.Resources.Ice_Cream_Bowl_png;
             this.btnDinnerDesserts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDinnerDesserts.Location = new System.Drawing.Point(51, 440);
+            this.btnDinnerDesserts.Location = new System.Drawing.Point(58, 587);
+            this.btnDinnerDesserts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDinnerDesserts.Name = "btnDinnerDesserts";
-            this.btnDinnerDesserts.Size = new System.Drawing.Size(254, 75);
+            this.btnDinnerDesserts.Size = new System.Drawing.Size(290, 100);
             this.btnDinnerDesserts.TabIndex = 4;
             this.btnDinnerDesserts.Text = "   Desserts";
             this.btnDinnerDesserts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -620,9 +647,10 @@
             this.btnDinnerMains.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDinnerMains.Image = global::ChapeauUI.Properties.Resources.Barbecue_Steak_png;
             this.btnDinnerMains.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDinnerMains.Location = new System.Drawing.Point(51, 340);
+            this.btnDinnerMains.Location = new System.Drawing.Point(58, 453);
+            this.btnDinnerMains.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDinnerMains.Name = "btnDinnerMains";
-            this.btnDinnerMains.Size = new System.Drawing.Size(254, 75);
+            this.btnDinnerMains.Size = new System.Drawing.Size(290, 100);
             this.btnDinnerMains.TabIndex = 3;
             this.btnDinnerMains.Text = "   Mains";
             this.btnDinnerMains.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -638,9 +666,10 @@
             this.btnDinnerEntremets.Font = new System.Drawing.Font("Century Gothic", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDinnerEntremets.Image = global::ChapeauUI.Properties.Resources.Vegetables_Mushroom_Soup_png;
             this.btnDinnerEntremets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDinnerEntremets.Location = new System.Drawing.Point(51, 240);
+            this.btnDinnerEntremets.Location = new System.Drawing.Point(58, 320);
+            this.btnDinnerEntremets.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDinnerEntremets.Name = "btnDinnerEntremets";
-            this.btnDinnerEntremets.Size = new System.Drawing.Size(254, 75);
+            this.btnDinnerEntremets.Size = new System.Drawing.Size(290, 100);
             this.btnDinnerEntremets.TabIndex = 2;
             this.btnDinnerEntremets.Text = "   Entremets";
             this.btnDinnerEntremets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -656,9 +685,10 @@
             this.btnDinnerStarters.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDinnerStarters.Image = global::ChapeauUI.Properties.Resources.Food_Soup_Bowl_png;
             this.btnDinnerStarters.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDinnerStarters.Location = new System.Drawing.Point(51, 143);
+            this.btnDinnerStarters.Location = new System.Drawing.Point(58, 191);
+            this.btnDinnerStarters.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDinnerStarters.Name = "btnDinnerStarters";
-            this.btnDinnerStarters.Size = new System.Drawing.Size(254, 75);
+            this.btnDinnerStarters.Size = new System.Drawing.Size(290, 100);
             this.btnDinnerStarters.TabIndex = 1;
             this.btnDinnerStarters.Text = "Starters";
             this.btnDinnerStarters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -670,18 +700,18 @@
             // 
             this.lblDinner.AutoSize = true;
             this.lblDinner.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDinner.Location = new System.Drawing.Point(77, 30);
+            this.lblDinner.Location = new System.Drawing.Point(88, 40);
             this.lblDinner.Name = "lblDinner";
-            this.lblDinner.Size = new System.Drawing.Size(234, 78);
+            this.lblDinner.Size = new System.Drawing.Size(291, 96);
             this.lblDinner.TabIndex = 0;
             this.lblDinner.Text = "Dinner";
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(728, 961);
+            this.ClientSize = new System.Drawing.Size(832, 1055);
             this.ControlBox = false;
             this.Controls.Add(this.pnlSubMenu);
             this.Controls.Add(this.pnlMenu);
@@ -691,6 +721,7 @@
             this.Controls.Add(this.pnlOrder);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlDrinks);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
