@@ -20,7 +20,7 @@ namespace ChapeauUI
         string titleReserved = "Reserved Table";
 
         MessageBoxButtons buttons = MessageBoxButtons.YesNo; 
-        private OrderViewForm orderViewForm = new OrderViewForm();
+       // private OrderViewForm orderViewForm = new OrderViewForm();
         public TableOverView()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace ChapeauUI
             {
                 // new order open
                 this.Hide();
-                orderViewForm.Show();
+                //orderViewForm.Show();
             }
             else
             {
@@ -53,7 +53,7 @@ namespace ChapeauUI
             {
                 // new order open
                 this.Hide();
-                orderViewForm.Show();
+                //orderViewForm.Show();
             }
             else
             {

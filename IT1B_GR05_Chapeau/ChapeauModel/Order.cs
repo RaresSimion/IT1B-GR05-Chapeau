@@ -15,10 +15,22 @@ namespace ChapeauModel
         public DateTime Order_Time { get; set; }
 
 
-        public Order(int orderID, Table tableNr, Employee employee, OrderStatus status, bool isPaid, string comment, DateTime ordertime)
+        public int Item_Count
         {
-            Order_Id = orderID;
-            Table = tableNr;
+            get
+            {
+                int count = 0;
+                foreach(OrderItem item in OrderedItems)
+                    count += item.Order_Item_Quantity;
+
+                return count;
+            }
+        }
+
+        public Order(List<OrderItem> orderItems, Table table, Employee employee, OrderStatus status, bool isPaid, string comment, DateTime ordertime)
+        {
+            OrderedItems = orderItems;
+            Table = table;
             Employee = employee;
             Order_Status = status;
             Is_Paid = isPaid;
