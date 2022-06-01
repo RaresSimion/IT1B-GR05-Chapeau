@@ -14,13 +14,42 @@ namespace ChapeauUI
     public partial class MenuItemPopUp : Form
     {
         private MenuItem menuItem;
+        private OrderItem orderItem;
         private OrderForm orderForm;
+
         public MenuItemPopUp(MenuItem menuItem, OrderForm form)
         {
             InitializeComponent();
             this.menuItem = menuItem;
             this.orderForm = form;
+            CustomizeMenuItemPopUp();
+        }
+
+        public MenuItemPopUp(OrderItem orderItem, OrderForm form)
+        {
+            InitializeComponent();
+            this.orderItem = orderItem;
+            this.orderForm = form;
+            textBoxItem.Text = orderItem.MenuItem.Menu_Item_Name;
+            CustomizeOrderItemPopUp();
+        }
+
+        private void CustomizeMenuItemPopUp()
+        {
+            pnlUpdateOrderItem.Visible = false;
+            textBoxItem.Text = menuItem.Menu_Item_Name;
+            lblQuantityValue.Text = "1";
             DisableMinus();
+        }
+
+        private void CustomizeOrderItemPopUp()
+        {
+            textBoxItem.Text = orderItem.MenuItem.Menu_Item_Name;
+            lblQuantityValue.Text = orderItem.Order_Item_Quantity.ToString();
+            textBoxComment.Text = orderItem.Order_Item_Comment;
+
+            if(orderItem.Order_Item_Quantity == 1)
+                DisableMinus();
         }
 
         private void DisableMinus()
@@ -96,8 +125,10 @@ namespace ChapeauUI
                 UpdateTotal();
                 orderForm.EnableButtons();
             }
-
-            //else dialog box
+            else
+            {
+                MessageBox.Show("Item is already in the order.", "Warning", MessageBoxButtons.OK);
+            }
             this.Close();
         }
 
@@ -132,6 +163,26 @@ namespace ChapeauUI
             }
 
             return false;
+        }
+
+        private void btnUpdateOrderItem_Click(object sender, EventArgs e)
+        {
+            orderItem.Order_Item_Quantity = int.Parse(lblQuantityValue.Text);
+            orderItem.Order_Item_Comment = textBoxComment.Text;
+
+            orderForm.OrderListView.SelectedItems[0].SubItems[0].Text = orderItem.Order_Item_Quantity.ToString();
+            orderForm.OrderListView.SelectedItems[0].SubItems[2].Text = orderItem.Order_Item_Comment;
+
+            UpdateTotal();
+            this.Close();
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            int idOfSelectedItem = orderForm.OrderListView.SelectedItems[0].Index;
+            orderForm.OrderListView.Items.RemoveAt(idOfSelectedItem);
+            UpdateTotal();
+            this.Close();
         }
     }
 }

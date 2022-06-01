@@ -17,5 +17,12 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
+
+        public void UpdateOrderItem(OrderItem orderItem)
+        {
+            string query = $"UPDATE ORDER_ITEM SET ORDER_ITEM_QUANTITY = {orderItem.Order_Item_Quantity}, ORDER_ITEM_COMMENT = '{orderItem.Order_Item_Comment}' WHERE ORDER_ID = {orderItem.OrderID} AND MENU_ITEM_ID = {orderItem.MenuItem.Menu_Item_Id};";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

@@ -339,5 +339,16 @@ namespace ChapeauUI
             RemoveOrderItems();
             DisableButtons();
         }
+
+        private void listViewOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listViewOrder.SelectedItems.Count > 0)
+            {
+                OrderItem orderItem = (OrderItem)listViewOrder.SelectedItems[0].Tag;
+
+                MenuItemPopUp orderItemPopUp = new MenuItemPopUp(orderItem, this);
+                orderItemPopUp.ShowDialog();
+            }
+        }
     }
 }
