@@ -42,17 +42,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelNoOrder = new System.Windows.Forms.Panel();
-            this.labelTableNumber = new System.Windows.Forms.Label();
             this.panelTable6 = new System.Windows.Forms.Panel();
-            this.panelTable1Order = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelTableNumber = new System.Windows.Forms.Label();
             this.labelTableNoOrder = new System.Windows.Forms.Label();
             this.buttonReturnToTableView = new System.Windows.Forms.Button();
             this.buttonCreateOrder = new System.Windows.Forms.Button();
@@ -60,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelNoOrder.SuspendLayout();
             this.panelTable6.SuspendLayout();
-            this.panelTable1Order.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelSignedIn
@@ -206,99 +200,25 @@
             // 
             // panelNoOrder
             // 
-            this.panelNoOrder.Controls.Add(this.panelTable6);
             this.panelNoOrder.Controls.Add(this.labelTableNumber);
             this.panelNoOrder.Controls.Add(this.labelTableNoOrder);
             this.panelNoOrder.Controls.Add(this.buttonReturnToTableView);
             this.panelNoOrder.Controls.Add(this.buttonCreateOrder);
-            this.panelNoOrder.Location = new System.Drawing.Point(199, 120);
+            this.panelNoOrder.Location = new System.Drawing.Point(196, 138);
             this.panelNoOrder.Name = "panelNoOrder";
             this.panelNoOrder.Size = new System.Drawing.Size(331, 363);
             this.panelNoOrder.TabIndex = 13;
             // 
-            // labelTableNumber
-            // 
-            this.labelTableNumber.AutoSize = true;
-            this.labelTableNumber.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTableNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.labelTableNumber.Location = new System.Drawing.Point(96, 9);
-            this.labelTableNumber.Name = "labelTableNumber";
-            this.labelTableNumber.Size = new System.Drawing.Size(127, 37);
-            this.labelTableNumber.TabIndex = 3;
-            this.labelTableNumber.Text = "Table # ...";
-            // 
             // panelTable6
             // 
-            this.panelTable6.Controls.Add(this.panelTable1Order);
             this.panelTable6.Controls.Add(this.label1);
             this.panelTable6.Controls.Add(this.label2);
             this.panelTable6.Controls.Add(this.button1);
             this.panelTable6.Controls.Add(this.button2);
-            this.panelTable6.Location = new System.Drawing.Point(0, 0);
+            this.panelTable6.Location = new System.Drawing.Point(568, 92);
             this.panelTable6.Name = "panelTable6";
             this.panelTable6.Size = new System.Drawing.Size(331, 363);
             this.panelTable6.TabIndex = 14;
-            // 
-            // panelTable1Order
-            // 
-            this.panelTable1Order.Controls.Add(this.label3);
-            this.panelTable1Order.Controls.Add(this.label4);
-            this.panelTable1Order.Controls.Add(this.button3);
-            this.panelTable1Order.Controls.Add(this.button4);
-            this.panelTable1Order.Location = new System.Drawing.Point(1, 0);
-            this.panelTable1Order.Name = "panelTable1Order";
-            this.panelTable1Order.Size = new System.Drawing.Size(331, 363);
-            this.panelTable1Order.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.label3.Location = new System.Drawing.Point(96, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 37);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Table # 1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.label4.Location = new System.Drawing.Point(11, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(316, 90);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Order #2 was placed on Table #1\r\n at .... Would you like to \r\nview this order?";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(11, 292);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(310, 61);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Return To Table View";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(210)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(11, 199);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(310, 61);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "View Order";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -352,6 +272,16 @@
             this.button2.Text = "View Order";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // labelTableNumber
+            // 
+            this.labelTableNumber.AutoSize = true;
+            this.labelTableNumber.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTableNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.labelTableNumber.Location = new System.Drawing.Point(96, 9);
+            this.labelTableNumber.Name = "labelTableNumber";
+            this.labelTableNumber.Size = new System.Drawing.Size(0, 37);
+            this.labelTableNumber.TabIndex = 3;
+            // 
             // labelTableNoOrder
             // 
             this.labelTableNoOrder.AutoSize = true;
@@ -390,6 +320,7 @@
             this.buttonCreateOrder.TabIndex = 0;
             this.buttonCreateOrder.Text = "Create Order";
             this.buttonCreateOrder.UseVisualStyleBackColor = false;
+            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
             // 
             // TableOverView
             // 
@@ -397,6 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(728, 749);
+            this.Controls.Add(this.panelTable6);
             this.Controls.Add(this.panelNoOrder);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -420,8 +352,6 @@
             this.panelNoOrder.PerformLayout();
             this.panelTable6.ResumeLayout(false);
             this.panelTable6.PerformLayout();
-            this.panelTable1Order.ResumeLayout(false);
-            this.panelTable1Order.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,10 +382,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panelTable1Order;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
     }
 }
