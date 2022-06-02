@@ -1,28 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ChapeauDAL;
+using ChapeauModel;
 
 namespace ChapeauModel
 {
-    public class Bill
+    public class BillService
     {
-        public int Bill_ID { get; set; }
-        public PaymentType Payment_Method { get; set; }
-        public int Order_ID { get; set; }
-        public int Table_Nr { get; set; }
-        public double Total_Price { get; set; }
-
-
-
-        public Bill()
+        BillDAO billDB;
+        public BillService()
         {
-
+            billDB = new BillDAO();
         }
-        public Bill(int Bill_ID, PaymentType Payment_Method, int Order_ID, int Table_Nr, double Total_Price)
+        public void GetAllBills()
         {
-            this.Bill_ID = Bill_ID;
-            this.Payment_Method = Payment_Method;
-            this.Order_ID = Order_ID;
-            this.Table_Nr = Table_Nr;
-            this.Total_Price = Total_Price;
+            billDB.GetAllBills();
+        }
+
+        public void GetBillByTableNrAndOrderItemID(Bill bill)
+        {
+            billDB.GetBillByTableNrAndOrderItemID(bill);
         }
     }
 }
