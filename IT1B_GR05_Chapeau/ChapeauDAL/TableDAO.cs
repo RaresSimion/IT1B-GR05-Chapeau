@@ -11,12 +11,10 @@ namespace ChapeauDAL
 {
     public class TableDAO : BaseDao
     {
-        private SqlConnection databaseConnection;
-
-        public Table GetTable(int tablenr)
+        public Table GetTable(int tableNr)
         {
-            string query = $"SELECT TABLE_ID, TABLE_CAPACITY, TABLE_AVAILABILITY FROM [TABLE] WHERE TABLE_ID = {tablenr}";
-                SqlParameter[] sqlParameter = { new SqlParameter("@TABLE_ID", tablenr) };
+            string query = $"SELECT TABLE_ID, TABLE_CAPACITY, TABLE_AVAILABILITY FROM [TABLES] WHERE TABLE_ID = {tableNr};";
+            SqlParameter[] sqlParameter = new SqlParameter[0];
             return ReadTable(ExecuteSelectQuery(query, sqlParameter));
         }
 
@@ -26,17 +24,14 @@ namespace ChapeauDAL
 
         private Table ReadTable(DataTable dataTable)
         {
-            Table table = null;
-
-            foreach (DataRow dataRow in dataTable.Rows)
+            DataRow dataRow = dataTable.Rows[0];
+            Table table = new Table()
             {
-                table = new Table()
-                {
-                    Table_Number = (int)(dataRow["TABLE_ID"]),
-                    Table_Capacity = (int)(dataRow["TABLE_CAPACITY"]),
-                    Table_Availability = (TableAvailability)Enum.Parse(typeof(TableAvailability), dataRow["TABLE_AVAILABILITY"].ToString())
-                };
-            }
+                Table_Number = (int)(dataRow["TABLE_ID"]),
+                Table_Capacity = (int)(dataRow["TABLE_CAPACITY"]),
+                Table_Availability = (bool)(dataRow["TABLE_AVAILABILITY"])
+            };
+
             return table;
         }
 

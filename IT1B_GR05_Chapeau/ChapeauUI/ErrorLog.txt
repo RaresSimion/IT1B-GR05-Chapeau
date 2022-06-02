@@ -167,3 +167,13 @@ Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__OR
 The statement has been terminated.
 -----------------------------------------------------------
 
+Time: 02/06/2022 04:46:08 PM
+-----------------------------------------------------------
+Message: Invalid object name 'TABLE'.
+-----------------------------------------------------------
+
+Time: 02/06/2022 04:47:42 PM
+-----------------------------------------------------------
+Message: Invalid object name 'TABLE'.
+-----------------------------------------------------------
+

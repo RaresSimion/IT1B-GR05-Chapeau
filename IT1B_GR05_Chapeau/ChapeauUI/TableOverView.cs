@@ -7,31 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ChapeauModel;
+using ChapeauLogic;
 
 namespace ChapeauUI
 {
     public partial class TableOverView : Form
     {
-        string messageOccupied = "This table is occupied. Would you like to view the order on this table?";
-        string titleOccupied = "Occupied Table";
-        string messageAvailable = "This table is available. Would you like to add an order to this table?";
-        string titleAvailable = "Available Table";
-        string messageReserved = "This table is reserved. Have the guests that reserved it arrived?";
-        string titleReserved = "Reserved Table";
-
-        MessageBoxButtons buttons = MessageBoxButtons.YesNo; 
-        private OrderViewForm orderViewForm = new OrderViewForm();
+        private Table table = new Table();
+        private TableService tableService = new TableService();
         public TableOverView()
         {
             InitializeComponent();
-            panelNoOrder.Hide();
-            panelTable1Order.Hide();
-            panelTable6.Hide();
         }
 
         private void TableOverView_Load(object sender, EventArgs e)
         {
-
+            panelNoOrder.Hide();
+            panelTable1Order.Hide();
+            panelTable6.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,6 +41,8 @@ namespace ChapeauUI
         private void buttonTable1_Click(object sender, EventArgs e)
         {
             panelNoOrder.Show();
+            table = tableService.GetTable(1);
+            labelTableNumber.Text = $"Table # {table.Table_Number}";
         }
 
         private void buttonTable2_Click(object sender, EventArgs e)

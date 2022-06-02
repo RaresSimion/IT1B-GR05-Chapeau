@@ -326,7 +326,7 @@ namespace ChapeauUI
                 menuItemService.UpdateMenuItemStock(item);
             }
 
-            Table table = new Table(1, TableAvailability.Available); //replace with current table
+            Table table = new Table(1, false); //replace with current table
             Employee employee = new Employee(1, "barry", EmployeeRole.Waiter, "1234"); //replace with current waiter
 
             Order order = new Order(orderItems, table, employee, OrderStatus.Ordered, false, "no", DateTime.Now);

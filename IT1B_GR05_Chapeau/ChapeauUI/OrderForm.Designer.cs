@@ -87,7 +87,7 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::ChapeauUI.Properties.Resources.Chapeau_Logo;
+            this.pictureBoxLogo.Image = global::ChapeauUI.Properties.Resources.Chapeau_Logo1;
             this.pictureBoxLogo.Location = new System.Drawing.Point(252, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(223, 89);
@@ -685,14 +685,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(728, 961);
             this.ControlBox = false;
-            this.Controls.Add(this.pnlSubMenu);
-            this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.pnlDinner);
             this.Controls.Add(this.pnlLunch);
+            this.Controls.Add(this.pnlDrinks);
+            this.Controls.Add(this.pnlDinner);
+            this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlSubMenu);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.pnlOrder);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.pnlDrinks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
