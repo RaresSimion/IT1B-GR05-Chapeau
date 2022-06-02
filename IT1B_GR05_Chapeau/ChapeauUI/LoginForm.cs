@@ -51,7 +51,7 @@ namespace ChapeauUI
                 {
                     MessageBox.Show($"Welcome Back, {user.Employee_Name}! Let's go take some orders.");
                     this.Hide();
-                    new TableOverView().Show();
+                    new TableOverView(user).Show();
                 }
                 else if (user.Employee_Role == EmployeeRole.Bartender)
                 {
@@ -108,9 +108,55 @@ namespace ChapeauUI
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSignIn_Click(object sender, EventArgs e)
         {
+            string password = textBoxPass.Text;
 
+            if (password == "")
+            {
+                MessageBox.Show("Please enter your Password");
+            }
+
+            user = employeeService.GetEmployeeByPassword(password);
+
+            if (user != null)
+            {
+                if (user.Employee_Role == EmployeeRole.Waiter)
+                {
+                    MessageBox.Show($"Welcome Back, {user.Employee_Name}! Let's go take some orders.");
+                    this.Hide();
+                    new TableOverView(user).Show();
+                }
+                else if (user.Employee_Role == EmployeeRole.Bartender)
+                {
+                    MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some drinks.");
+                    this.Hide();
+                    //updated when Matthias' form is added
+                    //new BarView().Show();
+                }
+                else if (user.Employee_Role == EmployeeRole.Chef)
+                {
+                    MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some meals.");
+                    this.Hide();
+                    //updated when Matthias' form is added
+                    //new KItchenView().Show();
+                }
+                else if (user.Employee_Role == EmployeeRole.Manager)
+                {
+                    MessageBox.Show($"Uh oh! Right now, Chapeau doesn't have a manager." +
+                    $"Maybe, come back later!");
+                    textBoxUser.Clear();
+                    textBoxPass.Clear();
+                    textBoxUser.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Incorrect PIN or Password Entered. Try again.");
+                textBoxUser.Clear();
+                textBoxPass.Clear();
+                textBoxUser.Focus();
+            }
         }
     }
 }

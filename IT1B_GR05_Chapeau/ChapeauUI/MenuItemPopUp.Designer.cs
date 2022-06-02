@@ -102,6 +102,7 @@
             this.textBoxComment.Name = "textBoxComment";
             this.textBoxComment.Size = new System.Drawing.Size(373, 104);
             this.textBoxComment.TabIndex = 7;
+            this.textBoxComment.TextChanged += new System.EventHandler(this.textBoxComment_TextChanged);
             // 
             // btnAddToOrder
             // 

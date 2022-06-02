@@ -123,14 +123,7 @@ namespace ChapeauUI
                 EnableMinus();
             }
 
-            /*if (value != orderItem.Order_Item_Quantity)
-            {
-                EnableUpdateButton();
-            }
-            else
-            {
-                DisableUpdateButton(); 
-            }*/
+            CheckForChanges();
         }
 
         private void btnAddToOrder_Click(object sender, EventArgs e)
@@ -212,5 +205,25 @@ namespace ChapeauUI
             UpdateTotal();
             this.Close();
         }
+
+        private void textBoxComment_TextChanged(object sender, EventArgs e)
+        {
+            CheckForChanges();
+        }
+
+        private void CheckForChanges()
+        {
+            string comment = textBoxComment.Text;
+            int value = int.Parse(lblQuantityValue.Text);
+
+            if (orderItem != null)
+            {
+                if (comment != orderItem.Order_Item_Comment || value != orderItem.Order_Item_Quantity)
+                    EnableUpdateButton();
+                else
+                    DisableUpdateButton();
+            }
+        }
+
     }
 }
