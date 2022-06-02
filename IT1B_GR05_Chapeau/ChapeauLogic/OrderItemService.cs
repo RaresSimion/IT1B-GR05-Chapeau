@@ -20,5 +20,10 @@ namespace ChapeauLogic
         {
             orderItemDB.InsertOrderItem(orderItem);
         }
+
+        public void UpdateOrderItem(OrderItem orderItem)
+        {
+            orderItemDB.UpdateOrderItem(orderItem);
+        }
     }
 }
