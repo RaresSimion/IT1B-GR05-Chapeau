@@ -20,7 +20,7 @@ namespace ChapeauDAL
 
         public List<Bill> GetAllBills()
         {
-            string query = "SELECT Bill_ID, Payment_Method, Order_ID, Table_Nr, Total_Price FROM Bill";
+            string query = "SELECT BILL_ID, PAYMENT_METHOD, ORDER_ITEM_ID, TABLE_NR, TOTAL_PRICE FROM BILL";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             List<Bill> bills = new List<Bill>();
             return ReadBill(ExecuteSelectQuery(query, sqlParameters));
@@ -34,20 +34,20 @@ namespace ChapeauDAL
             {
                 bill = new Bill()
                 {
-                    Bill_ID = (int)(row["Bill_ID"]),
-                    Payment_Method = (PaymentType)(row["Payment_Method"]),
-                    Order_ID = (int)(row["Order_ID"]),
-                    Table_Nr = (int)(row["Table_Nr"]),
-                    Total_Price = ((double)row["Total_Price"])
+                    Bill_ID = (int)(row["BILL_ID"]),
+                    Payment_Method = (PaymentType)(row["PAYMENT_METHOD"]),
+                    Order_Item_ID = (int)(row["ORDER_ITEM_ID"]),
+                    Table_Nr = (int)(row["TABLE_NR"]),
+                    Total_Price = ((double)row["TOTAL_PRICE"])
                 };
                 bills.Add(bill);
             }
             return bills;
         }
 
-        public List<Bill> GetBillByTableNrAndOrderID()
+        public List<Bill> GetBillByTableNrAndOrderItemID(Bill bill)
         {
-            string query = "SELECT Bill_ID, Payment_Method, Order_ID, Table_Nr, Total_Price FROM Bill WHERE Table_Nr = @TableNR AND order_ID = @orderId";
+            string query = $"SELECT BILL_ID = {bill.Bill_ID}, PAYMENT_METHOD = {bill.Payment_Method}, ORDER_ITEM_ID = {bill.Order_Item_ID}, TABLE_NR = {bill.Table_Nr}, TOTAL_PRICE = {bill.Total_Price} FROM BILL WHERE TABLE_NR = {bill.Table_Nr} AND ORDER_ITEM_ID = {bill.Order_Item_ID}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             List<Bill> bills = new List<Bill>();
             return ReadBill(ExecuteSelectQuery(query, sqlParameters));
