@@ -132,10 +132,10 @@
             // listView2
             // 
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(364, 160);
+            this.listView2.Location = new System.Drawing.Point(354, 160);
             this.listView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(347, 260);
+            this.listView2.Size = new System.Drawing.Size(357, 260);
             this.listView2.TabIndex = 9;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -143,10 +143,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(364, 112);
+            this.panel3.Location = new System.Drawing.Point(354, 112);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(347, 48);
+            this.panel3.Size = new System.Drawing.Size(357, 48);
             this.panel3.TabIndex = 9;
             // 
             // label5
@@ -207,10 +207,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(364, 419);
+            this.panel4.Location = new System.Drawing.Point(354, 419);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(347, 55);
+            this.panel4.Size = new System.Drawing.Size(357, 55);
             this.panel4.TabIndex = 9;
             // 
             // label6
@@ -228,10 +228,10 @@
             // listView3
             // 
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(364, 472);
+            this.listView3.Location = new System.Drawing.Point(354, 472);
             this.listView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(347, 188);
+            this.listView3.Size = new System.Drawing.Size(357, 188);
             this.listView3.TabIndex = 13;
             this.listView3.UseCompatibleStateImageBehavior = false;
             // 
