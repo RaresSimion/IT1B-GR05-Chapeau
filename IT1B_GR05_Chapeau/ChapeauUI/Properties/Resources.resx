@@ -145,9 +145,6 @@
   <data name="Bread Baguette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bread Baguette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minus.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minus.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Coffee Cup Hot.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coffee Cup Hot.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,11 +157,14 @@
   <data name="Food Soup Bowl.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Food Soup Bowl.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="drink" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minus.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minus.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Barbecue Steak.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Barbecue Steak.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x-circle4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-circle4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="x-circle3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x-circle3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,10 +184,49 @@
   <data name="arrow-left-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-left-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="drink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Chapeau original" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chapeau original.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="x-circle4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x-circle4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cleanlockicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cleanlockicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Indicator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Indicator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table 10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table 10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usericonclear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usericonclear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

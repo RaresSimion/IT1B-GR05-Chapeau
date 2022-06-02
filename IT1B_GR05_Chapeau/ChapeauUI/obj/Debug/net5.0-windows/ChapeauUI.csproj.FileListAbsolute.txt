@@ -145,4 +145,3 @@ C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\De
 C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TableOverView.resources
 C:\Users\rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderForm.resources
 C:\Users\rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.MenuItemPopUp.resources
-C:\Users\rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderItemPopUp.resources

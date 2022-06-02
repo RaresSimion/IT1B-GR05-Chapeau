@@ -693,9 +693,9 @@
             this.Controls.Add(this.pnlOrder);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlDrinks);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();

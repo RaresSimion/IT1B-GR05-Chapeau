@@ -135,7 +135,6 @@
             this.textBoxItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.textBoxItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItem.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBoxItem.Enabled = false;
             this.textBoxItem.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxItem.ForeColor = System.Drawing.Color.Black;
             this.textBoxItem.Location = new System.Drawing.Point(22, 73);
@@ -159,7 +158,7 @@
             // 
             this.btnRemoveItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.btnRemoveItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveItem.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRemoveItem.ForeColor = System.Drawing.Color.Black;
             this.btnRemoveItem.Location = new System.Drawing.Point(12, 22);
@@ -174,8 +173,9 @@
             // 
             this.btnUpdateOrderItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(210)))));
             this.btnUpdateOrderItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdateOrderItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdateOrderItem.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateOrderItem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdateOrderItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateOrderItem.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnUpdateOrderItem.ForeColor = System.Drawing.Color.White;
             this.btnUpdateOrderItem.Location = new System.Drawing.Point(287, 22);
             this.btnUpdateOrderItem.Name = "btnUpdateOrderItem";

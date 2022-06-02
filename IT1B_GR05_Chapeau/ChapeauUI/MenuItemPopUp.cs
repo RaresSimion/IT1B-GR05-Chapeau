@@ -38,6 +38,7 @@ namespace ChapeauUI
         {
             pnlUpdateOrderItem.Visible = false;
             textBoxItem.Text = menuItem.Menu_Item_Name;
+            textBoxItem.Enabled = false;
             lblQuantityValue.Text = "1";
             DisableMinus();
         }
@@ -47,8 +48,12 @@ namespace ChapeauUI
             textBoxItem.Text = orderItem.MenuItem.Menu_Item_Name;
             lblQuantityValue.Text = orderItem.Order_Item_Quantity.ToString();
             textBoxComment.Text = orderItem.Order_Item_Comment;
+            textBoxItem.Enabled = false;
 
-            if(orderItem.Order_Item_Quantity == 1)
+            btnUpdateOrderItem.Enabled = false;
+            btnUpdateOrderItem.BackColor = Color.FromArgb(190, 203, 250);
+
+            if (orderItem.Order_Item_Quantity == 1)
                 DisableMinus();
         }
 
