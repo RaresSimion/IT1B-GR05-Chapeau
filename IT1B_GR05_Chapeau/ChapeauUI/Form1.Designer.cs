@@ -66,11 +66,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(110, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 41);
+            this.label2.Size = new System.Drawing.Size(101, 37);
             this.label2.TabIndex = 4;
             this.label2.Text = "Order";
             // 
@@ -80,7 +80,7 @@
             this.listViewOrder.Location = new System.Drawing.Point(12, 160);
             this.listViewOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listViewOrder.Name = "listViewOrder";
-            this.listViewOrder.Size = new System.Drawing.Size(346, 740);
+            this.listViewOrder.Size = new System.Drawing.Size(346, 500);
             this.listViewOrder.TabIndex = 5;
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
             // 
@@ -153,11 +153,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(50, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(266, 41);
+            this.label5.Size = new System.Drawing.Size(274, 37);
             this.label5.TabIndex = 4;
             this.label5.Text = "Payment method:";
             // 
@@ -165,10 +165,11 @@
             // 
             this.rbtnCash.AutoSize = true;
             this.rbtnCash.BackColor = System.Drawing.SystemColors.Window;
-            this.rbtnCash.Location = new System.Drawing.Point(483, 201);
+            this.rbtnCash.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnCash.Location = new System.Drawing.Point(463, 194);
             this.rbtnCash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnCash.Name = "rbtnCash";
-            this.rbtnCash.Size = new System.Drawing.Size(61, 24);
+            this.rbtnCash.Size = new System.Drawing.Size(112, 41);
             this.rbtnCash.TabIndex = 10;
             this.rbtnCash.TabStop = true;
             this.rbtnCash.Text = "Cash";
@@ -178,10 +179,11 @@
             // 
             this.rbtnDebitcard.AutoSize = true;
             this.rbtnDebitcard.BackColor = System.Drawing.SystemColors.Window;
-            this.rbtnDebitcard.Location = new System.Drawing.Point(483, 325);
+            this.rbtnDebitcard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnDebitcard.Location = new System.Drawing.Point(463, 324);
             this.rbtnDebitcard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnDebitcard.Name = "rbtnDebitcard";
-            this.rbtnDebitcard.Size = new System.Drawing.Size(96, 24);
+            this.rbtnDebitcard.Size = new System.Drawing.Size(185, 41);
             this.rbtnDebitcard.TabIndex = 11;
             this.rbtnDebitcard.TabStop = true;
             this.rbtnDebitcard.Text = "Debitcard";
@@ -191,10 +193,11 @@
             // 
             this.rbtnCreditcard.AutoSize = true;
             this.rbtnCreditcard.BackColor = System.Drawing.SystemColors.Window;
-            this.rbtnCreditcard.Location = new System.Drawing.Point(483, 265);
+            this.rbtnCreditcard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnCreditcard.Location = new System.Drawing.Point(463, 262);
             this.rbtnCreditcard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnCreditcard.Name = "rbtnCreditcard";
-            this.rbtnCreditcard.Size = new System.Drawing.Size(99, 24);
+            this.rbtnCreditcard.Size = new System.Drawing.Size(197, 41);
             this.rbtnCreditcard.TabIndex = 12;
             this.rbtnCreditcard.TabStop = true;
             this.rbtnCreditcard.Text = "Creditcard";
@@ -214,11 +217,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(99, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 41);
+            this.label6.Size = new System.Drawing.Size(185, 37);
             this.label6.TabIndex = 4;
             this.label6.Text = "Leave a tip!";
             // 
@@ -236,10 +239,11 @@
             // 
             this.rbtnTipNo.AutoSize = true;
             this.rbtnTipNo.BackColor = System.Drawing.SystemColors.Window;
-            this.rbtnTipNo.Location = new System.Drawing.Point(607, 505);
+            this.rbtnTipNo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnTipNo.Location = new System.Drawing.Point(572, 505);
             this.rbtnTipNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnTipNo.Name = "rbtnTipNo";
-            this.rbtnTipNo.Size = new System.Drawing.Size(50, 24);
+            this.rbtnTipNo.Size = new System.Drawing.Size(80, 41);
             this.rbtnTipNo.TabIndex = 14;
             this.rbtnTipNo.TabStop = true;
             this.rbtnTipNo.Text = "No";
@@ -249,10 +253,11 @@
             // 
             this.rbtnTipYes.AutoSize = true;
             this.rbtnTipYes.BackColor = System.Drawing.SystemColors.Window;
-            this.rbtnTipYes.Location = new System.Drawing.Point(452, 505);
+            this.rbtnTipYes.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnTipYes.Location = new System.Drawing.Point(414, 505);
             this.rbtnTipYes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnTipYes.Name = "rbtnTipYes";
-            this.rbtnTipYes.Size = new System.Drawing.Size(51, 24);
+            this.rbtnTipYes.Size = new System.Drawing.Size(87, 41);
             this.rbtnTipYes.TabIndex = 15;
             this.rbtnTipYes.TabStop = true;
             this.rbtnTipYes.Text = "Yes";
@@ -262,18 +267,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(438, 595);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(402, 594);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.Size = new System.Drawing.Size(140, 37);
             this.label7.TabIndex = 16;
             this.label7.Text = "Amount:";
             // 
             // txtTipAmount
             // 
-            this.txtTipAmount.Location = new System.Drawing.Point(566, 588);
+            this.txtTipAmount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTipAmount.Location = new System.Drawing.Point(572, 594);
             this.txtTipAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTipAmount.Name = "txtTipAmount";
-            this.txtTipAmount.Size = new System.Drawing.Size(114, 27);
+            this.txtTipAmount.Size = new System.Drawing.Size(114, 47);
             this.txtTipAmount.TabIndex = 17;
             // 
             // panel6
@@ -287,18 +294,19 @@
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Location = new System.Drawing.Point(364, 659);
+            this.panel6.Location = new System.Drawing.Point(12, 659);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(347, 241);
+            this.panel6.Size = new System.Drawing.Size(699, 247);
             this.panel6.TabIndex = 19;
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(118, 200);
+            this.btnPay.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPay.Location = new System.Drawing.Point(184, 177);
             this.btnPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(150, 31);
+            this.btnPay.Size = new System.Drawing.Size(319, 58);
             this.btnPay.TabIndex = 10;
             this.btnPay.Text = "PAY BILL";
             this.btnPay.UseVisualStyleBackColor = true;
@@ -308,59 +316,65 @@
             // 
             this.txtTip.BackColor = System.Drawing.SystemColors.Window;
             this.txtTip.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTip.Location = new System.Drawing.Point(154, 154);
+            this.txtTip.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTip.Location = new System.Drawing.Point(351, 129);
             this.txtTip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTip.Name = "txtTip";
             this.txtTip.ReadOnly = true;
-            this.txtTip.Size = new System.Drawing.Size(114, 20);
+            this.txtTip.Size = new System.Drawing.Size(316, 40);
             this.txtTip.TabIndex = 8;
             // 
             // txtVAT6
             // 
             this.txtVAT6.BackColor = System.Drawing.SystemColors.Window;
             this.txtVAT6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVAT6.Location = new System.Drawing.Point(154, 88);
+            this.txtVAT6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtVAT6.Location = new System.Drawing.Point(351, 74);
             this.txtVAT6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVAT6.Name = "txtVAT6";
             this.txtVAT6.ReadOnly = true;
-            this.txtVAT6.Size = new System.Drawing.Size(114, 20);
+            this.txtVAT6.Size = new System.Drawing.Size(316, 40);
             this.txtVAT6.TabIndex = 7;
             // 
             // txtOrder
             // 
             this.txtOrder.BackColor = System.Drawing.SystemColors.Window;
             this.txtOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOrder.Location = new System.Drawing.Point(154, 25);
+            this.txtOrder.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtOrder.Location = new System.Drawing.Point(351, 26);
             this.txtOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrder.Name = "txtOrder";
             this.txtOrder.ReadOnly = true;
-            this.txtOrder.Size = new System.Drawing.Size(114, 20);
+            this.txtOrder.Size = new System.Drawing.Size(340, 40);
             this.txtOrder.TabIndex = 5;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(32, 154);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(33, 128);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 20);
+            this.label11.Size = new System.Drawing.Size(206, 37);
             this.label11.TabIndex = 3;
             this.label11.Text = "Total with tip:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 88);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(33, 75);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 20);
+            this.label9.Size = new System.Drawing.Size(224, 37);
             this.label9.TabIndex = 1;
             this.label9.Text = "Total with VAT:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(33, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(186, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Order:";
             // 
@@ -388,7 +402,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
