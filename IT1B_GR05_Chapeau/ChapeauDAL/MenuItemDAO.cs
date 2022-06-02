@@ -11,26 +11,33 @@ namespace ChapeauDAL
 {
     public class MenuItemDAO : BaseDao
     {
-        public List<MenuItem> GetMenu()
+        /*public List<MenuItem> GetMenu()
         {
             // select columns from database
             string query = "SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
+        } */
 
-        public List<MenuItem> GetFoodItems()
+        /*public List<MenuItem> GetFoodItems()
         {
             // select columns from database
             string query = "SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID < 8";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
+        }*/
 
-        public List<MenuItem> GetLunchItems()
+        /*public List<MenuItem> GetLunchItems()
         {
             // select columns from database
             string query = "SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID < 4";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }*/
+
+        public List<MenuItem> GetSubmenu(Category category)
+        {
+            string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID = {(int)category}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -59,13 +66,13 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<MenuItem> GetDinnerItems()
+        /*public List<MenuItem> GetDinnerItems()
         {
             // select columns from database
             string query = "SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID BETWEEN 4 AND 7";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
+        }*/
 
         public List<MenuItem> GetDinnerStarters()
         {
@@ -99,13 +106,13 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<MenuItem> GetDrinks()
+        /*public List<MenuItem> GetDrinks()
         {
             // select columns from database
             string query = "SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID BETWEEN 8 AND 12";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
+        }*/
 
         public List<MenuItem> GetSoftDrinks()
         {
@@ -168,7 +175,7 @@ namespace ChapeauDAL
                     Menu_Item_Name = (string)(dr["MENU_ITEM_NAME"]),
                     Menu_Item_Stock = (int)(dr["MENU_ITEM_STOCK"]),
                     Menu_Item_Price = (decimal)(dr["MENU_ITEM_PRICE"]),
-                    Category_Id = (int)(dr["CATEGORY_ID"])
+                    Category = (Category)(dr["CATEGORY_ID"])
                 };
                 menu.Add(menuItem);
             }
@@ -185,7 +192,7 @@ namespace ChapeauDAL
                 Menu_Item_Name = (string)(dr["MENU_ITEM_NAME"]),
                 Menu_Item_Stock = (int)(dr["MENU_ITEM_STOCK"]),
                 Menu_Item_Price = (decimal)(dr["MENU_ITEM_PRICE"]),
-                Category_Id = (int)(dr["CATEGORY_ID"])
+                Category = (Category)(dr["CATEGORY_ID"])
             };
             return menuItem;
         }

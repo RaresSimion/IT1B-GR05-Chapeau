@@ -18,7 +18,7 @@ namespace ChapeauUI
         // Chef. Username: 3. Password: 4342.
         // Manager. Username: 4. Password: 6241. (Note: Our group doesn't have a manager as we have 4 memebers).
 
-
+        private TableOverView tableView = new TableOverView();
         public LoginForm()
         {
             InitializeComponent();
@@ -29,8 +29,8 @@ namespace ChapeauUI
             if (textBoxUser.Text == "test" && textBoxPass.Text == "pass")
             {
                 MessageBox.Show($"Welcome Back, Test!");
-                this.Close();
-                
+                this.Hide();
+                tableView.Show();
             }
 
             //waiter, opens table view
@@ -38,21 +38,22 @@ namespace ChapeauUI
             {
                 MessageBox.Show($"Welcome Back, Barry! Let's go take some orders.");
                 this.Hide();
-                OrderViewForm orderViewForm = new OrderViewForm();
-                orderViewForm.Show();
+                tableView.Show();
             }
 
             //bartender, opens bar view
             else if (textBoxUser.Text == "2" && textBoxPass.Text == "2321")
             {
                 MessageBox.Show($"Welcome Back, Alan! Let's go make some drinks.");
-                this.Close();
+                this.Hide();
+                tableView.Show();
             }
             //chef, opens kitchen view
             else if (textBoxUser.Text == "3" && textBoxPass.Text == "4342")
             {
                 MessageBox.Show($"Welcome Back, Stefan! Let's go make some meals.");
-                this.Close();
+                this.Hide();
+                tableView.Show();
             }
             //manager, shows messagebox and clears username and password
             else if (textBoxUser.Text == "4" && textBoxPass.Text == "6241")

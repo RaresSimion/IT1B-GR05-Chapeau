@@ -10,7 +10,13 @@
     <Compile Update="MenuItemPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="OrderViewForm.cs">
+    <Compile Update="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OrderItemPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TableOverView.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

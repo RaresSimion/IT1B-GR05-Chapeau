@@ -28,148 +28,184 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblSelectedItem = new System.Windows.Forms.Label();
-            this.btnAddToOrder = new System.Windows.Forms.Button();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblSelectedItemTxt = new System.Windows.Forms.Label();
-            this.lblIDTxt = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.btnMinus = new System.Windows.Forms.Button();
+            this.pictureBoxClosePopUp = new System.Windows.Forms.PictureBox();
             this.btnPlus = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
             this.lblComment = new System.Windows.Forms.Label();
-            this.textBoxOrderComment = new System.Windows.Forms.TextBox();
-            this.textBoxQuantity = new System.Windows.Forms.TextBox();
+            this.textBoxComment = new System.Windows.Forms.TextBox();
+            this.btnAddToOrder = new System.Windows.Forms.Button();
+            this.lblQuantityValue = new System.Windows.Forms.Label();
+            this.textBoxItem = new System.Windows.Forms.TextBox();
+            this.pnlUpdateOrderItem = new System.Windows.Forms.Panel();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.btnUpdateOrderItem = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClosePopUp)).BeginInit();
+            this.pnlUpdateOrderItem.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblSelectedItem
+            // pictureBoxClosePopUp
             // 
-            this.lblSelectedItem.AutoSize = true;
-            this.lblSelectedItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSelectedItem.Location = new System.Drawing.Point(23, 33);
-            this.lblSelectedItem.Name = "lblSelectedItem";
-            this.lblSelectedItem.Size = new System.Drawing.Size(171, 31);
-            this.lblSelectedItem.TabIndex = 0;
-            this.lblSelectedItem.Text = "Selected Item: ";
-            // 
-            // btnAddToOrder
-            // 
-            this.btnAddToOrder.Location = new System.Drawing.Point(197, 308);
-            this.btnAddToOrder.Name = "btnAddToOrder";
-            this.btnAddToOrder.Size = new System.Drawing.Size(203, 56);
-            this.btnAddToOrder.TabIndex = 1;
-            this.btnAddToOrder.Text = "Add to order";
-            this.btnAddToOrder.UseVisualStyleBackColor = true;
-            this.btnAddToOrder.Click += new System.EventHandler(this.btnAddToOrder_Click);
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(23, 69);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(50, 31);
-            this.lblID.TabIndex = 2;
-            this.lblID.Text = "ID: ";
-            // 
-            // lblSelectedItemTxt
-            // 
-            this.lblSelectedItemTxt.AutoSize = true;
-            this.lblSelectedItemTxt.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSelectedItemTxt.Location = new System.Drawing.Point(219, 33);
-            this.lblSelectedItemTxt.Name = "lblSelectedItemTxt";
-            this.lblSelectedItemTxt.Size = new System.Drawing.Size(0, 31);
-            this.lblSelectedItemTxt.TabIndex = 3;
-            // 
-            // lblIDTxt
-            // 
-            this.lblIDTxt.AutoSize = true;
-            this.lblIDTxt.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblIDTxt.Location = new System.Drawing.Point(219, 69);
-            this.lblIDTxt.Name = "lblIDTxt";
-            this.lblIDTxt.Size = new System.Drawing.Size(0, 31);
-            this.lblIDTxt.TabIndex = 4;
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblQuantity.Location = new System.Drawing.Point(23, 111);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(114, 31);
-            this.lblQuantity.TabIndex = 5;
-            this.lblQuantity.Text = "Quantity:";
-            // 
-            // btnMinus
-            // 
-            this.btnMinus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMinus.Location = new System.Drawing.Point(219, 111);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(41, 38);
-            this.btnMinus.TabIndex = 7;
-            this.btnMinus.Text = "-";
-            this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            this.pictureBoxClosePopUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pictureBoxClosePopUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxClosePopUp.Image = global::ChapeauUI.Properties.Resources.x_circle4;
+            this.pictureBoxClosePopUp.Location = new System.Drawing.Point(471, 2);
+            this.pictureBoxClosePopUp.Name = "pictureBoxClosePopUp";
+            this.pictureBoxClosePopUp.Size = new System.Drawing.Size(68, 65);
+            this.pictureBoxClosePopUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxClosePopUp.TabIndex = 0;
+            this.pictureBoxClosePopUp.TabStop = false;
+            this.pictureBoxClosePopUp.Click += new System.EventHandler(this.pictureBoxClosePopUp_Click);
             // 
             // btnPlus
             // 
-            this.btnPlus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPlus.Location = new System.Drawing.Point(330, 111);
+            this.btnPlus.BackgroundImage = global::ChapeauUI.Properties.Resources.plus_png;
+            this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnPlus.Location = new System.Drawing.Point(311, 139);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(41, 38);
-            this.btnPlus.TabIndex = 8;
-            this.btnPlus.Text = "+";
+            this.btnPlus.Size = new System.Drawing.Size(40, 40);
+            this.btnPlus.TabIndex = 4;
             this.btnPlus.UseVisualStyleBackColor = true;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.BackgroundImage = global::ChapeauUI.Properties.Resources.minus_png;
+            this.btnMinus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnMinus.Location = new System.Drawing.Point(188, 139);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(40, 40);
+            this.btnMinus.TabIndex = 5;
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // lblComment
             // 
             this.lblComment.AutoSize = true;
-            this.lblComment.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblComment.Location = new System.Drawing.Point(23, 157);
+            this.lblComment.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblComment.Location = new System.Drawing.Point(174, 231);
             this.lblComment.Name = "lblComment";
-            this.lblComment.Size = new System.Drawing.Size(129, 31);
-            this.lblComment.TabIndex = 9;
-            this.lblComment.Text = "Comments";
+            this.lblComment.Size = new System.Drawing.Size(199, 44);
+            this.lblComment.TabIndex = 6;
+            this.lblComment.Text = "Comment";
             // 
-            // textBoxOrderComment
+            // textBoxComment
             // 
-            this.textBoxOrderComment.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOrderComment.Location = new System.Drawing.Point(23, 206);
-            this.textBoxOrderComment.Multiline = true;
-            this.textBoxOrderComment.Name = "textBoxOrderComment";
-            this.textBoxOrderComment.Size = new System.Drawing.Size(531, 85);
-            this.textBoxOrderComment.TabIndex = 10;
+            this.textBoxComment.BackColor = System.Drawing.Color.White;
+            this.textBoxComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxComment.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxComment.Location = new System.Drawing.Point(84, 278);
+            this.textBoxComment.Multiline = true;
+            this.textBoxComment.Name = "textBoxComment";
+            this.textBoxComment.Size = new System.Drawing.Size(373, 104);
+            this.textBoxComment.TabIndex = 7;
             // 
-            // textBoxQuantity
+            // btnAddToOrder
             // 
-            this.textBoxQuantity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxQuantity.Location = new System.Drawing.Point(266, 111);
-            this.textBoxQuantity.Multiline = true;
-            this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(58, 38);
-            this.textBoxQuantity.TabIndex = 11;
-            this.textBoxQuantity.Text = "1";
-            this.textBoxQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxQuantity.TextChanged += new System.EventHandler(this.textBoxQuantity_TextChanged);
+            this.btnAddToOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(210)))));
+            this.btnAddToOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddToOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddToOrder.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddToOrder.ForeColor = System.Drawing.Color.White;
+            this.btnAddToOrder.Location = new System.Drawing.Point(138, 419);
+            this.btnAddToOrder.Name = "btnAddToOrder";
+            this.btnAddToOrder.Size = new System.Drawing.Size(264, 58);
+            this.btnAddToOrder.TabIndex = 8;
+            this.btnAddToOrder.Text = "Add to order";
+            this.btnAddToOrder.UseVisualStyleBackColor = false;
+            this.btnAddToOrder.Click += new System.EventHandler(this.btnAddToOrder_Click);
+            // 
+            // lblQuantityValue
+            // 
+            this.lblQuantityValue.AutoSize = true;
+            this.lblQuantityValue.Font = new System.Drawing.Font("Century Gothic", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblQuantityValue.Location = new System.Drawing.Point(244, 131);
+            this.lblQuantityValue.Name = "lblQuantityValue";
+            this.lblQuantityValue.Size = new System.Drawing.Size(46, 52);
+            this.lblQuantityValue.TabIndex = 9;
+            this.lblQuantityValue.Text = "1";
+            this.lblQuantityValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblQuantityValue.TextChanged += new System.EventHandler(this.lblQuantityValue_TextChanged);
+            // 
+            // textBoxItem
+            // 
+            this.textBoxItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.textBoxItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxItem.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBoxItem.Enabled = false;
+            this.textBoxItem.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxItem.ForeColor = System.Drawing.Color.Black;
+            this.textBoxItem.Location = new System.Drawing.Point(22, 73);
+            this.textBoxItem.Multiline = true;
+            this.textBoxItem.Name = "textBoxItem";
+            this.textBoxItem.Size = new System.Drawing.Size(505, 60);
+            this.textBoxItem.TabIndex = 10;
+            this.textBoxItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlUpdateOrderItem
+            // 
+            this.pnlUpdateOrderItem.Controls.Add(this.btnRemoveItem);
+            this.pnlUpdateOrderItem.Controls.Add(this.btnUpdateOrderItem);
+            this.pnlUpdateOrderItem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlUpdateOrderItem.Location = new System.Drawing.Point(0, 388);
+            this.pnlUpdateOrderItem.Name = "pnlUpdateOrderItem";
+            this.pnlUpdateOrderItem.Size = new System.Drawing.Size(539, 101);
+            this.pnlUpdateOrderItem.TabIndex = 11;
+            // 
+            // btnRemoveItem
+            // 
+            this.btnRemoveItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.btnRemoveItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoveItem.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveItem.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoveItem.Location = new System.Drawing.Point(12, 22);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(240, 58);
+            this.btnRemoveItem.TabIndex = 13;
+            this.btnRemoveItem.Text = "Remove item";
+            this.btnRemoveItem.UseVisualStyleBackColor = false;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // btnUpdateOrderItem
+            // 
+            this.btnUpdateOrderItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(210)))));
+            this.btnUpdateOrderItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateOrderItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateOrderItem.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateOrderItem.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateOrderItem.Location = new System.Drawing.Point(287, 22);
+            this.btnUpdateOrderItem.Name = "btnUpdateOrderItem";
+            this.btnUpdateOrderItem.Size = new System.Drawing.Size(240, 58);
+            this.btnUpdateOrderItem.TabIndex = 12;
+            this.btnUpdateOrderItem.Text = "Update item";
+            this.btnUpdateOrderItem.UseVisualStyleBackColor = false;
+            this.btnUpdateOrderItem.Click += new System.EventHandler(this.btnUpdateOrderItem_Click);
             // 
             // MenuItemPopUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 376);
-            this.Controls.Add(this.textBoxQuantity);
-            this.Controls.Add(this.textBoxOrderComment);
-            this.Controls.Add(this.lblComment);
-            this.Controls.Add(this.btnPlus);
-            this.Controls.Add(this.btnMinus);
-            this.Controls.Add(this.lblQuantity);
-            this.Controls.Add(this.lblIDTxt);
-            this.Controls.Add(this.lblSelectedItemTxt);
-            this.Controls.Add(this.lblID);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.ClientSize = new System.Drawing.Size(539, 489);
+            this.ControlBox = false;
+            this.Controls.Add(this.pnlUpdateOrderItem);
+            this.Controls.Add(this.textBoxItem);
+            this.Controls.Add(this.lblQuantityValue);
             this.Controls.Add(this.btnAddToOrder);
-            this.Controls.Add(this.lblSelectedItem);
+            this.Controls.Add(this.textBoxComment);
+            this.Controls.Add(this.lblComment);
+            this.Controls.Add(this.btnMinus);
+            this.Controls.Add(this.btnPlus);
+            this.Controls.Add(this.pictureBoxClosePopUp);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MenuItemPopUp";
-            this.Text = "Choose options";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClosePopUp)).EndInit();
+            this.pnlUpdateOrderItem.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,16 +213,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblSelectedItem;
-        private System.Windows.Forms.Button btnAddToOrder;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Label lblSelectedItemTxt;
-        private System.Windows.Forms.Label lblIDTxt;
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Button btnMinus;
+        private System.Windows.Forms.PictureBox pictureBoxClosePopUp;
         private System.Windows.Forms.Button btnPlus;
+        private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Label lblComment;
-        private System.Windows.Forms.TextBox textBoxOrderComment;
-        private System.Windows.Forms.TextBox textBoxQuantity;
+        private System.Windows.Forms.TextBox textBoxComment;
+        private System.Windows.Forms.Button btnAddToOrder;
+        private System.Windows.Forms.Label lblQuantityValue;
+        private System.Windows.Forms.TextBox textBoxItem;
+        private System.Windows.Forms.Panel pnlUpdateOrderItem;
+        private System.Windows.Forms.Button btnRemoveItem;
+        private System.Windows.Forms.Button btnUpdateOrderItem;
     }
 }

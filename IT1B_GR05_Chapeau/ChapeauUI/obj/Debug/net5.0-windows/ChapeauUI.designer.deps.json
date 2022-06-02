@@ -32,11 +32,11 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/6.0.0": {
+      "Microsoft.Win32.SystemEvents/6.0.1": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
+            "fileVersion": "6.0.422.16404"
           }
         },
         "runtimeTargets": {
@@ -44,7 +44,7 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
+            "fileVersion": "6.0.422.16404"
           }
         }
       },
@@ -123,7 +123,7 @@
       },
       "System.Drawing.Common/6.0.0": {
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "6.0.0"
+          "Microsoft.Win32.SystemEvents": "6.0.1"
         },
         "runtime": {
           "lib/netcoreapp3.1/System.Drawing.Common.dll": {
@@ -248,12 +248,12 @@
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
     },
-    "Microsoft.Win32.SystemEvents/6.0.0": {
+    "Microsoft.Win32.SystemEvents/6.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
-      "path": "microsoft.win32.systemevents/6.0.0",
-      "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+      "sha512": "sha512-AlsaDWyQHLFB7O2nfbny0x0oziB34WWzGnf/4Q5R8KjXhu8MnCsxE2MIePr192lIIaxarfTLI9bQg+qtmM+9ag==",
+      "path": "microsoft.win32.systemevents/6.0.1",
+      "hashPath": "microsoft.win32.systemevents.6.0.1.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
