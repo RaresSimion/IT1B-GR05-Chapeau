@@ -180,7 +180,6 @@ C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\De
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Form1.resources
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LoginForm.resources
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.MenuItemPopUp.resources
-C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderViewForm.resources
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Properties.Resources.resources
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TableOverView.resources
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.GenerateResource.cache
@@ -195,3 +194,4 @@ C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\De
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
 C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderForm.resources
+C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderForm.resources
