@@ -50,11 +50,21 @@ namespace ChapeauUI
             textBoxComment.Text = orderItem.Order_Item_Comment;
             textBoxItem.Enabled = false;
 
-            btnUpdateOrderItem.Enabled = false;
-            btnUpdateOrderItem.BackColor = Color.FromArgb(190, 203, 250);
-
+            DisableUpdateButton();
             if (orderItem.Order_Item_Quantity == 1)
                 DisableMinus();
+        }
+
+        private void DisableUpdateButton()
+        {
+            btnUpdateOrderItem.Enabled = false;
+            btnUpdateOrderItem.BackColor = Color.FromArgb(190, 203, 250);
+        }
+
+        private void EnableUpdateButton()
+        {
+            btnUpdateOrderItem.Enabled = true;
+            btnUpdateOrderItem.BackColor = Color.FromArgb(24, 116, 210);
         }
 
         private void DisableMinus()
@@ -103,11 +113,24 @@ namespace ChapeauUI
         private void lblQuantityValue_TextChanged(object sender, EventArgs e)
         {
             int value = int.Parse(lblQuantityValue.Text);
-            if (value == 1)
-                DisableMinus();
-            else
-                EnableMinus();
 
+            if (value == 1)
+            {
+                DisableMinus();
+            }
+            else
+            {
+                EnableMinus();
+            }
+
+            /*if (value != orderItem.Order_Item_Quantity)
+            {
+                EnableUpdateButton();
+            }
+            else
+            {
+                DisableUpdateButton(); 
+            }*/
         }
 
         private void btnAddToOrder_Click(object sender, EventArgs e)

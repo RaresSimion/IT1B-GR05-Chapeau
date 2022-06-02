@@ -161,6 +161,13 @@ namespace ChapeauDAL
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public void UpdateMenuItemStock(OrderItem orderItem)
+        {
+            string query = $"UPDATE MENU_ITEM SET MENU_ITEM_STOCK = MENU_ITEM_STOCK - {orderItem.Order_Item_Quantity} WHERE MENU_ITEM_ID = {orderItem.MenuItem.Menu_Item_Id};";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
         private List<MenuItem> ReadTables(DataTable dataTable)
         {
             //create list to store the menu

@@ -323,6 +323,7 @@ namespace ChapeauUI
             foreach(OrderItem item in orderItems)
             {
                 orderItemService.InsertOrderItem(item);
+                menuItemService.UpdateMenuItemStock(item);
             }
 
             Table table = new Table(1, TableAvailability.Available); //replace with current table
