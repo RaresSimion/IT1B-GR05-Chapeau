@@ -18,7 +18,7 @@ namespace ChapeauDAL
             return ReadTable(ExecuteSelectQuery(query, sqlParameter));
         }
 
-
+        
 
         //read 1 
 

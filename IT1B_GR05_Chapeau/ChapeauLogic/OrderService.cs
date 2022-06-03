@@ -21,5 +21,25 @@ namespace ChapeauLogic
         {
             orderDB.InsertOrder(order);
         }
+
+        public void UpdateOrderStatus(int orderId, OrderStatus status) {
+            orderDB.UpdateOrderStatus(orderId, status);
+        }
+
+         public List<Order> GetFoodOrders() {
+            List<Order> orders = orderDB.GetFoodOrders();
+            return orders;
+         }
+         public List<Order> GetDrinkOrders()
+         {
+            List<Order> orders = orderDB.GetDrinkOrders();
+            return orders;
+         }
+        /*
+         public Order GetOrderById(int orderId) {
+            Order order = orderDB.GetOrderById(orderId);
+            return order;
+         }
+        */
     }
 }

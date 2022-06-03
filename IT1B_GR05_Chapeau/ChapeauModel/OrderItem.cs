@@ -7,10 +7,9 @@ namespace ChapeauModel
 	{
 		private const decimal ALCOHOLIC_VAT = 1.21M;
 		private const decimal NONALCOHOLIC_VAT = 1.06M;
-
+		private decimal order_Item_Price_With_VAT;
 		public int OrderID { get; set; }
 		public MenuItem MenuItem { get; set; }
-		private decimal order_Item_Price_With_VAT;
 		public int Order_Item_Quantity { get; set; }
 		public string Order_Item_Comment { get; set; }
 		private bool Is_Alcoholic
