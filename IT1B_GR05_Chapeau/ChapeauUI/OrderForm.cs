@@ -18,6 +18,9 @@ namespace ChapeauUI
         private OrderItemService orderItemService = new OrderItemService();
         private OrderService orderService = new OrderService();
         private Panel currentPanel = new Panel();
+        private Table currentTable;
+        private Employee currentWaiter;
+        private TableOverView tableOverView;
 
         public ListView OrderListView
         {
@@ -34,9 +37,13 @@ namespace ChapeauUI
             get { return lblTotalWithVATValue; }
         }
 
-        public OrderForm()
+        public OrderForm(TableOverView tableOverView)
         {
             InitializeComponent();
+            this.tableOverView = tableOverView;
+            this.currentTable = tableOverView.table;
+            this.currentWaiter = tableOverView.user;
+            lblTable.Text = $"Table {currentTable.Table_Number}";
             ShowPanel("Menu");
             DisableButtons();
         }
@@ -212,6 +219,7 @@ namespace ChapeauUI
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Close();
+            tableOverView.Show();
         }
 
         private void btnDrinks_Click(object sender, EventArgs e)
@@ -326,10 +334,10 @@ namespace ChapeauUI
                 menuItemService.UpdateMenuItemStock(item);
             }
 
-            Table table = new Table(1, false); //replace with current table
-            Employee employee = new Employee(1, "barry", EmployeeRole.Waiter, "1234"); //replace with current waiter
+           // Table table = new Table(1, false); //replace with current table
+            //Employee employee = new Employee(1, "barry", EmployeeRole.Waiter, "1234"); //replace with current waiter
 
-            Order order = new Order(orderItems, table, employee, OrderStatus.Ordered, false, "no", DateTime.Now);
+            Order order = new Order(orderItems, currentTable, currentWaiter, OrderStatus.Ordered, false, "no", DateTime.Now);
             orderService.InsertOrder(order);
 
             RemoveOrderItems();

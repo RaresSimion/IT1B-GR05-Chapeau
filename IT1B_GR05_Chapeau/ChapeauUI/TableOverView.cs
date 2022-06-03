@@ -14,17 +14,20 @@ namespace ChapeauUI
 {
     public partial class TableOverView : Form
     {
-        private Table table = new Table();
+        public Table table = new Table();
+        public Employee user = new Employee();
         private TableService tableService = new TableService();
-        public TableOverView()
+        public TableOverView(Employee employee)
         {
             InitializeComponent();
+            this.user = employee;
         }
 
         private void TableOverView_Load(object sender, EventArgs e)
         {
             panelNoOrder.Hide();
             panelTable6.Hide();
+            labelSignedIn.Text = $"Signed in: {user.Employee_Name}";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,7 +43,7 @@ namespace ChapeauUI
         private void buttonTable1_Click(object sender, EventArgs e)
         {
             table = tableService.GetTable(1);
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
 
             if (!table.Table_Availability)
             {
@@ -57,7 +60,7 @@ namespace ChapeauUI
         private void buttonTable2_Click(object sender, EventArgs e)
         {
             table = tableService.GetTable(2);
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
 
             if (!table.Table_Availability)
             {
@@ -73,7 +76,7 @@ namespace ChapeauUI
         private void buttonTable3_Click(object sender, EventArgs e)
         {
             table = tableService.GetTable(3);
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
 
             if (!table.Table_Availability)
             {
@@ -88,7 +91,7 @@ namespace ChapeauUI
         private void buttonTable4_Click(object sender, EventArgs e)
         {
             table = tableService.GetTable(4);
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
 
             if (!table.Table_Availability)
             {
@@ -103,7 +106,7 @@ namespace ChapeauUI
         private void buttonTable5_Click(object sender, EventArgs e)
         {
             table = tableService.GetTable(5);
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
 
             if (!table.Table_Availability)
             {
@@ -117,8 +120,8 @@ namespace ChapeauUI
 
         private void buttonTable6_Click(object sender, EventArgs e)
         {
-            panelTable6.Show();
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            table = tableService.GetTable(6);
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
 
 
             if (!table.Table_Availability)
@@ -133,8 +136,9 @@ namespace ChapeauUI
 
         private void buttonTable7_Click(object sender, EventArgs e)
         {
-            panelNoOrder.Show();
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            table = tableService.GetTable(7);
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
+
 
             if (!table.Table_Availability)
             {
@@ -148,8 +152,9 @@ namespace ChapeauUI
 
         private void buttonTable8_Click(object sender, EventArgs e)
         {
-            panelNoOrder.Show();
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            table = tableService.GetTable(8);
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
+
 
             if (!table.Table_Availability)
             {
@@ -164,8 +169,9 @@ namespace ChapeauUI
 
         private void buttonTable9_Click(object sender, EventArgs e)
         {
-            panelNoOrder.Show();
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            table = tableService.GetTable(9);
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
+
 
             if (!table.Table_Availability)
             {
@@ -175,13 +181,13 @@ namespace ChapeauUI
             {
                 panelTable6.Show();
             }
-
         }
 
         private void buttonTable10_Click(object sender, EventArgs e)
         {
-            panelNoOrder.Show();
-            labelTableNumber.Text = $"Table # {table.Table_Number}";
+            table = tableService.GetTable(10);
+            labelTableNumber.Text = $"Table #{table.Table_Number}";
+
 
             if (!table.Table_Availability)
             {
@@ -191,7 +197,6 @@ namespace ChapeauUI
             {
                 panelTable6.Show();
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -206,8 +211,8 @@ namespace ChapeauUI
 
         private void buttonCreateOrder_Click(object sender, EventArgs e)
         {
-            table.Table_Number = this.table.Table_Number;
-            OrderForm orderForm = new OrderForm();
+            OrderForm orderForm = new OrderForm(this);
+            panelNoOrder.Hide();
             this.Hide();
 
             orderForm.Show();

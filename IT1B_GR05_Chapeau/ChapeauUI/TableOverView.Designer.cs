@@ -42,15 +42,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelNoOrder = new System.Windows.Forms.Panel();
+            this.labelTableNumber = new System.Windows.Forms.Label();
+            this.labelTableNoOrder = new System.Windows.Forms.Label();
+            this.buttonReturnToTableView = new System.Windows.Forms.Button();
+            this.buttonCreateOrder = new System.Windows.Forms.Button();
             this.panelTable6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.labelTableNumber = new System.Windows.Forms.Label();
-            this.labelTableNoOrder = new System.Windows.Forms.Label();
-            this.buttonReturnToTableView = new System.Windows.Forms.Button();
-            this.buttonCreateOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelNoOrder.SuspendLayout();
@@ -209,6 +209,56 @@
             this.panelNoOrder.Size = new System.Drawing.Size(331, 363);
             this.panelNoOrder.TabIndex = 13;
             // 
+            // labelTableNumber
+            // 
+            this.labelTableNumber.AutoSize = true;
+            this.labelTableNumber.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTableNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.labelTableNumber.Location = new System.Drawing.Point(96, 9);
+            this.labelTableNumber.Name = "labelTableNumber";
+            this.labelTableNumber.Size = new System.Drawing.Size(0, 37);
+            this.labelTableNumber.TabIndex = 3;
+            // 
+            // labelTableNoOrder
+            // 
+            this.labelTableNoOrder.AutoSize = true;
+            this.labelTableNoOrder.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTableNoOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.labelTableNoOrder.Location = new System.Drawing.Point(1, 57);
+            this.labelTableNoOrder.Name = "labelTableNoOrder";
+            this.labelTableNoOrder.Size = new System.Drawing.Size(327, 111);
+            this.labelTableNoOrder.TabIndex = 2;
+            this.labelTableNoOrder.Text = "There is currently no order\r\n on this table. Would you \r\nlike to create one?";
+            this.labelTableNoOrder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // buttonReturnToTableView
+            // 
+            this.buttonReturnToTableView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.buttonReturnToTableView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReturnToTableView.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonReturnToTableView.ForeColor = System.Drawing.Color.White;
+            this.buttonReturnToTableView.Location = new System.Drawing.Point(11, 292);
+            this.buttonReturnToTableView.Name = "buttonReturnToTableView";
+            this.buttonReturnToTableView.Size = new System.Drawing.Size(310, 61);
+            this.buttonReturnToTableView.TabIndex = 1;
+            this.buttonReturnToTableView.Text = "Return To Table View";
+            this.buttonReturnToTableView.UseVisualStyleBackColor = false;
+            this.buttonReturnToTableView.Click += new System.EventHandler(this.buttonReturnToTableView_Click);
+            // 
+            // buttonCreateOrder
+            // 
+            this.buttonCreateOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(210)))));
+            this.buttonCreateOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateOrder.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCreateOrder.ForeColor = System.Drawing.Color.White;
+            this.buttonCreateOrder.Location = new System.Drawing.Point(11, 199);
+            this.buttonCreateOrder.Name = "buttonCreateOrder";
+            this.buttonCreateOrder.Size = new System.Drawing.Size(310, 61);
+            this.buttonCreateOrder.TabIndex = 0;
+            this.buttonCreateOrder.Text = "Create Order";
+            this.buttonCreateOrder.UseVisualStyleBackColor = false;
+            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
+            // 
             // panelTable6
             // 
             this.panelTable6.Controls.Add(this.label1);
@@ -272,56 +322,6 @@
             this.button2.Text = "View Order";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // labelTableNumber
-            // 
-            this.labelTableNumber.AutoSize = true;
-            this.labelTableNumber.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTableNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.labelTableNumber.Location = new System.Drawing.Point(96, 9);
-            this.labelTableNumber.Name = "labelTableNumber";
-            this.labelTableNumber.Size = new System.Drawing.Size(0, 37);
-            this.labelTableNumber.TabIndex = 3;
-            // 
-            // labelTableNoOrder
-            // 
-            this.labelTableNoOrder.AutoSize = true;
-            this.labelTableNoOrder.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTableNoOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.labelTableNoOrder.Location = new System.Drawing.Point(1, 57);
-            this.labelTableNoOrder.Name = "labelTableNoOrder";
-            this.labelTableNoOrder.Size = new System.Drawing.Size(327, 111);
-            this.labelTableNoOrder.TabIndex = 2;
-            this.labelTableNoOrder.Text = "There is currently no order\r\n on this table. Would you \r\nlike to create one?";
-            this.labelTableNoOrder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // buttonReturnToTableView
-            // 
-            this.buttonReturnToTableView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.buttonReturnToTableView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReturnToTableView.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonReturnToTableView.ForeColor = System.Drawing.Color.White;
-            this.buttonReturnToTableView.Location = new System.Drawing.Point(11, 292);
-            this.buttonReturnToTableView.Name = "buttonReturnToTableView";
-            this.buttonReturnToTableView.Size = new System.Drawing.Size(310, 61);
-            this.buttonReturnToTableView.TabIndex = 1;
-            this.buttonReturnToTableView.Text = "Return To Table View";
-            this.buttonReturnToTableView.UseVisualStyleBackColor = false;
-            this.buttonReturnToTableView.Click += new System.EventHandler(this.buttonReturnToTableView_Click);
-            // 
-            // buttonCreateOrder
-            // 
-            this.buttonCreateOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(210)))));
-            this.buttonCreateOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateOrder.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCreateOrder.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateOrder.Location = new System.Drawing.Point(11, 199);
-            this.buttonCreateOrder.Name = "buttonCreateOrder";
-            this.buttonCreateOrder.Size = new System.Drawing.Size(310, 61);
-            this.buttonCreateOrder.TabIndex = 0;
-            this.buttonCreateOrder.Text = "Create Order";
-            this.buttonCreateOrder.UseVisualStyleBackColor = false;
-            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
-            // 
             // TableOverView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -344,6 +344,7 @@
             this.Controls.Add(this.buttonTable1);
             this.Controls.Add(this.labelSignedIn);
             this.Name = "TableOverView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Table Overview";
             this.Load += new System.EventHandler(this.TableOverView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

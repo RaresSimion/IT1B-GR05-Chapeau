@@ -11,10 +11,7 @@ namespace ChapeauModel
         public Employee Employee { get; set; }
         public OrderStatus Order_Status { get; set; }
         public bool Is_Paid { get; set; }
-        public string Order_Comment { get; set; }
         public DateTime Order_Time { get; set; }
-
-
         public int Item_Count
         {
             get
@@ -34,14 +31,9 @@ namespace ChapeauModel
             Employee = employee;
             Order_Status = status;
             Is_Paid = isPaid;
-            Order_Comment = comment;
             Order_Time = ordertime;
         }
 
-        public Order()
-        {
-
-        }
-
+        public Order() { }
     }
 }

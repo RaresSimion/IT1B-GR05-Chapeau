@@ -17,9 +17,6 @@ namespace ChapeauModel
             this.Employee_Password = employeePassword;
         }
 
-        public Employee()
-        {
-
-        }
+        public Employee() { }
     }
 }

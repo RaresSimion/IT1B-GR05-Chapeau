@@ -25,5 +25,10 @@ namespace ChapeauLogic
         {
             orderItemDB.UpdateOrderItem(orderItem);
         }
+        public List<OrderItem> GetItems(int ID)
+        {
+            return orderItemDB.GetOrderItemsByOrderID(ID);
+        }
+
     }
 }
