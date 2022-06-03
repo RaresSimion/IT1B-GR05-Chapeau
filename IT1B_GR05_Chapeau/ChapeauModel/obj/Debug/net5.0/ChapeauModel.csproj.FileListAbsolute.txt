@@ -34,3 +34,15 @@ C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\refint\ChapeauModel.dll
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.pdb
 C:\Users\Conor\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ref\ChapeauModel.dll
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\bin\Debug\net5.0\ChapeauModel.deps.json
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\bin\Debug\net5.0\ChapeauModel.dll
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\bin\Debug\net5.0\ChapeauModel.pdb
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.csproj.AssemblyReference.cache
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.AssemblyInfoInputs.cache
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.AssemblyInfo.cs
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.csproj.CoreCompileInputs.cache
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.dll
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\refint\ChapeauModel.dll
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ChapeauModel.pdb
+C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauModel\obj\Debug\net5.0\ref\ChapeauModel.dll
