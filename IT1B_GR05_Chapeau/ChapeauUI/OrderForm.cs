@@ -44,8 +44,17 @@ namespace ChapeauUI
             this.currentTable = tableOverView.table;
             this.currentWaiter = tableOverView.user;
             lblTable.Text = $"Table {currentTable.Table_Number}";
+            lblOrder.Text = $"Order {GetNextOrderID()}";
             ShowPanel("Menu");
             DisableButtons();
+        }
+
+
+        private int GetNextOrderID()
+        {
+            int lastOrderID = orderService.GetLastOrderID();
+            int nextOrderID = lastOrderID + 1;
+            return nextOrderID;
         }
 
         private void DisableButtons()

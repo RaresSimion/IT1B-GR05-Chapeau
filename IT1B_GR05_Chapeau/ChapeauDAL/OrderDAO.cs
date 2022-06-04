@@ -48,6 +48,13 @@ namespace ChapeauDAL
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
         }
         */
+
+        public int GetLastOrderID()
+        {
+            string query = $"SELECT MAX(ORDER_ID) AS LAST_ORDER_ID FROM [ORDER]";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadLastOrderID(ExecuteSelectQuery(query, sqlParameters));
+        }
         private List<Order> ReadTables(DataTable dataTable)
         {
             List<Order> orders = new List<Order>();
@@ -71,6 +78,13 @@ namespace ChapeauDAL
                 orders.Add(order);
             }
             return orders;
+        }
+
+        private int ReadLastOrderID(DataTable dataTable)
+        {
+            DataRow dr = dataTable.Rows[0];
+            int lastOrderID = (int)dr["LAST_ORDER_ID"];
+            return lastOrderID;
         }
     }
 }
