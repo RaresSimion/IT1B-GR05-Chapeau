@@ -265,7 +265,7 @@
             this.panelTable6.Controls.Add(this.label2);
             this.panelTable6.Controls.Add(this.button1);
             this.panelTable6.Controls.Add(this.button2);
-            this.panelTable6.Location = new System.Drawing.Point(568, 92);
+            this.panelTable6.Location = new System.Drawing.Point(200, 138);
             this.panelTable6.Name = "panelTable6";
             this.panelTable6.Size = new System.Drawing.Size(331, 363);
             this.panelTable6.TabIndex = 14;

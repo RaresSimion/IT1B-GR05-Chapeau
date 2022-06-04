@@ -143,7 +143,7 @@ namespace ChapeauUI
                 //li.SubItems.Add(orderItem.Order_Item_Quantity.ToString());
 
                 orderForm.OrderListView.Items.Add(li);
-                UpdateTotal();
+                //UpdateTotal();
                 orderForm.EnableButtons();
             }
             else
@@ -153,7 +153,7 @@ namespace ChapeauUI
             this.Close();
         }
 
-        private void UpdateTotal()
+        /*private void UpdateTotal()
         {
             List<OrderItem> items = orderForm.GetOrderItems();
             decimal valueOfItems = 0;
@@ -172,7 +172,7 @@ namespace ChapeauUI
         {
             orderForm.TotalValue.Text = $"€{value:0.00}";
             orderForm.TotalWithVatValue.Text = $"€{valueWithVat:0.00}";
-        }
+        }*/
 
         private bool IsOrderItemInList(OrderItem orderItem)
         {
@@ -194,7 +194,7 @@ namespace ChapeauUI
             orderForm.OrderListView.SelectedItems[0].SubItems[0].Text = orderItem.Order_Item_Quantity.ToString();
             orderForm.OrderListView.SelectedItems[0].SubItems[2].Text = orderItem.Order_Item_Comment;
 
-            UpdateTotal();
+            //UpdateTotal();
             this.Close();
         }
 
@@ -202,7 +202,7 @@ namespace ChapeauUI
         {
             int idOfSelectedItem = orderForm.OrderListView.SelectedItems[0].Index;
             orderForm.OrderListView.Items.RemoveAt(idOfSelectedItem);
-            UpdateTotal();
+            //UpdateTotal();
             this.Close();
         }
 

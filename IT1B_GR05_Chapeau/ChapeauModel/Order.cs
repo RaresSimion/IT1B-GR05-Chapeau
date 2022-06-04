@@ -24,7 +24,7 @@ namespace ChapeauModel
             }
         }
 
-        public Order(List<OrderItem> orderItems, Table table, Employee employee, OrderStatus status, bool isPaid, string comment, DateTime ordertime)
+        public Order(List<OrderItem> orderItems, Table table, Employee employee, OrderStatus status, bool isPaid, DateTime ordertime)
         {
             OrderedItems = orderItems;
             Table = table;

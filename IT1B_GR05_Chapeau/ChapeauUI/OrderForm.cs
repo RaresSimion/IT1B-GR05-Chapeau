@@ -27,7 +27,7 @@ namespace ChapeauUI
             get { return listViewOrder; }
         }
 
-        public Label TotalValue
+        /*public Label TotalValue
         {
             get { return lblTotalValue; }
         }
@@ -35,7 +35,7 @@ namespace ChapeauUI
         public Label TotalWithVatValue
         {
             get { return lblTotalWithVATValue; }
-        }
+        }*/
 
         public OrderForm(TableOverView tableOverView)
         {
@@ -212,8 +212,8 @@ namespace ChapeauUI
         private void RemoveOrderItems()
         {
             listViewOrder.Items.Clear();
-            lblTotalValue.Text = "";
-            lblTotalWithVATValue.Text = "";
+            //lblTotalValue.Text = "";
+            //lblTotalWithVATValue.Text = "";
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
@@ -337,7 +337,7 @@ namespace ChapeauUI
            // Table table = new Table(1, false); //replace with current table
             //Employee employee = new Employee(1, "barry", EmployeeRole.Waiter, "1234"); //replace with current waiter
 
-            Order order = new Order(orderItems, currentTable, currentWaiter, OrderStatus.Ordered, false, "no", DateTime.Now);
+            Order order = new Order(orderItems, currentTable, currentWaiter, OrderStatus.Ordered, false, DateTime.Now);
             orderService.InsertOrder(order);
 
             RemoveOrderItems();
