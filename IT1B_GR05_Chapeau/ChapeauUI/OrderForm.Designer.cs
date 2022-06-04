@@ -39,8 +39,6 @@
             this.lblMenu = new System.Windows.Forms.Label();
             this.pnlOrder = new System.Windows.Forms.Panel();
             this.btnRemoveOrder = new System.Windows.Forms.Button();
-            this.lblWithVAT = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.btnSubmitOrder = new System.Windows.Forms.Button();
             this.listViewOrder = new System.Windows.Forms.ListView();
             this.columnHeaderOrderQuantity = new System.Windows.Forms.ColumnHeader();
@@ -191,8 +189,6 @@
             // pnlOrder
             // 
             this.pnlOrder.Controls.Add(this.btnRemoveOrder);
-            this.pnlOrder.Controls.Add(this.lblWithVAT);
-            this.pnlOrder.Controls.Add(this.lblTotal);
             this.pnlOrder.Controls.Add(this.btnSubmitOrder);
             this.pnlOrder.Controls.Add(this.listViewOrder);
             this.pnlOrder.Controls.Add(this.lblTable);
@@ -216,26 +212,6 @@
             this.btnRemoveOrder.Text = "Remove order";
             this.btnRemoveOrder.UseVisualStyleBackColor = false;
             this.btnRemoveOrder.Click += new System.EventHandler(this.btnRemoveOrder_Click);
-            // 
-            // lblWithVAT
-            // 
-            this.lblWithVAT.AutoSize = true;
-            this.lblWithVAT.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblWithVAT.Location = new System.Drawing.Point(7, 729);
-            this.lblWithVAT.Name = "lblWithVAT";
-            this.lblWithVAT.Size = new System.Drawing.Size(180, 44);
-            this.lblWithVAT.TabIndex = 6;
-            this.lblWithVAT.Text = "With VAT:";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotal.Location = new System.Drawing.Point(3, 671);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(149, 58);
-            this.lblTotal.TabIndex = 5;
-            this.lblTotal.Text = "Total:";
             // 
             // btnSubmitOrder
             // 
@@ -736,8 +712,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderComment;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderQuantity;
         private System.Windows.Forms.Button btnSubmitOrder;
-        private System.Windows.Forms.Label lblWithVAT;
-        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnRemoveOrder;
     }
 }

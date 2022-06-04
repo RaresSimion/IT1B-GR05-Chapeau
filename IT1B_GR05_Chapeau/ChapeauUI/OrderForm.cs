@@ -341,6 +341,9 @@ namespace ChapeauUI
             orderService.InsertOrder(order);
 
             RemoveOrderItems();
+            MessageBox.Show("Order successfully submitted, press OK to go back to Table View", "Order", MessageBoxButtons.OK);
+            this.Close();
+            tableOverView.Show();
         }
 
         private void btnRemoveOrder_Click(object sender, EventArgs e)
