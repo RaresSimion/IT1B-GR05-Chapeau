@@ -124,7 +124,7 @@ namespace ChapeauUI
             labelTableNumber.Text = $"Table #{table.Table_Number}";
 
 
-            if (!table.Table_Availability)
+            if (table.Table_Availability)
             {
                 panelNoOrder.Show();
             }

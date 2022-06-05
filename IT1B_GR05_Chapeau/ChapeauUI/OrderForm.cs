@@ -27,7 +27,7 @@ namespace ChapeauUI
             get { return listViewOrder; }
         }
 
-        public Label TotalValue
+        /*public Label TotalValue
         {
             get { return lblTotalValue; }
         }
@@ -35,7 +35,7 @@ namespace ChapeauUI
         public Label TotalWithVatValue
         {
             get { return lblTotalWithVATValue; }
-        }
+        }*/
 
         public OrderForm(TableOverView tableOverView)
         {
@@ -44,8 +44,17 @@ namespace ChapeauUI
             this.currentTable = tableOverView.table;
             this.currentWaiter = tableOverView.user;
             lblTable.Text = $"Table {currentTable.Table_Number}";
+            lblOrder.Text = $"Order {GetNextOrderID()}";
             ShowPanel("Menu");
             DisableButtons();
+        }
+
+
+        private int GetNextOrderID()
+        {
+            int lastOrderID = orderService.GetLastOrderID();
+            int nextOrderID = lastOrderID + 1;
+            return nextOrderID;
         }
 
         private void DisableButtons()
@@ -212,8 +221,8 @@ namespace ChapeauUI
         private void RemoveOrderItems()
         {
             listViewOrder.Items.Clear();
-            lblTotalValue.Text = "";
-            lblTotalWithVATValue.Text = "";
+            //lblTotalValue.Text = "";
+            //lblTotalWithVATValue.Text = "";
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
@@ -337,10 +346,13 @@ namespace ChapeauUI
            // Table table = new Table(1, false); //replace with current table
             //Employee employee = new Employee(1, "barry", EmployeeRole.Waiter, "1234"); //replace with current waiter
 
-            Order order = new Order(orderItems, currentTable, currentWaiter, OrderStatus.Ordered, false, "no", DateTime.Now);
+            Order order = new Order(orderItems, currentTable, currentWaiter, OrderStatus.Ordered, false, DateTime.Now);
             orderService.InsertOrder(order);
 
             RemoveOrderItems();
+            MessageBox.Show("Order successfully submitted, press OK to go back to Table View", "Order", MessageBoxButtons.OK);
+            this.Close();
+            tableOverView.Show();
         }
 
         private void btnRemoveOrder_Click(object sender, EventArgs e)

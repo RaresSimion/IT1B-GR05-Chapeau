@@ -41,5 +41,11 @@ namespace ChapeauLogic
             return order;
          }
         */
+
+        public int GetLastOrderID()
+        {
+            int lastOrderID = orderDB.GetLastOrderID();
+            return lastOrderID;
+        }
     }
 }
