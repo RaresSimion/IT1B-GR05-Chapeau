@@ -15,14 +15,10 @@ namespace ChapeauModel
         {
             billDB = new BillDAO();
         }
-        public void GetAllBills()
-        {
-            billDB.GetAllBills();
-        }
 
-        public void GetBillByTableNrAndOrderItemID(Bill bill)
+        public void InsertBill(Bill bill)
         {
-            billDB.GetBillByTableNrAndOrderItemID(bill);
+            billDB.InsertBill(bill);
         }
     }
 }

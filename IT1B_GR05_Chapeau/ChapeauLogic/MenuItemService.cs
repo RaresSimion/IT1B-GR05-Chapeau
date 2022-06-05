@@ -27,5 +27,10 @@ namespace ChapeauLogic
         {
             menuItemDB.UpdateMenuItemStock(orderItem);
         }
+        public MenuItem GetMenuItemByID(int menuItemId)
+        {
+            MenuItem menuItem = menuItemDB.GetMenuItemByID(menuItemId);
+            return menuItem;
+        }
     }
 }

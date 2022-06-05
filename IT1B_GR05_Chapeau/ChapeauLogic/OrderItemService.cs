@@ -29,6 +29,11 @@ namespace ChapeauLogic
         {
             return orderItemDB.GetOrderItemsByOrderID(ID);
         }
+        public List<OrderItem> GetAllOrderItemsFromTable(Table table)
+        {
+            return orderItemDB.GetAllOrderItemsFromTable(table);
+        }
+
 
     }
 }
