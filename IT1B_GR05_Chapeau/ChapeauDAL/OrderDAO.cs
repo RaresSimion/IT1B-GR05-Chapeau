@@ -39,14 +39,14 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        /*
+        
         public Order GetOrderById(int orderId)
         {
             string query = $"SELECT ORDER_ID, ORDER_DATE, ORDER_STATUS, IS_PAID, TABLE_ID, EMPLOYEE_NUMBER [ORDER] where ORDER_ID = {orderId}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTable(ExecuteSelectQuery(query, sqlParameters));
+            return ReadOrder(ExecuteSelectQuery(query, sqlParameters));
         }
-        */
+        
 
         public int GetLastOrderID()
         {
@@ -84,6 +84,24 @@ namespace ChapeauDAL
             DataRow dr = dataTable.Rows[0];
             int lastOrderID = (int)dr["LAST_ORDER_ID"];
             return lastOrderID;
+        }
+        private Order ReadOrder(DataTable dataTable)
+        {
+            DataRow dr = dataTable.Rows[0];
+            Table table = new Table();
+            table.Table_Number = (int)dr["TABLE_ID"];
+            Employee employee = new Employee();
+            employee.Employee_Number = (int)dr["EMPLOYEE_NUMBER"];
+            Order order = new Order()
+            {
+                Order_Id = (int)dr["ORDER_ID"],
+                Order_Time = (DateTime)dr["ORDER_DATE"],
+                Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), (string)dr["ORDER_STATUS"]),
+                Is_Paid = (bool)dr["IS_PAID"],
+                Table = table,
+                Employee = employee,
+            };
+            return order;
         }
     }
 }

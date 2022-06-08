@@ -98,22 +98,22 @@
             // columnHeaderOrderItemAmount
             // 
             this.columnHeaderOrderItemAmount.Text = "Amount";
-            this.columnHeaderOrderItemAmount.Width = 155;
+            this.columnHeaderOrderItemAmount.Width = 80;
             // 
             // columnHeaderOrderItemName
             // 
             this.columnHeaderOrderItemName.Text = "Name";
-            this.columnHeaderOrderItemName.Width = 155;
+            this.columnHeaderOrderItemName.Width = 250;
             // 
             // columnHeaderOrderItemPrice
             // 
             this.columnHeaderOrderItemPrice.Text = "Price";
-            this.columnHeaderOrderItemPrice.Width = 155;
+            this.columnHeaderOrderItemPrice.Width = 80;
             // 
             // columnHeaderOrderItemComment
             // 
             this.columnHeaderOrderItemComment.Text = "Comment";
-            this.columnHeaderOrderItemComment.Width = 155;
+            this.columnHeaderOrderItemComment.Width = 200;
             // 
             // panel1
             // 

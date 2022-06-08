@@ -15,15 +15,26 @@ namespace ChapeauUI
     public partial class Payment : Form
     {
         private OrderItemService orderItemService = new OrderItemService();
-        public Payment()
+        private OrderService orderService = new OrderService();
+        private TableService tableService = new TableService();
+        private Table currentTable;
+        private Order currentOrder;
+        private TableOverView tableView;
+        private OrderForm orderForm;
+
+        public Payment(TableOverView tableOverView, OrderForm orderForm)
         {
             InitializeComponent();
             DisplayTable();
+            this.tableView = tableOverView;
+            this.currentTable = tableOverView.table;
+            this.orderForm = orderForm;
+            //this.currentOrder = orderForm;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show($"{currentTable.Table_Number} bill has been paid!");
         }
 
         public void DisplayTable()
