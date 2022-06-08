@@ -11,6 +11,7 @@ namespace ChapeauDAL
 {
     public class MenuItemDAO : BaseDao
     {
+        //get the submenu depending on the category
         public List<MenuItem> GetSubmenu(Category category)
         {
             string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID = {(int)category}";
@@ -25,6 +26,7 @@ namespace ChapeauDAL
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //update the stock
         public void UpdateMenuItemStock(OrderItem orderItem)
         {
             string query = $"UPDATE MENU_ITEM SET MENU_ITEM_STOCK = MENU_ITEM_STOCK - {orderItem.Order_Item_Quantity} WHERE MENU_ITEM_ID = {orderItem.MenuItem.Menu_Item_Id};";
@@ -32,6 +34,7 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        //method for reading multiple menu items from the data table
         private List<MenuItem> ReadTables(DataTable dataTable)
         {
             //create list to store the menu

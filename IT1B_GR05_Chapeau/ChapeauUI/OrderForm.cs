@@ -50,7 +50,7 @@ namespace ChapeauUI
         }
 
 
-        private int GetNextOrderID()
+        public int GetNextOrderID()
         {
             int lastOrderID = orderService.GetLastOrderID();
             int nextOrderID = lastOrderID + 1;
@@ -337,7 +337,10 @@ namespace ChapeauUI
         private void btnSubmitOrder_Click(object sender, EventArgs e)
         {
             List<OrderItem> orderItems = GetOrderItems();
-            foreach(OrderItem item in orderItems)
+            Order order = new Order(orderItems, currentTable, currentWaiter, OrderStatus.Ordered, false, DateTime.Now);
+            orderService.InsertOrder(order);
+
+            foreach (OrderItem item in orderItems)
             {
                 orderItemService.InsertOrderItem(item);
                 menuItemService.UpdateMenuItemStock(item);
@@ -345,9 +348,6 @@ namespace ChapeauUI
 
            // Table table = new Table(1, false); //replace with current table
             //Employee employee = new Employee(1, "barry", EmployeeRole.Waiter, "1234"); //replace with current waiter
-
-            Order order = new Order(orderItems, currentTable, currentWaiter, OrderStatus.Ordered, false, DateTime.Now);
-            orderService.InsertOrder(order);
 
             RemoveOrderItems();
             MessageBox.Show("Order successfully submitted, press OK to go back to Table View", "Order", MessageBoxButtons.OK);

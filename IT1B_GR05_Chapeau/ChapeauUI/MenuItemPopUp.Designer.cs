@@ -136,12 +136,12 @@
             this.textBoxItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.textBoxItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItem.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBoxItem.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxItem.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxItem.ForeColor = System.Drawing.Color.Black;
-            this.textBoxItem.Location = new System.Drawing.Point(22, 73);
+            this.textBoxItem.Location = new System.Drawing.Point(22, 64);
             this.textBoxItem.Multiline = true;
             this.textBoxItem.Name = "textBoxItem";
-            this.textBoxItem.Size = new System.Drawing.Size(505, 60);
+            this.textBoxItem.Size = new System.Drawing.Size(505, 69);
             this.textBoxItem.TabIndex = 10;
             this.textBoxItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

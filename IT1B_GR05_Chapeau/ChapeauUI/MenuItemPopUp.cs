@@ -39,6 +39,7 @@ namespace ChapeauUI
             pnlUpdateOrderItem.Visible = false;
             textBoxItem.Text = menuItem.Menu_Item_Name;
             textBoxItem.Enabled = false;
+            textBoxItem.ForeColor = Color.Green;
             lblQuantityValue.Text = "1";
             DisableMinus();
         }
@@ -130,8 +131,8 @@ namespace ChapeauUI
         {
             int quantity = int.Parse(lblQuantityValue.Text);
             string comment = GetComment();
-
-            OrderItem orderItem = new OrderItem(3, menuItem, quantity, comment);
+            int nextOrderId =  orderForm.GetNextOrderID();
+            OrderItem orderItem = new OrderItem(nextOrderId, menuItem, quantity, comment);
 
             if (!IsOrderItemInList(orderItem))
             {
