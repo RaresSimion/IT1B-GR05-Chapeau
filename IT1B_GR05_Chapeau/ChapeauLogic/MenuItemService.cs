@@ -32,5 +32,10 @@ namespace ChapeauLogic
             MenuItem menuItem = menuItemDB.GetMenuItemByID(menuItemId);
             return menuItem;
         }
+
+        public int GetStockOfMenuItem(MenuItem menuItem)
+        {
+            return menuItemDB.GetStockOfMenuItem(menuItem);
+        }
     }
 }

@@ -39,6 +39,7 @@
             this.pnlUpdateOrderItem = new System.Windows.Forms.Panel();
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnUpdateOrderItem = new System.Windows.Forms.Button();
+            this.lblRestockSoon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClosePopUp)).BeginInit();
             this.pnlUpdateOrderItem.SuspendLayout();
             this.SuspendLayout();
@@ -186,6 +187,17 @@
             this.btnUpdateOrderItem.UseVisualStyleBackColor = false;
             this.btnUpdateOrderItem.Click += new System.EventHandler(this.btnUpdateOrderItem_Click);
             // 
+            // lblRestockSoon
+            // 
+            this.lblRestockSoon.AutoSize = true;
+            this.lblRestockSoon.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRestockSoon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.lblRestockSoon.Location = new System.Drawing.Point(0, 2);
+            this.lblRestockSoon.Name = "lblRestockSoon";
+            this.lblRestockSoon.Size = new System.Drawing.Size(180, 30);
+            this.lblRestockSoon.TabIndex = 12;
+            this.lblRestockSoon.Text = "*Restock soon";
+            // 
             // MenuItemPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -193,6 +205,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(539, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.lblRestockSoon);
             this.Controls.Add(this.pnlUpdateOrderItem);
             this.Controls.Add(this.textBoxItem);
             this.Controls.Add(this.lblQuantityValue);
@@ -225,5 +238,6 @@
         private System.Windows.Forms.Panel pnlUpdateOrderItem;
         private System.Windows.Forms.Button btnRemoveItem;
         private System.Windows.Forms.Button btnUpdateOrderItem;
+        private System.Windows.Forms.Label lblRestockSoon;
     }
 }

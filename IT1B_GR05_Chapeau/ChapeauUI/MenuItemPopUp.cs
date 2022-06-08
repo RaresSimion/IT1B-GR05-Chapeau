@@ -41,6 +41,7 @@ namespace ChapeauUI
             textBoxItem.Enabled = false;
             textBoxItem.ForeColor = Color.Green;
             lblQuantityValue.Text = "1";
+            CheckStock();
             DisableMinus();
         }
 
@@ -50,6 +51,7 @@ namespace ChapeauUI
             lblQuantityValue.Text = orderItem.Order_Item_Quantity.ToString();
             textBoxComment.Text = orderItem.Order_Item_Comment;
             textBoxItem.Enabled = false;
+            CheckStock();
 
             DisableUpdateButton();
             if (orderItem.Order_Item_Quantity == 1)
@@ -71,13 +73,30 @@ namespace ChapeauUI
         private void DisableMinus()
         {
             btnMinus.Visible = false;
-            btnMinus.Cursor = Cursors.No;
         }
 
         private void EnableMinus()
         {
             btnMinus.Visible = true;
-            btnMinus.Cursor = Cursors.Hand;
+        }
+
+        private void DisablePlus()
+        {
+            btnPlus.Visible = false;
+        }
+
+        private void EnablePlus()
+        {
+            btnPlus.Visible = true;
+        }
+
+        private void CheckStock()
+        {
+            int itemStock = GetStock();
+            if (itemStock < 10)
+                lblRestockSoon.Visible = true;
+            else
+                lblRestockSoon.Visible = false;
         }
 
         private string GetComment()
@@ -90,6 +109,17 @@ namespace ChapeauUI
                 comment = textBoxComment.Text;
 
             return comment;
+        }
+
+        private int GetStock()
+        {
+            int itemStock;
+            if (menuItem != null)
+                itemStock = menuItem.Menu_Item_Stock;
+            else
+                itemStock = orderItem.MenuItem.Menu_Item_Stock;
+
+            return itemStock;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
@@ -114,13 +144,19 @@ namespace ChapeauUI
         private void lblQuantityValue_TextChanged(object sender, EventArgs e)
         {
             int value = int.Parse(lblQuantityValue.Text);
+            int stockValue = GetStock();
 
-            if (value == 1)
+            if (value == stockValue)
+            {
+                DisablePlus();
+            }
+            else if(value == 1)
             {
                 DisableMinus();
             }
             else
             {
+                EnablePlus();
                 EnableMinus();
             }
 
@@ -132,7 +168,7 @@ namespace ChapeauUI
             int quantity = int.Parse(lblQuantityValue.Text);
             string comment = GetComment();
             int nextOrderId =  orderForm.GetNextOrderID();
-            OrderItem orderItem = new OrderItem(nextOrderId, menuItem, quantity, comment);
+            OrderItem orderItem = new OrderItem(nextOrderId, menuItem, quantity, comment, false);
 
             if (!IsOrderItemInList(orderItem))
             {
@@ -141,10 +177,8 @@ namespace ChapeauUI
                 li.Tag = orderItem;
                 li.SubItems.Add(orderItem.MenuItem.Menu_Item_Name);
                 li.SubItems.Add(orderItem.Order_Item_Comment);
-                //li.SubItems.Add(orderItem.Order_Item_Quantity.ToString());
 
                 orderForm.OrderListView.Items.Add(li);
-                //UpdateTotal();
                 orderForm.EnableButtons();
             }
             else
@@ -153,27 +187,6 @@ namespace ChapeauUI
             }
             this.Close();
         }
-
-        /*private void UpdateTotal()
-        {
-            List<OrderItem> items = orderForm.GetOrderItems();
-            decimal valueOfItems = 0;
-            decimal valueOfItemsWithVat = 0;
-
-            foreach(OrderItem item in items)
-            {
-                valueOfItems += item.MenuItem.Menu_Item_Price * item.Order_Item_Quantity;
-                valueOfItemsWithVat += item.Order_Item_Price_With_VAT * item.Order_Item_Quantity;
-            }
-
-            SetNewTotal(valueOfItems, valueOfItemsWithVat);
-        }
-
-        private void SetNewTotal(decimal value, decimal valueWithVat)
-        {
-            orderForm.TotalValue.Text = $"€{value:0.00}";
-            orderForm.TotalWithVatValue.Text = $"€{valueWithVat:0.00}";
-        }*/
 
         private bool IsOrderItemInList(OrderItem orderItem)
         {
@@ -195,7 +208,6 @@ namespace ChapeauUI
             orderForm.OrderListView.SelectedItems[0].SubItems[0].Text = orderItem.Order_Item_Quantity.ToString();
             orderForm.OrderListView.SelectedItems[0].SubItems[2].Text = orderItem.Order_Item_Comment;
 
-            //UpdateTotal();
             this.Close();
         }
 
@@ -225,6 +237,5 @@ namespace ChapeauUI
                     DisableUpdateButton();
             }
         }
-
     }
 }
