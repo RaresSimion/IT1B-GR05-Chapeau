@@ -182,3 +182,15 @@ Time: 02/06/2022 10:59:01 PM
 Message: Must declare the scalar variable "@EMPLOYEE_PASSWORD".
 -----------------------------------------------------------
 
+Time: 05/06/2022 07:00:29 PM
+-----------------------------------------------------------
+Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__ORDER_ITE__ORDER__7755B73D". The conflict occurred in database "db_IT1b5", table "dbo.ORDER", column 'ORDER_ID'.
+The statement has been terminated.
+-----------------------------------------------------------
+
+Time: 05/06/2022 07:00:29 PM
+-----------------------------------------------------------
+Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__ORDER_ITE__ORDER__7755B73D". The conflict occurred in database "db_IT1b5", table "dbo.ORDER", column 'ORDER_ID'.
+The statement has been terminated.
+-----------------------------------------------------------
+
