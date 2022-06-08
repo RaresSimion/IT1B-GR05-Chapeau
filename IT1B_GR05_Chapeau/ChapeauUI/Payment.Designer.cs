@@ -30,6 +30,10 @@
         {
             this.lblTable = new System.Windows.Forms.Label();
             this.listViewTable = new System.Windows.Forms.ListView();
+            this.columnHeaderOrderItemAmount = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderOrderItemName = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderOrderItemPrice = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderOrderItemComment = new System.Windows.Forms.ColumnHeader();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,10 +61,6 @@
             this.lblTip = new System.Windows.Forms.Label();
             this.lblVat = new System.Windows.Forms.Label();
             this.lblTotalOrder = new System.Windows.Forms.Label();
-            this.columnHeaderOrderItemName = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderOrderItemAmount = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderOrderItemPrice = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderOrderItemComment = new System.Windows.Forms.ColumnHeader();
             this.panel1.SuspendLayout();
             this.pnlTable.SuspendLayout();
             this.pnlPaymentMethod.SuspendLayout();
@@ -94,6 +94,26 @@
             this.listViewTable.TabIndex = 5;
             this.listViewTable.UseCompatibleStateImageBehavior = false;
             this.listViewTable.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderOrderItemAmount
+            // 
+            this.columnHeaderOrderItemAmount.Text = "Amount";
+            this.columnHeaderOrderItemAmount.Width = 155;
+            // 
+            // columnHeaderOrderItemName
+            // 
+            this.columnHeaderOrderItemName.Text = "Name";
+            this.columnHeaderOrderItemName.Width = 155;
+            // 
+            // columnHeaderOrderItemPrice
+            // 
+            this.columnHeaderOrderItemPrice.Text = "Price";
+            this.columnHeaderOrderItemPrice.Width = 155;
+            // 
+            // columnHeaderOrderItemComment
+            // 
+            this.columnHeaderOrderItemComment.Text = "Comment";
+            this.columnHeaderOrderItemComment.Width = 155;
             // 
             // panel1
             // 
@@ -394,22 +414,6 @@
             this.lblTotalOrder.Size = new System.Drawing.Size(151, 30);
             this.lblTotalOrder.TabIndex = 0;
             this.lblTotalOrder.Text = "Total Order:";
-            // 
-            // columnHeaderOrderItemName
-            // 
-            this.columnHeaderOrderItemName.Text = "Name";
-            // 
-            // columnHeaderOrderItemAmount
-            // 
-            this.columnHeaderOrderItemAmount.Text = "Amount";
-            // 
-            // columnHeaderOrderItemPrice
-            // 
-            this.columnHeaderOrderItemPrice.Text = "Price";
-            // 
-            // columnHeaderOrderItemComment
-            // 
-            this.columnHeaderOrderItemComment.Text = "Comment";
             // 
             // Payment
             // 
