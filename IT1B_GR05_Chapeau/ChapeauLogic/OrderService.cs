@@ -35,12 +35,12 @@ namespace ChapeauLogic
             List<Order> orders = orderDB.GetDrinkOrders();
             return orders;
          }
-        /*
+        
          public Order GetOrderById(int orderId) {
             Order order = orderDB.GetOrderById(orderId);
             return order;
          }
-        */
+        
 
         public int GetLastOrderID()
         {
