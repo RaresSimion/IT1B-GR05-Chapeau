@@ -19,12 +19,12 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        /*public MenuItem GetMenuItemByID(int menuItemID)
+        public MenuItem GetMenuItemByID(int menuItemID)
         {
             string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE MENU_ITEM_ID = {menuItemID}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
-        }*/
+        }
 
         //update the stock
         public void UpdateMenuItemStock(OrderItem orderItem)

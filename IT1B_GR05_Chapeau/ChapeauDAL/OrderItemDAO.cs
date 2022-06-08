@@ -10,6 +10,7 @@ namespace ChapeauDAL
 {
     public class OrderItemDAO : BaseDao
     {
+        private MenuItemDAO menuItemDAO = new MenuItemDAO();
         public void InsertOrderItem(OrderItem orderItem)
         {
             string query = $"INSERT INTO ORDER_ITEM (ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT) VALUES ({orderItem.OrderID}, {orderItem.MenuItem.Menu_Item_Id}, {orderItem.Order_Item_Quantity}, '{orderItem.Order_Item_Comment}');";
@@ -34,6 +35,12 @@ namespace ChapeauDAL
             string query = $"SELECT ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT FROM ORDER_ITEM WHERE ORDER_ID = {ID}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public List<OrderItem> GetAllOrderItemsFromTable(Table table)
+        {
+            string query = $"SELECT ORDER_ITEM.ORDER_ID, ORDER_ITEM.MENU_ITEM_ID, ORDER_ITEM.ORDER_ITEM_QUANTITY, ORDER_ITEM.ORDER_ITEM_COMMENT FROM ORDER_ITEM JOIN[ORDER] ON ORDER_ITEM.ORDER_ID = [ORDER].ORDER_ID WHERE[ORDER].TABLE_ID = {table.Table_Number}  AND[ORDER].IS_PAID = 'false'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
         private List<OrderItem> ReadTables(DataTable dataTable)
         {
@@ -63,6 +70,23 @@ namespace ChapeauDAL
                 Category = (Category)(dr["CATEGORY_ID"])
             };
             return menuItem;
+        }
+        private List<OrderItem> ReadOrderItems(DataTable dataTable)
+        {
+            List<OrderItem> orderItem = new List<OrderItem>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                OrderItem item = new OrderItem()
+                {
+                    OrderID = (int)(dr["ORDER_ID"]),
+                    MenuItem = menuItemDAO.GetMenuItemByID((int)(dr["MENU_ITEM_ID"])),
+                    Order_Item_Quantity = (int)(dr["ORDER_ITEM_QUANTITY"]),
+                    Order_Item_Comment = (string)(dr["ORDER_ITEM_COMMENT"]),
+                };
+                orderItem.Add(item);
+            }
+            return orderItem;
         }
     }
 }

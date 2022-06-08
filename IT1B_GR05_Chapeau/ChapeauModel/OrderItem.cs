@@ -5,9 +5,9 @@ namespace ChapeauModel
 
 	public class OrderItem
 	{
-		private const decimal ALCOHOLIC_VAT = 1.21M;
-		private const decimal NONALCOHOLIC_VAT = 1.06M;
-		private decimal order_Item_Price_Without_VAT;
+		private const decimal ALCOHOLIC_VAT = 0.21M;
+		private const decimal NONALCOHOLIC_VAT = 0.06M;
+		private decimal vat_In_Price;
 		public int OrderID { get; set; }
 		public MenuItem MenuItem { get; set; }
 		public int Order_Item_Quantity { get; set; }
@@ -20,16 +20,16 @@ namespace ChapeauModel
 			}
 		}
 
-		public decimal Order_Item_Price_Without_VAT
+		public decimal VAT_In_Price
 		{
 			get 
 			{
 				if (Is_Alcoholic)
-					order_Item_Price_Without_VAT = MenuItem.Menu_Item_Price / ALCOHOLIC_VAT;
+					vat_In_Price = MenuItem.Menu_Item_Price * ALCOHOLIC_VAT;
 				else
-					order_Item_Price_Without_VAT = MenuItem.Menu_Item_Price / NONALCOHOLIC_VAT;
+					vat_In_Price = MenuItem.Menu_Item_Price * NONALCOHOLIC_VAT;
 
-				return order_Item_Price_Without_VAT; 
+				return vat_In_Price; 
 			}
 		}
 

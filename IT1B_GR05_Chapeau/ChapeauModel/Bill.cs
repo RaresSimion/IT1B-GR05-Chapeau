@@ -6,9 +6,10 @@ namespace ChapeauModel
     {
         public int Bill_ID { get; set; }
         public PaymentType Payment_Method { get; set; }
-        public int Order_Item_ID { get; set; }
-        public int Table_Nr { get; set; }
-        public double Total_Price { get; set; }
+        public Table Table { get; set; }
+        public decimal Total_Price { get; set; }
+        public decimal Vat21 { get; set;}
+        public decimal Vat6 { get; set;}
 
 
 
@@ -16,13 +17,14 @@ namespace ChapeauModel
         {
 
         }
-        public Bill(int Bill_ID, PaymentType Payment_Method, int Order_Item_ID, int Table_Nr, double Total_Price)
+        public Bill(int Bill_ID, PaymentType Payment_Method, Table Table, decimal Total_Price, decimal Vat21, decimal Vat6)
         {
             this.Bill_ID = Bill_ID;
             this.Payment_Method = Payment_Method;
-            this.Order_Item_ID = Order_Item_ID;
-            this.Table_Nr = Table_Nr;
+            this.Table = Table;
             this.Total_Price = Total_Price;
+            this.Vat21 = Vat21;
+            this.Vat6 = Vat6;
         }
     }
 }
