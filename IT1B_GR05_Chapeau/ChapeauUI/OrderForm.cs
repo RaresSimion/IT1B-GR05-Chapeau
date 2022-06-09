@@ -195,6 +195,9 @@ namespace ChapeauUI
             listViewMenu.Items.Clear();
             foreach (MenuItem item in items)
             {
+                if (item.Menu_Item_Stock == 0)
+                    continue;
+
                 ListViewItem li = new ListViewItem(item.Menu_Item_Id.ToString());
                 li.Tag = item;
                 li.SubItems.Add(item.Menu_Item_Name);
