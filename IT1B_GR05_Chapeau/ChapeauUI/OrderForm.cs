@@ -69,7 +69,7 @@ namespace ChapeauUI
         }
 
         //disable the remove order and submit order buttons
-        private void DisableButtons()
+        public void DisableButtons()
         {
             btnRemoveOrder.Visible = false;
             btnSubmitOrder.Visible = false;
@@ -479,7 +479,7 @@ namespace ChapeauUI
             catch (Exception ex)
             {
                 MessageBox.Show("Something went wrong while inserting the order: " + ex.Message); //error pop up
-                ErrorLogger.LogError(ex);
+                ErrorLogger.LogError(ex); //log the error
             }
         }
 

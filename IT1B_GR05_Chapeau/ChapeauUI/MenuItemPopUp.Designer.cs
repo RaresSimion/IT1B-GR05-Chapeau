@@ -136,7 +136,6 @@
             // 
             this.textBoxItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.textBoxItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxItem.Cursor = System.Windows.Forms.Cursors.No;
             this.textBoxItem.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxItem.ForeColor = System.Drawing.Color.Black;
             this.textBoxItem.Location = new System.Drawing.Point(22, 64);

@@ -10,6 +10,8 @@ namespace ChapeauDAL
 {
     public class OrderDAO : BaseDao
     {
+
+        //inserting an order into the database
         public void InsertOrder(Order order)
         {
             string query = $"INSERT INTO [ORDER] VALUES ('{order.Order_Time:yyyy-MM-dd HH:mm:ss}', '{order.Is_Paid}', {order.Table.Table_Number}, {order.Employee.Employee_Number}, {order.Item_Count}, {(int)order.Order_Status});";
