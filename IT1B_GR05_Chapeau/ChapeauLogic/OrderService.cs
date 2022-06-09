@@ -14,34 +14,39 @@ namespace ChapeauLogic
 
         public OrderService()
         {
+            //create connection to database
             orderDB = new OrderDAO();
         }
 
+        //inserting an order into the database
         public void InsertOrder(Order order)
         {
             orderDB.InsertOrder(order);
         }
 
-        public void UpdateOrderStatus(int orderId, OrderStatus status) {
+        public void UpdateOrderStatus(int orderId, OrderStatus status) 
+        {
             orderDB.UpdateOrderStatus(orderId, status);
         }
 
-         public List<Order> GetFoodOrders() {
+        public List<Order> GetFoodOrders()
+        {
             List<Order> orders = orderDB.GetFoodOrders();
             return orders;
-         }
-         public List<Order> GetDrinkOrders()
-         {
+        }
+        public List<Order> GetDrinkOrders()
+        {
             List<Order> orders = orderDB.GetDrinkOrders();
             return orders;
-         }
-        
-         public Order GetOrderById(int orderId) {
+        }
+
+        public Order GetOrderById(int orderId)
+        {
             Order order = orderDB.GetOrderById(orderId);
             return order;
-         }
-        
+        }
 
+        //get the id of the last order
         public int GetLastOrderID()
         {
             int lastOrderID = orderDB.GetLastOrderID();

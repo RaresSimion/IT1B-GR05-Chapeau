@@ -215,7 +215,6 @@ namespace ChapeauUI
         {
             int idOfSelectedItem = orderForm.OrderListView.SelectedItems[0].Index;
             orderForm.OrderListView.Items.RemoveAt(idOfSelectedItem);
-            //UpdateTotal();
             this.Close();
         }
 
