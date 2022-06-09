@@ -60,6 +60,8 @@
             this.lblLunch = new System.Windows.Forms.Label();
             this.lblBack = new System.Windows.Forms.Label();
             this.pnlSubMenu = new System.Windows.Forms.Panel();
+            this.lblLowStock = new System.Windows.Forms.Label();
+            this.txtBoxColorIndicato = new System.Windows.Forms.TextBox();
             this.textBoxSubmenu = new System.Windows.Forms.TextBox();
             this.listViewMenu = new System.Windows.Forms.ListView();
             this.columnHeaderID = new System.Windows.Forms.ColumnHeader();
@@ -239,6 +241,7 @@
             this.listViewOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listViewOrder.FullRowSelect = true;
             this.listViewOrder.GridLines = true;
+            this.listViewOrder.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewOrder.HideSelection = false;
             this.listViewOrder.Location = new System.Drawing.Point(7, 143);
             this.listViewOrder.Name = "listViewOrder";
@@ -251,8 +254,8 @@
             // 
             // columnHeaderOrderQuantity
             // 
-            this.columnHeaderOrderQuantity.Text = "Quantity";
-            this.columnHeaderOrderQuantity.Width = 100;
+            this.columnHeaderOrderQuantity.Text = "Amount";
+            this.columnHeaderOrderQuantity.Width = 95;
             // 
             // columnHeaderOrderItemName
             // 
@@ -489,12 +492,35 @@
             // 
             // pnlSubMenu
             // 
+            this.pnlSubMenu.Controls.Add(this.lblLowStock);
+            this.pnlSubMenu.Controls.Add(this.txtBoxColorIndicato);
             this.pnlSubMenu.Controls.Add(this.textBoxSubmenu);
             this.pnlSubMenu.Controls.Add(this.listViewMenu);
             this.pnlSubMenu.Location = new System.Drawing.Point(0, 112);
             this.pnlSubMenu.Name = "pnlSubMenu";
             this.pnlSubMenu.Size = new System.Drawing.Size(364, 776);
             this.pnlSubMenu.TabIndex = 6;
+            // 
+            // lblLowStock
+            // 
+            this.lblLowStock.AutoSize = true;
+            this.lblLowStock.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLowStock.Location = new System.Drawing.Point(84, 454);
+            this.lblLowStock.Name = "lblLowStock";
+            this.lblLowStock.Size = new System.Drawing.Size(185, 42);
+            this.lblLowStock.TabIndex = 4;
+            this.lblLowStock.Text = "< 10 items";
+            // 
+            // txtBoxColorIndicato
+            // 
+            this.txtBoxColorIndicato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.txtBoxColorIndicato.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxColorIndicato.Enabled = false;
+            this.txtBoxColorIndicato.Location = new System.Drawing.Point(35, 457);
+            this.txtBoxColorIndicato.Multiline = true;
+            this.txtBoxColorIndicato.Name = "txtBoxColorIndicato";
+            this.txtBoxColorIndicato.Size = new System.Drawing.Size(43, 39);
+            this.txtBoxColorIndicato.TabIndex = 3;
             // 
             // textBoxSubmenu
             // 
@@ -517,6 +543,7 @@
             this.listViewMenu.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listViewMenu.FullRowSelect = true;
             this.listViewMenu.GridLines = true;
+            this.listViewMenu.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewMenu.HideSelection = false;
             this.listViewMenu.Location = new System.Drawing.Point(3, 143);
             this.listViewMenu.Name = "listViewMenu";
@@ -639,11 +666,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(728, 961);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlSubMenu);
             this.Controls.Add(this.pnlLunch);
             this.Controls.Add(this.pnlDrinks);
             this.Controls.Add(this.pnlDinner);
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.pnlSubMenu);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.pnlOrder);
             this.Controls.Add(this.pnlHeader);
@@ -713,5 +740,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderOrderQuantity;
         private System.Windows.Forms.Button btnSubmitOrder;
         private System.Windows.Forms.Button btnRemoveOrder;
+        private System.Windows.Forms.Label lblLowStock;
+        private System.Windows.Forms.TextBox txtBoxColorIndicato;
     }
 }

@@ -202,6 +202,10 @@ namespace ChapeauUI
                 li.SubItems.Add(item.Menu_Item_Price.ToString());
                 li.SubItems.Add(item.Category.ToString());
 
+                int itemStock = menuItemService.GetStockOfMenuItem(item);
+                if (itemStock < 10)
+                    li.BackColor = Color.FromArgb(253, 102, 0);
+
                 listViewMenu.Items.Add(li);
             }
         }
