@@ -41,6 +41,10 @@ namespace ChapeauLogic
             return orderItemDB.GetAllOrderItemsFromTable(table);
         }
 
-
+        //mark item as complete
+        public void MarkItemComplete(int orderid, int menuitemid)
+        {
+            orderItemDB.MarkOrderItemComplete(orderid, menuitemid);
+        }
     }
 }

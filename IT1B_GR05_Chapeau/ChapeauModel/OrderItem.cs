@@ -14,6 +14,9 @@ namespace ChapeauModel
 		//the part of the price represented by vat
 		private decimal vat_In_Price;
 
+		//is item ready
+		public bool itemIsReady { get; set; }
+
 		//the order id of the order item
 		public int OrderID { get; set; }
 

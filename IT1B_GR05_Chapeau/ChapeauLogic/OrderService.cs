@@ -24,7 +24,7 @@ namespace ChapeauLogic
             orderDB.InsertOrder(order);
         }
 
-        public void UpdateOrderStatus(int orderId, OrderStatus status) 
+        public void UpdateOrderStatus(int orderId, OrderStatus status)
         {
             orderDB.UpdateOrderStatus(orderId, status);
         }
@@ -51,6 +51,18 @@ namespace ChapeauLogic
         {
             int lastOrderID = orderDB.GetLastOrderID();
             return lastOrderID;
+        }
+
+        public List<Order> GetOrdersByTableId(int tableNr)
+        {
+            List<Order> orders = orderDB.GetOrdersByTableNumber(tableNr);
+            return orders;
+        }
+
+        public List<Order> GetAllOrders()
+        {
+            List<Order> orders = orderDB.GetAllOrders();
+            return orders;
         }
     }
 }

@@ -18,7 +18,12 @@ namespace ChapeauDAL
             return ReadTable(ExecuteSelectQuery(query, sqlParameter));
         }
 
-        
+        public List<Table> GetAllTables()
+        {
+            string query = $"SELECT TABLE_ID, TABLE_CAPACITY, TABLE_AVAILABILITY FROM [TABLES]";
+            SqlParameter[] sqlParameter = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameter));
+        }
 
         //read 1 
 
@@ -35,10 +40,28 @@ namespace ChapeauDAL
             return table;
         }
 
+        private List<Table> ReadTables(DataTable dataTable)
+        {
+            List<Table> tables = new List<Table>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Table table = new Table();
+                {
+                    table.Table_Number = (int)(dr["TABLE_ID"]);
+                    table.Table_Capacity = (int)(dr["TABLE_CAPACITY"]);
+                    table.Table_Availability = (bool)(dr["TABLE_AVAILABILITY"]);
+                }
+                tables.Add(table);
+            }
+            return tables;
+        }
 
         public void UpdateTable(Table table)
         {
-
+            string query = $"UPDATE [TABLES] SET TABLE_AVAILABILITY = '{table.Table_Availability}' WHERE TABLE_ID = {table.Table_Number}";
+            SqlParameter[] sqlParameter = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameter);
         }
     }
 }

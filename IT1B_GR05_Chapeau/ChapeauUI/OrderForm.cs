@@ -258,6 +258,7 @@ namespace ChapeauUI
 
                     //add the item to the menu list view
                     listViewMenu.Items.Add(li);
+
                 }
             }
             catch (Exception ex)
@@ -595,6 +596,7 @@ namespace ChapeauUI
 
                 //show the table view
                 tableOverView.Show();
+                tableOverView.HidePanels();
             }
             catch (Exception ex)
             {

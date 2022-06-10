@@ -41,7 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSignIn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonRegister = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -49,7 +50,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ChapeauUI.Properties.Resources.Chapeau_original;
+            this.pictureBox1.Image = global::ChapeauUI.Properties.Resources.Chapeau_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(144, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(439, 167);
@@ -104,10 +105,11 @@
             // 
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPass.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPass.ForeColor = System.Drawing.Color.SeaGreen;
+            this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.textBoxPass.Location = new System.Drawing.Point(160, 462);
             this.textBoxPass.Multiline = true;
             this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.PasswordChar = '*';
             this.textBoxPass.Size = new System.Drawing.Size(537, 50);
             this.textBoxPass.TabIndex = 6;
             this.textBoxPass.TextChanged += new System.EventHandler(this.textBoxPass_TextChanged);
@@ -188,17 +190,29 @@
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
-            // button3
+            // buttonRegister
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(54, 686);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(643, 66);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Forgot Your Password?";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRegister.ForeColor = System.Drawing.Color.White;
+            this.buttonRegister.Location = new System.Drawing.Point(54, 686);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(643, 66);
+            this.buttonRegister.TabIndex = 14;
+            this.buttonRegister.Text = "Register New User";
+            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(635, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 40);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Exit";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // LoginForm
             // 
@@ -206,7 +220,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(744, 788);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -248,6 +263,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSignIn;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.Label label5;
     }
 }
