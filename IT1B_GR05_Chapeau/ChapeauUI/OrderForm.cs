@@ -320,7 +320,17 @@ namespace ChapeauUI
             ShowSubPanel("Soft drinks");
 
             //add soft drinks to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.SoftDrinks));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.SoftDrinks));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the soft drinks: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnBeers_Click(object sender, EventArgs e)
@@ -328,7 +338,17 @@ namespace ChapeauUI
             ShowSubPanel("Beers");
 
             //add beers to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.Beers));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.Beers));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the beers: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnWines_Click(object sender, EventArgs e)
@@ -336,7 +356,17 @@ namespace ChapeauUI
             ShowSubPanel("Wines");
 
             //add wines to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.Wines));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.Wines));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the wines: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnSpirits_Click(object sender, EventArgs e)
@@ -344,7 +374,17 @@ namespace ChapeauUI
             ShowSubPanel("Spirits");
 
             //add spirits to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.SpiritDrinks));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.SpiritDrinks));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the spirits: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnCoffeeTea_Click(object sender, EventArgs e)
@@ -352,7 +392,17 @@ namespace ChapeauUI
             ShowSubPanel("Coffee/Tea");
 
             //add coffee/tea to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.CoffeeTea));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.CoffeeTea));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the coffee/tea: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
@@ -365,7 +415,17 @@ namespace ChapeauUI
             ShowSubPanel("Lunch Starters");
 
             //add lunch starters to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchStarters));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchStarters));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the lunch starters: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnLunchMains_Click(object sender, EventArgs e)
@@ -373,7 +433,17 @@ namespace ChapeauUI
             ShowSubPanel("Lunch Mains");
 
             //add lunch mains to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchMains));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchMains));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the lunch mains: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnDesserts_Click(object sender, EventArgs e)
@@ -381,7 +451,17 @@ namespace ChapeauUI
             ShowSubPanel("Lunch Desserts");
 
             //add lunch desserts to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchDesserts));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.LunchDesserts));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the lunch desserts: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnDinnerStarters_Click(object sender, EventArgs e)
@@ -389,7 +469,17 @@ namespace ChapeauUI
             ShowSubPanel("Dinner Starters");
 
             //add dinner starters to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerStarters));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerStarters));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the dinner starters: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnDinnerEntremets_Click(object sender, EventArgs e)
@@ -397,7 +487,17 @@ namespace ChapeauUI
             ShowSubPanel("Dinner Entremets");
 
             //add dinner entremets to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerEntremets));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerEntremets));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the dinner entremets: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnDinnerMains_Click(object sender, EventArgs e)
@@ -405,7 +505,17 @@ namespace ChapeauUI
             ShowSubPanel("Dinner Mains");
 
             //add dinner mains to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerMains));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerMains));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the dinner mains: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnDinnerDesserts_Click(object sender, EventArgs e)
@@ -413,7 +523,17 @@ namespace ChapeauUI
             ShowSubPanel("Dinner Desserts");
 
             //add dinner desserts to menu
-            AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerDesserts));
+            try
+            {
+                AddItemsToMenu(menuItemService.GetSubmenu(Category.DinnerDesserts));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Something went wrong while displaying the dinner desserts: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+                ShowPanel("Menu");
+            }
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
