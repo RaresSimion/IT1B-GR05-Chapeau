@@ -30,8 +30,7 @@ namespace ChapeauUI
 
             employeeService = new EmployeeService();
 
-            textBoxPass.UseSystemPasswordChar = true;
-            textBoxPass.PasswordChar = '*';
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,16 +55,24 @@ namespace ChapeauUI
                 else if (user.Employee_Role == EmployeeRole.Bartender)
                 {
                     MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some drinks.");
+
+                    
                     this.Hide();
+                    new KitchenViewForm(user).Show();
                     //updated when Matthias' form is added
                     //new BarView().Show();
+
                 }
                 else if (user.Employee_Role == EmployeeRole.Chef)
                 {
                     MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some meals.");
+
+
                     this.Hide();
+                    new KitchenViewForm(user).Show();
                     //updated when Matthias' form is added
                     //new KItchenView().Show();
+
                 }
                 else if (user.Employee_Role == EmployeeRole.Manager)
                 {
@@ -112,51 +119,76 @@ namespace ChapeauUI
         {
             string password = textBoxPass.Text;
 
-            if (password == "")
+            try
             {
-                MessageBox.Show("Please enter your Password");
-            }
+                user = employeeService.GetEmployeeByPassword(password);
 
-            user = employeeService.GetEmployeeByPassword(password);
-
-            if (user != null)
-            {
-                if (user.Employee_Role == EmployeeRole.Waiter)
+                if (user != null)
                 {
-                    MessageBox.Show($"Welcome Back, {user.Employee_Name}! Let's go take some orders.");
-                    this.Hide();
-                    new TableOverView(user).Show();
+                    if (user.Employee_Role == EmployeeRole.Waiter)
+                    {
+                        MessageBox.Show($"Welcome Back, {user.Employee_Name}! Let's go take some orders.");
+                        this.Hide();
+                        new TableOverView(user).Show();
+                    }
+                    else if (user.Employee_Role == EmployeeRole.Bartender)
+                    {
+                        MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some drinks.");
+                        this.Hide();
+                        //updated when Matthias' form is added
+                        //new BarView().Show();
+                    }
+                    else if (user.Employee_Role == EmployeeRole.Chef)
+                    {
+                        MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some meals.");
+                        this.Hide();
+                        //updated when Matthias' form is added
+                        //new KItchenView().Show();
+                    }
+                    else if (user.Employee_Role == EmployeeRole.Manager)
+                    {
+                        MessageBox.Show($"Uh oh! Right now, Chapeau doesn't have a manager." +
+                        $"Maybe, come back later!");
+                        textBoxUser.Clear();
+                        textBoxPass.Clear();
+                        textBoxUser.Focus();
+                    }
                 }
-                else if (user.Employee_Role == EmployeeRole.Bartender)
+                else
                 {
-                    MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some drinks.");
-                    this.Hide();
-                    //updated when Matthias' form is added
-                    //new BarView().Show();
-                }
-                else if (user.Employee_Role == EmployeeRole.Chef)
-                {
-                    MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some meals.");
-                    this.Hide();
-                    //updated when Matthias' form is added
-                    //new KItchenView().Show();
-                }
-                else if (user.Employee_Role == EmployeeRole.Manager)
-                {
-                    MessageBox.Show($"Uh oh! Right now, Chapeau doesn't have a manager." +
-                    $"Maybe, come back later!");
+                    MessageBox.Show("Incorrect PIN or Password Entered. Try again.");
                     textBoxUser.Clear();
                     textBoxPass.Clear();
                     textBoxUser.Focus();
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong while logging in: " + ex.Message); //error pop up
+                ErrorLogger.LogError(ex);
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttonbox = MessageBoxButtons.YesNo;
+            string message = "Do you want to exit Chapeau?";
+            string title = "Exit?";
+
+            DialogResult result = MessageBox.Show(message, title, buttonbox);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
             else
             {
-                MessageBox.Show("Incorrect PIN or Password Entered. Try again.");
-                textBoxUser.Clear();
-                textBoxPass.Clear();
-                textBoxUser.Focus();
+                
             }
+        }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chapeau doesn't have a manager. You cannot register a new user.");
         }
     }
 }

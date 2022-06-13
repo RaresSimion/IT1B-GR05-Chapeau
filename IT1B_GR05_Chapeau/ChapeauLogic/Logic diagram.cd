@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChapeauModel.BillService">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>BillService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauLogic.EmployeeService">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>EmployeeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauLogic.MenuItemService">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAABBAAI=</HashCode>
+      <FileName>MenuItemService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauLogic.OrderItemService">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAACEAAgAAAAAAIAACAAA=</HashCode>
+      <FileName>OrderItemService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauLogic.OrderService">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAQAAAABAAAAAAABAAAAEAQAAwAAAAAAAAAg=</HashCode>
+      <FileName>OrderService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauLogic.TableService">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TableService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

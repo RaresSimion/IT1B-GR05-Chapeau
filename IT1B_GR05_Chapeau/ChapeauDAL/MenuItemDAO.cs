@@ -62,6 +62,7 @@ namespace ChapeauDAL
                 };
                 menu.Add(menuItem);
             }
+
             return menu;
         }
 

@@ -21,16 +21,27 @@ namespace ChapeauDAL
 
         private Employee ReadEmployee(DataTable dataTable)
         {
-            DataRow row = dataTable.Rows[0];
-            Employee employee = new Employee()
+            if (dataTable.Rows.Count > 0)
             {
-                Employee_Number = (int)(row["EMPLOYEE_NUMBER"]),
-                Employee_Name = (string)(row["EMPLOYEE_NAME"]),
-                Employee_Role = (EmployeeRole)(row["EMPLOYEE_ROLE"]),
-                Employee_Password = (string)(row["EMPLOYEE_PASSWORD"])
-            };
+                DataRow row = dataTable.Rows[0];
+                Employee employee = new Employee()
+                {
+                    Employee_Number = (int)(row["EMPLOYEE_NUMBER"]),
+                    Employee_Name = (string)(row["EMPLOYEE_NAME"]),
+                    Employee_Role = (EmployeeRole)(row["EMPLOYEE_ROLE"]),
+                    Employee_Password = (string)(row["EMPLOYEE_PASSWORD"])
+                };
+                return employee;
+            }
+            else
+                throw new Exception("Incorrect credentials entered");
+        }
 
-            return employee;
+        public Employee GetEmployeeByID(int ID)
+        {
+            string query = $"SELECT EMPLOYEE_NUMBER, EMPLOYEE_NAME, EMPLOYEE_ROLE, EMPLOYEE_PASSWORD FROM EMPLOYEE WHERE EMPLOYEE_NUMBER='{ID}';";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadEmployee(ExecuteSelectQuery(query, sqlParameters));
         }
     }
 }

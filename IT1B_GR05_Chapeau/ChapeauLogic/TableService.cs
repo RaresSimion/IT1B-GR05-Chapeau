@@ -27,5 +27,11 @@ namespace ChapeauLogic
         {
             tableDAO.UpdateTable(table);
         }
+
+        public List<Table> GetTables()
+        {
+            List<Table> tables = tableDAO.GetAllTables();
+            return tables;
+        }
     }
 }

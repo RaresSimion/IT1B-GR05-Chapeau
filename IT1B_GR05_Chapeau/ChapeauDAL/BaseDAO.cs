@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using System.IO;
+using ChapeauModel;
 
 namespace ChapeauDAL
 {
@@ -32,7 +33,7 @@ namespace ChapeauDAL
             }
             catch (Exception e)
             {
-                LogError(e); //error log
+                ErrorLogger.LogError(e); //error log
                 throw;
             }
             return conn;
@@ -59,7 +60,7 @@ namespace ChapeauDAL
             }
             catch (Exception e)
             {
-                LogError(e);
+                ErrorLogger.LogError(e);
                 //throw;
             }
         }
@@ -72,7 +73,6 @@ namespace ChapeauDAL
             SqlCommand command = new SqlCommand();
 
 
-
             try
             {
                 command.Connection = OpenConnection();
@@ -83,8 +83,8 @@ namespace ChapeauDAL
             }
             catch (SqlException e)
             {
-                LogError(e);
-                // throw;
+                ErrorLogger.LogError(e);
+                throw new Exception("Unable to execute edit query, check the syntax");
             }
             finally
             {
@@ -115,35 +115,15 @@ namespace ChapeauDAL
             }
             catch (SqlException e)
             {
-                LogError(e); //error log
-                return null;
-                throw;
+                ErrorLogger.LogError(e); //error log
+                throw new Exception("Unable to execute select query, check the syntax");
+                //return null;
             }
             finally
             {
                 CloseConnection();
             }
             return dataTable;
-        }
-
-
-
-        protected void LogError(Exception ex)
-        {
-            string message = string.Format($"Time: {DateTime.Now:dd/MM/yyyy hh:mm:ss tt}");
-            message += Environment.NewLine;
-            message += "-----------------------------------------------------------";
-            message += Environment.NewLine;
-            message += string.Format($"Message: {ex.Message}");
-            message += Environment.NewLine;
-            message += "-----------------------------------------------------------";
-            message += Environment.NewLine;
-            string path = "../../../ErrorLog.txt";
-            using (StreamWriter writer = new StreamWriter(path, true))
-            {
-                writer.WriteLine(message);
-                writer.Close();
-            }
         }
     }
 }

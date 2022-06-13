@@ -206,10 +206,10 @@
             this.btnRemoveOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.btnRemoveOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRemoveOrder.Location = new System.Drawing.Point(100, 559);
+            this.btnRemoveOrder.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveOrder.Location = new System.Drawing.Point(59, 652);
             this.btnRemoveOrder.Name = "btnRemoveOrder";
-            this.btnRemoveOrder.Size = new System.Drawing.Size(173, 49);
+            this.btnRemoveOrder.Size = new System.Drawing.Size(274, 67);
             this.btnRemoveOrder.TabIndex = 9;
             this.btnRemoveOrder.Text = "Remove order";
             this.btnRemoveOrder.UseVisualStyleBackColor = false;
@@ -220,11 +220,11 @@
             this.btnSubmitOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(116)))), ((int)(((byte)(210)))));
             this.btnSubmitOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmitOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitOrder.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSubmitOrder.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSubmitOrder.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitOrder.Location = new System.Drawing.Point(111, 783);
+            this.btnSubmitOrder.Location = new System.Drawing.Point(59, 768);
             this.btnSubmitOrder.Name = "btnSubmitOrder";
-            this.btnSubmitOrder.Size = new System.Drawing.Size(152, 49);
+            this.btnSubmitOrder.Size = new System.Drawing.Size(274, 67);
             this.btnSubmitOrder.TabIndex = 4;
             this.btnSubmitOrder.Text = "Submit order";
             this.btnSubmitOrder.UseVisualStyleBackColor = false;
@@ -245,7 +245,7 @@
             this.listViewOrder.HideSelection = false;
             this.listViewOrder.Location = new System.Drawing.Point(7, 143);
             this.listViewOrder.Name = "listViewOrder";
-            this.listViewOrder.Size = new System.Drawing.Size(354, 395);
+            this.listViewOrder.Size = new System.Drawing.Size(354, 483);
             this.listViewOrder.TabIndex = 3;
             this.listViewOrder.TileSize = new System.Drawing.Size(3, 3);
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
@@ -273,9 +273,9 @@
             this.lblTable.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTable.Location = new System.Drawing.Point(90, 81);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(194, 58);
+            this.lblTable.Size = new System.Drawing.Size(202, 58);
             this.lblTable.TabIndex = 2;
-            this.lblTable.Text = "Table 1";
+            this.lblTable.Text = "Table #";
             // 
             // lblOrder
             // 
@@ -283,9 +283,9 @@
             this.lblOrder.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblOrder.Location = new System.Drawing.Point(45, 3);
             this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(266, 78);
+            this.lblOrder.Size = new System.Drawing.Size(277, 78);
             this.lblOrder.TabIndex = 1;
-            this.lblOrder.Text = "Order 2";
+            this.lblOrder.Text = "Order #";
             // 
             // pnlDrinks
             // 
