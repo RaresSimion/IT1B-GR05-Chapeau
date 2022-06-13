@@ -21,24 +21,33 @@ namespace ChapeauUI
         private Order currentOrder;
         private TableOverView tableView;
         private OrderForm orderForm;
-
-        public Payment(TableOverView tableOverView, OrderForm orderForm)
+        public Payment()
         {
             InitializeComponent();
+            btnPay.Enabled = false;
+            txtTipAmount.Visible = false;
+            lblAmount.Visible = false;
+            lblTotalTip.Visible = false;
+            txtTipAmount.Visible = false;
+            rbtnCash.Checked = false;
+            txtTip.Visible = false;
+            btnAddTip.Enabled = false;
+            btnAddTip.Visible = false;
             DisplayTable();
-            this.tableView = tableOverView;
-            this.currentTable = tableOverView.table;
-            this.orderForm = orderForm;
+            
+            //this.tableView = tableOverView;
+            //this.currentTable = tableOverView.table;
+            //this.orderForm = orderForm;
             //this.currentOrder = orderForm;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show($"{currentTable.Table_Number} bill has been paid!");
+            
         }
 
         public void DisplayTable()
         {
+            decimal totalPrice = 0;
+            int count = 0;
+            decimal vat6 = 0;
+            decimal vat21 = 0;
             listViewTable.Items.Clear();
             Table table = new Table(9, false);
             List<OrderItem> orderItems = orderItemService.GetAllOrderItemsFromTable(table);
@@ -52,11 +61,78 @@ namespace ChapeauUI
                 listViewTable.Items.Add(listViewItem);
                
             }
+            foreach(OrderItem item in orderItems)
+            {
+                decimal itemPrice = item.MenuItem.Menu_Item_Price * item.Order_Item_Quantity;
+                totalPrice = totalPrice + itemPrice;
+                if(!item.Is_Alcoholic)
+                {
+                    vat6 = vat6 + (item.VAT_In_Price * item.Order_Item_Quantity);
+                }
+                else
+                {
+                    vat21 = vat21 + (item.VAT_In_Price * item.Order_Item_Quantity);
+                }
+                count++;
+            }
+            
+
+            // string stringTip = tipAmount;
+            // decimal decimalTip = decimal.Parse(stringTip);
+            // tipTotal = totalPrice + decimalTip;
+            txtOrder.Text = totalPrice.ToString("€0.00");
+            txtVAT6.Text = vat6.ToString("€0.00");
+            txtVat21.Text = vat21.ToString("€0.00");
+            
+            
+        }
+        private void rbtnTipYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtnTipYes.Checked)
+            {
+                txtTipAmount.Visible = true;
+                lblAmount.Visible = true;
+                lblTotalTip.Visible = true;
+                txtTipAmount.Visible = true;
+                txtTip.Visible = true;
+                btnAddTip.Enabled = true;
+                btnAddTip.Visible = true;
+            }
+            if ((rbtnCash.Checked || rbtnCreditcard.Checked || rbtnDebitcard.Checked) && (rbtnTipNo.Checked || rbtnTipYes.Checked))
+            {
+                btnPay.Enabled = true;
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void rbtnTipNo_CheckedChanged(object sender, EventArgs e)
         {
+            if(rbtnTipNo.Checked)
+            {
+                txtTipAmount.Visible = false;
+                lblAmount.Visible = false;
+                lblTotalTip.Visible = false;
+                txtTipAmount.Visible = false;
+                txtTip.Visible = false;
+                btnAddTip.Enabled = false;
+                btnAddTip.Visible = false;
+            }
+            if ((rbtnCash.Checked || rbtnCreditcard.Checked || rbtnDebitcard.Checked) && (rbtnTipNo.Checked || rbtnTipYes.Checked))
+            {
+                btnPay.Enabled = true;
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!rbtnTipYes.Checked || !rbtnTipNo.Checked)
+            {
+                MessageBox.Show($"Please select yes or no for tip!");
+            }
+            //MessageBox.Show($"{currentTable.Table_Number} bill has been paid!");
+        }
 
+        private void btnAddTip_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

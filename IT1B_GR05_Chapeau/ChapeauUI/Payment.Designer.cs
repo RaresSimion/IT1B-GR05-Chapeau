@@ -38,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlTable = new System.Windows.Forms.Panel();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.pnlPaymentMethod = new System.Windows.Forms.Panel();
             this.lblPaymentMethod = new System.Windows.Forms.Label();
             this.rbtnCash = new System.Windows.Forms.RadioButton();
@@ -46,14 +45,13 @@
             this.rbtnCreditcard = new System.Windows.Forms.RadioButton();
             this.pnlLeaveTip = new System.Windows.Forms.Panel();
             this.lblLeaveTip = new System.Windows.Forms.Label();
-            this.listView3 = new System.Windows.Forms.ListView();
             this.rbtnTipNo = new System.Windows.Forms.RadioButton();
             this.rbtnTipYes = new System.Windows.Forms.RadioButton();
             this.lblAmount = new System.Windows.Forms.Label();
             this.txtTipAmount = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTip = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalTip = new System.Windows.Forms.Label();
             this.btnPay = new System.Windows.Forms.Button();
             this.txtVat21 = new System.Windows.Forms.TextBox();
             this.txtVAT6 = new System.Windows.Forms.TextBox();
@@ -61,11 +59,16 @@
             this.lblTip = new System.Windows.Forms.Label();
             this.lblVat = new System.Windows.Forms.Label();
             this.lblTotalOrder = new System.Windows.Forms.Label();
+            this.groupBoxPaymentMethod = new System.Windows.Forms.GroupBox();
+            this.groupBoxLeaveTip = new System.Windows.Forms.GroupBox();
+            this.btnAddTip = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlTable.SuspendLayout();
             this.pnlPaymentMethod.SuspendLayout();
             this.pnlLeaveTip.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.groupBoxPaymentMethod.SuspendLayout();
+            this.groupBoxLeaveTip.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTable
@@ -158,15 +161,6 @@
             this.pnlTable.Size = new System.Drawing.Size(626, 36);
             this.pnlTable.TabIndex = 8;
             // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(-1, 354);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(313, 142);
-            this.listView2.TabIndex = 9;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
             // pnlPaymentMethod
             // 
             this.pnlPaymentMethod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
@@ -193,7 +187,7 @@
             this.rbtnCash.AutoSize = true;
             this.rbtnCash.BackColor = System.Drawing.SystemColors.Window;
             this.rbtnCash.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbtnCash.Location = new System.Drawing.Point(50, 361);
+            this.rbtnCash.Location = new System.Drawing.Point(88, 13);
             this.rbtnCash.Name = "rbtnCash";
             this.rbtnCash.Size = new System.Drawing.Size(92, 34);
             this.rbtnCash.TabIndex = 10;
@@ -206,7 +200,7 @@
             this.rbtnDebitcard.AutoSize = true;
             this.rbtnDebitcard.BackColor = System.Drawing.SystemColors.Window;
             this.rbtnDebitcard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbtnDebitcard.Location = new System.Drawing.Point(50, 441);
+            this.rbtnDebitcard.Location = new System.Drawing.Point(88, 94);
             this.rbtnDebitcard.Name = "rbtnDebitcard";
             this.rbtnDebitcard.Size = new System.Drawing.Size(150, 34);
             this.rbtnDebitcard.TabIndex = 11;
@@ -219,7 +213,7 @@
             this.rbtnCreditcard.AutoSize = true;
             this.rbtnCreditcard.BackColor = System.Drawing.SystemColors.Window;
             this.rbtnCreditcard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbtnCreditcard.Location = new System.Drawing.Point(50, 401);
+            this.rbtnCreditcard.Location = new System.Drawing.Point(88, 54);
             this.rbtnCreditcard.Name = "rbtnCreditcard";
             this.rbtnCreditcard.Size = new System.Drawing.Size(159, 34);
             this.rbtnCreditcard.TabIndex = 12;
@@ -248,47 +242,40 @@
             this.lblLeaveTip.TabIndex = 4;
             this.lblLeaveTip.Text = "Leave a tip!";
             // 
-            // listView3
-            // 
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(310, 354);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(316, 142);
-            this.listView3.TabIndex = 13;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            // 
             // rbtnTipNo
             // 
             this.rbtnTipNo.AutoSize = true;
             this.rbtnTipNo.BackColor = System.Drawing.SystemColors.Window;
             this.rbtnTipNo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbtnTipNo.Location = new System.Drawing.Point(500, 379);
+            this.rbtnTipNo.Location = new System.Drawing.Point(172, 22);
             this.rbtnTipNo.Name = "rbtnTipNo";
             this.rbtnTipNo.Size = new System.Drawing.Size(65, 34);
             this.rbtnTipNo.TabIndex = 14;
             this.rbtnTipNo.TabStop = true;
             this.rbtnTipNo.Text = "No";
             this.rbtnTipNo.UseVisualStyleBackColor = false;
+            this.rbtnTipNo.CheckedChanged += new System.EventHandler(this.rbtnTipNo_CheckedChanged);
             // 
             // rbtnTipYes
             // 
             this.rbtnTipYes.AutoSize = true;
             this.rbtnTipYes.BackColor = System.Drawing.SystemColors.Window;
             this.rbtnTipYes.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbtnTipYes.Location = new System.Drawing.Point(362, 379);
+            this.rbtnTipYes.Location = new System.Drawing.Point(59, 22);
             this.rbtnTipYes.Name = "rbtnTipYes";
             this.rbtnTipYes.Size = new System.Drawing.Size(73, 34);
             this.rbtnTipYes.TabIndex = 15;
             this.rbtnTipYes.TabStop = true;
             this.rbtnTipYes.Text = "Yes";
             this.rbtnTipYes.UseVisualStyleBackColor = false;
+            this.rbtnTipYes.CheckedChanged += new System.EventHandler(this.rbtnTipYes_CheckedChanged);
             // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
             this.lblAmount.BackColor = System.Drawing.SystemColors.Window;
             this.lblAmount.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAmount.Location = new System.Drawing.Point(352, 446);
+            this.lblAmount.Location = new System.Drawing.Point(31, 59);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(115, 30);
             this.lblAmount.TabIndex = 16;
@@ -297,7 +284,7 @@
             // txtTipAmount
             // 
             this.txtTipAmount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTipAmount.Location = new System.Drawing.Point(500, 446);
+            this.txtTipAmount.Location = new System.Drawing.Point(172, 52);
             this.txtTipAmount.Name = "txtTipAmount";
             this.txtTipAmount.Size = new System.Drawing.Size(100, 39);
             this.txtTipAmount.TabIndex = 17;
@@ -307,7 +294,7 @@
             this.panel6.BackColor = System.Drawing.SystemColors.Window;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.txtTip);
-            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.lblTotalTip);
             this.panel6.Controls.Add(this.btnPay);
             this.panel6.Controls.Add(this.txtVat21);
             this.panel6.Controls.Add(this.txtVAT6);
@@ -331,15 +318,15 @@
             this.txtTip.Size = new System.Drawing.Size(276, 32);
             this.txtTip.TabIndex = 12;
             // 
-            // label1
+            // lblTotalTip
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(29, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 30);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Total with tip:";
+            this.lblTotalTip.AutoSize = true;
+            this.lblTotalTip.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalTip.Location = new System.Drawing.Point(29, 105);
+            this.lblTotalTip.Name = "lblTotalTip";
+            this.lblTotalTip.Size = new System.Drawing.Size(170, 30);
+            this.lblTotalTip.TabIndex = 11;
+            this.lblTotalTip.Text = "Total with tip:";
             // 
             // btnPay
             // 
@@ -415,23 +402,53 @@
             this.lblTotalOrder.TabIndex = 0;
             this.lblTotalOrder.Text = "Total Order:";
             // 
+            // groupBoxPaymentMethod
+            // 
+            this.groupBoxPaymentMethod.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBoxPaymentMethod.Controls.Add(this.rbtnCreditcard);
+            this.groupBoxPaymentMethod.Controls.Add(this.rbtnCash);
+            this.groupBoxPaymentMethod.Controls.Add(this.rbtnDebitcard);
+            this.groupBoxPaymentMethod.Location = new System.Drawing.Point(0, 354);
+            this.groupBoxPaymentMethod.Name = "groupBoxPaymentMethod";
+            this.groupBoxPaymentMethod.Size = new System.Drawing.Size(312, 142);
+            this.groupBoxPaymentMethod.TabIndex = 5;
+            this.groupBoxPaymentMethod.TabStop = false;
+            // 
+            // groupBoxLeaveTip
+            // 
+            this.groupBoxLeaveTip.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBoxLeaveTip.Controls.Add(this.btnAddTip);
+            this.groupBoxLeaveTip.Controls.Add(this.rbtnTipYes);
+            this.groupBoxLeaveTip.Controls.Add(this.rbtnTipNo);
+            this.groupBoxLeaveTip.Controls.Add(this.txtTipAmount);
+            this.groupBoxLeaveTip.Controls.Add(this.lblAmount);
+            this.groupBoxLeaveTip.Location = new System.Drawing.Point(312, 354);
+            this.groupBoxLeaveTip.Name = "groupBoxLeaveTip";
+            this.groupBoxLeaveTip.Size = new System.Drawing.Size(316, 142);
+            this.groupBoxLeaveTip.TabIndex = 20;
+            this.groupBoxLeaveTip.TabStop = false;
+            // 
+            // btnAddTip
+            // 
+            this.btnAddTip.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddTip.Location = new System.Drawing.Point(59, 97);
+            this.btnAddTip.Name = "btnAddTip";
+            this.btnAddTip.Size = new System.Drawing.Size(174, 39);
+            this.btnAddTip.TabIndex = 18;
+            this.btnAddTip.Text = "Add Tip";
+            this.btnAddTip.UseVisualStyleBackColor = true;
+            this.btnAddTip.Click += new System.EventHandler(this.btnAddTip_Click);
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 689);
+            this.Controls.Add(this.groupBoxLeaveTip);
+            this.Controls.Add(this.groupBoxPaymentMethod);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.txtTipAmount);
-            this.Controls.Add(this.lblAmount);
-            this.Controls.Add(this.rbtnTipYes);
-            this.Controls.Add(this.rbtnTipNo);
-            this.Controls.Add(this.listView3);
             this.Controls.Add(this.pnlLeaveTip);
-            this.Controls.Add(this.rbtnCreditcard);
-            this.Controls.Add(this.rbtnDebitcard);
-            this.Controls.Add(this.rbtnCash);
             this.Controls.Add(this.pnlPaymentMethod);
-            this.Controls.Add(this.listView2);
             this.Controls.Add(this.pnlTable);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewTable);
@@ -450,8 +467,11 @@
             this.pnlLeaveTip.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.groupBoxPaymentMethod.ResumeLayout(false);
+            this.groupBoxPaymentMethod.PerformLayout();
+            this.groupBoxLeaveTip.ResumeLayout(false);
+            this.groupBoxLeaveTip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -462,7 +482,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnlTable;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Panel pnlPaymentMethod;
         private System.Windows.Forms.Label lblPaymentMethod;
         private System.Windows.Forms.RadioButton rbtnCash;
@@ -470,7 +489,6 @@
         private System.Windows.Forms.RadioButton rbtnCreditcard;
         private System.Windows.Forms.Panel pnlLeaveTip;
         private System.Windows.Forms.Label lblLeaveTip;
-        private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.RadioButton rbtnTipNo;
         private System.Windows.Forms.RadioButton rbtnTipYes;
         private System.Windows.Forms.Label lblAmount;
@@ -484,10 +502,13 @@
         private System.Windows.Forms.Label lblTotalOrder;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.TextBox txtTip;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalTip;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderItemAmount;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderItemName;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderItemPrice;
         private System.Windows.Forms.ColumnHeader columnHeaderOrderItemComment;
+        private System.Windows.Forms.GroupBox groupBoxPaymentMethod;
+        private System.Windows.Forms.GroupBox groupBoxLeaveTip;
+        private System.Windows.Forms.Button btnAddTip;
     }
 }
