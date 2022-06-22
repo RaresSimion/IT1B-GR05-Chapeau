@@ -23,9 +23,9 @@ namespace ChapeauLogic
             return table;
         }
 
-        public void UpdateTable(Table table)
+        public void UpdateTable(int tableNr, bool tableAvailability)
         {
-            tableDAO.UpdateTable(table);
+            tableDAO.UpdateTable(tableNr, tableAvailability);
         }
 
         public List<Table> GetTables()

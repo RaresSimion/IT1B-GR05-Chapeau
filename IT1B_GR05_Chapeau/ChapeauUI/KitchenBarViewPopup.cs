@@ -14,10 +14,16 @@ namespace ChapeauUI
     public partial class KitchenBarViewPopup : Form
     {
         Order order;
+        OrderItemService orderItemService = new OrderItemService();
+        OrderService orderService = new OrderService();
+        List<OrderItem> selectedItems = new List<OrderItem>();
+        List<OrderItem> allOrderItems;
         public KitchenBarViewPopup(Order order, string categoryName, List<OrderItem> orderedItems)
         {
-            this.order = order;
             InitializeComponent();
+            this.order = order;
+            allOrderItems = orderItemService.GetItems(order.Order_Id);
+
             itemListView.Columns.Add("Item", 600);
             itemListView.Columns.Add("Comment", 740);
             orderNumberLbl.Text = $"Order #{order.Order_Id}";
@@ -41,9 +47,6 @@ namespace ChapeauUI
         }
         private void MarkReadyBtn_Click(object sender, EventArgs e)
         {
-            OrderItemService orderItemService = new OrderItemService();
-            OrderService orderService = new OrderService();
-            List<OrderItem> selectedItems = new List<OrderItem>();
             foreach (ListViewItem item in this.itemListView.CheckedItems)
             {
                 OrderItem orderItem = (OrderItem)item.Tag;
@@ -56,8 +59,16 @@ namespace ChapeauUI
                 foreach (OrderItem orderItem in selectedItems)
                     orderItemService.MarkItemComplete(orderItem.OrderID, orderItem.MenuItem.Menu_Item_Id);
                 orderService.UpdateOrderStatus(order.Order_Id, OrderStatus.Ordered);
+
+                int readyItems = 0;
+                foreach (OrderItem item in allOrderItems)
+                    if (item.itemIsReady)
+                        readyItems++;
+                if (readyItems == order.OrderedItems.Count)
+                    orderService.UpdateOrderStatus(order.Order_Id, OrderStatus.Finished);
                 this.Close();
-            }  
+            }
+
         }
         private void CancelBtn_Click(object sender, EventArgs e)
         {

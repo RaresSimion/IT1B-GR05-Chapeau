@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChapeauLogic;
 using ChapeauModel;
-
 namespace ChapeauUI
 {
     public partial class OrderForm : Form

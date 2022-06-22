@@ -37,6 +37,7 @@ namespace ChapeauDAL
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //get the order items from a specific order
         public List<OrderItem> GetOrderItemsByOrderID(int ID)
         {
             string query = $"SELECT ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT, ORDER_ITEM_IS_READY FROM ORDER_ITEM WHERE ORDER_ID = {ID}";
@@ -44,6 +45,7 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //get all order items from a table
         public List<OrderItem> GetAllOrderItemsFromTable(Table table)
         {
             string query = $"SELECT ORDER_ITEM.ORDER_ID, ORDER_ITEM.MENU_ITEM_ID, ORDER_ITEM.ORDER_ITEM_QUANTITY, ORDER_ITEM.ORDER_ITEM_COMMENT FROM ORDER_ITEM JOIN[ORDER] ON ORDER_ITEM.ORDER_ID = [ORDER].ORDER_ID WHERE[ORDER].TABLE_ID = {table.Table_Number}  AND[ORDER].IS_PAID = 'false'";
@@ -51,6 +53,7 @@ namespace ChapeauDAL
             return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //mark item as complete
         public void MarkOrderItemComplete(int orderid, int menuitemid)
         {
             string query = $"UPDATE ORDER_ITEM SET ORDER_ITEM_IS_READY = 1 WHERE ORDER_ID = {orderid} AND MENU_ITEM_ID = {menuitemid};";
@@ -58,6 +61,7 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        //method for reading multiple order items from the data table
         private List<OrderItem> ReadTables(DataTable dataTable)
         {
             List<OrderItem> orderItem = new List<OrderItem>();
@@ -77,6 +81,7 @@ namespace ChapeauDAL
             return orderItem;
         }
 
+        //method for reading one order item from the data table
         private MenuItem ReadTable(DataTable dataTable)
         {
             DataRow dr = dataTable.Rows[0];

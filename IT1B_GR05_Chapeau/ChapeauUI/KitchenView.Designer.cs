@@ -35,10 +35,11 @@
             this.btnKitchenNewOrders = new System.Windows.Forms.Button();
             this.btnKitchenEarliestOrders = new System.Windows.Forms.Button();
             this.flowpnlKitchenView = new System.Windows.Forms.FlowLayoutPanel();
-            this.PageLbl = new System.Windows.Forms.Label();
             this.btnLeftScroll = new System.Windows.Forms.Button();
             this.btnScrollRight = new System.Windows.Forms.Button();
             this.lblHeadingBarView = new System.Windows.Forms.Label();
+            this.lblSignedIn = new System.Windows.Forms.Label();
+            this.btnSignOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.viewLogo1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             // viewLogo1
             // 
             this.viewLogo1.Image = global::ChapeauUI.Properties.Resources.Chapeau_Logo1;
-            this.viewLogo1.Location = new System.Drawing.Point(0, 0);
+            this.viewLogo1.Location = new System.Drawing.Point(2, 1);
             this.viewLogo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.viewLogo1.Name = "viewLogo1";
             this.viewLogo1.Size = new System.Drawing.Size(210, 102);
@@ -89,7 +90,7 @@
             this.btnKitchenNewOrders.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnKitchenNewOrders.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnKitchenNewOrders.ForeColor = System.Drawing.Color.Black;
-            this.btnKitchenNewOrders.Location = new System.Drawing.Point(1431, 3);
+            this.btnKitchenNewOrders.Location = new System.Drawing.Point(230, 2);
             this.btnKitchenNewOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKitchenNewOrders.Name = "btnKitchenNewOrders";
             this.btnKitchenNewOrders.Size = new System.Drawing.Size(177, 45);
@@ -105,7 +106,7 @@
             this.btnKitchenEarliestOrders.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnKitchenEarliestOrders.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnKitchenEarliestOrders.ForeColor = System.Drawing.Color.White;
-            this.btnKitchenEarliestOrders.Location = new System.Drawing.Point(1431, 52);
+            this.btnKitchenEarliestOrders.Location = new System.Drawing.Point(230, 51);
             this.btnKitchenEarliestOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKitchenEarliestOrders.Name = "btnKitchenEarliestOrders";
             this.btnKitchenEarliestOrders.Size = new System.Drawing.Size(177, 45);
@@ -123,16 +124,6 @@
             this.flowpnlKitchenView.Size = new System.Drawing.Size(1704, 1000);
             this.flowpnlKitchenView.TabIndex = 6;
             this.flowpnlKitchenView.WrapContents = false;
-            // 
-            // PageLbl
-            // 
-            this.PageLbl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PageLbl.Location = new System.Drawing.Point(910, 1050);
-            this.PageLbl.Name = "PageLbl";
-            this.PageLbl.Size = new System.Drawing.Size(100, 20);
-            this.PageLbl.TabIndex = 10;
-            this.PageLbl.Text = "Page";
-            this.PageLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLeftScroll
             // 
@@ -179,12 +170,38 @@
             this.lblHeadingBarView.TabIndex = 9;
             this.lblHeadingBarView.Text = "Bar view";
             // 
+            // lblSignedIn
+            // 
+            this.lblSignedIn.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSignedIn.Location = new System.Drawing.Point(1615, 13);
+            this.lblSignedIn.Name = "lblSignedIn";
+            this.lblSignedIn.Size = new System.Drawing.Size(300, 32);
+            this.lblSignedIn.TabIndex = 11;
+            this.lblSignedIn.Text = "Signed in:";
+            this.lblSignedIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(1690, 52);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(150, 40);
+            this.btnSignOut.TabIndex = 12;
+            this.btnSignOut.Text = "Sign out";
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
             // KitchenViewForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.PageLbl);
+            this.Controls.Add(this.btnSignOut);
+            this.Controls.Add(this.lblSignedIn);
             this.Controls.Add(this.lblHeadingBarView);
             this.Controls.Add(this.btnScrollRight);
             this.Controls.Add(this.btnLeftScroll);
@@ -218,7 +235,8 @@
         public System.Windows.Forms.Button btnKitchenEarliestOrders;
         public System.Windows.Forms.Button btnLeftScroll;
         public System.Windows.Forms.Button btnScrollRight;
-        public System.Windows.Forms.Label PageLbl;
         public System.Windows.Forms.FlowLayoutPanel flowpnlKitchenView;
+        private System.Windows.Forms.Label lblSignedIn;
+        private System.Windows.Forms.Button btnSignOut;
     }
 }

@@ -243,9 +243,9 @@ C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\n
 C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
 C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
 C:\Users\yanez\Desktop\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
-C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenViewForm.resources
 C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenViewForm.resources
 C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderForm.resources
 C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Payment.resources
 C:\Users\joelg\source\repos\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TableOverView.resources
 C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Payment.resources
+C:\Users\Rares\Documents\GitHub\IT1B-GR05-Chapeau\IT1B_GR05_Chapeau\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarViewPopup.resources

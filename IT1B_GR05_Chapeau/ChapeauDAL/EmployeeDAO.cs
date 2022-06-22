@@ -12,10 +12,10 @@ namespace ChapeauDAL
     public class EmployeeDAO : BaseDao
     {
         //for login
-        public Employee GetEmployeeByPassword(string employee_password)
+        public Employee GetEmployeeByPassword(string employeePassword)
         {
-            string query = $"SELECT EMPLOYEE_NUMBER, EMPLOYEE_NAME, EMPLOYEE_ROLE, EMPLOYEE_PASSWORD FROM EMPLOYEE WHERE EMPLOYEE_PASSWORD='{employee_password}';";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT EMPLOYEE_NUMBER, EMPLOYEE_NAME, EMPLOYEE_ROLE, EMPLOYEE_PASSWORD FROM EMPLOYEE WHERE EMPLOYEE_PASSWORD=(@employeePassword)";
+            SqlParameter[] sqlParameters = { new SqlParameter("@employeePassword", employeePassword) };
             return ReadEmployee(ExecuteSelectQuery(query, sqlParameters));
         }
 
@@ -35,6 +35,13 @@ namespace ChapeauDAL
             }
             else
                 throw new Exception("Incorrect credentials entered");
+        }
+
+        public Employee GetEmployeeByIDandPassword(int ID, string employeePassword)
+        {
+            string query = $"SELECT EMPLOYEE_NUMBER, EMPLOYEE_NAME, EMPLOYEE_ROLE, EMPLOYEE_PASSWORD FROM EMPLOYEE WHERE EMPLOYEE_NUMBER='(@ID) AND EMPLOYEE_PASSWORD = (@employeePassword)';";
+            SqlParameter[] sqlParameters = { new SqlParameter("@ID", (int)ID), new SqlParameter("@employeePassword", (string)employeePassword) };
+            return ReadEmployee(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public Employee GetEmployeeByID(int ID)

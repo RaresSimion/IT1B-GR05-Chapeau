@@ -268,7 +268,7 @@ namespace ChapeauUI
         private void buttonCreateOrder_Click(object sender, EventArgs e)
         {
             table.Table_Availability = true;
-            tableService.UpdateTable(table);
+            tableService.UpdateTable(table.Table_Number, table.Table_Availability);
             switch (table.Table_Number)
             {
 

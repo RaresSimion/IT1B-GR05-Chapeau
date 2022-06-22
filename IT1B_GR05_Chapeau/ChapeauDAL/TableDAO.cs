@@ -7,26 +7,25 @@ using ChapeauModel;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace ChapeauDAL
 {
     public class TableDAO : BaseDao
     {
         public Table GetTable(int tableNr)
         {
-            string query = $"SELECT TABLE_ID, TABLE_CAPACITY, TABLE_AVAILABILITY FROM [TABLES] WHERE TABLE_ID = {tableNr};";
-            SqlParameter[] sqlParameter = new SqlParameter[0];
+            string query = $"SELECT TABLE_ID, TABLE_CAPACITY, TABLE_AVAILABILITY FROM [TABLES] WHERE TABLE_ID = @TABLE_ID;";
+            SqlParameter[] sqlParameter = { new SqlParameter("@TABLE_ID", (int)tableNr) };
             return ReadTable(ExecuteSelectQuery(query, sqlParameter));
         }
 
         public List<Table> GetAllTables()
         {
             string query = $"SELECT TABLE_ID, TABLE_CAPACITY, TABLE_AVAILABILITY FROM [TABLES]";
-            SqlParameter[] sqlParameter = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameter));
+            return ReadTables(ExecuteSelectQuery(query));
         }
 
         //read 1 
-
         private Table ReadTable(DataTable dataTable)
         {
             DataRow dataRow = dataTable.Rows[0];
@@ -36,7 +35,6 @@ namespace ChapeauDAL
                 Table_Capacity = (int)(dataRow["TABLE_CAPACITY"]),
                 Table_Availability = (bool)(dataRow["TABLE_AVAILABILITY"])
             };
-
             return table;
         }
 
@@ -57,10 +55,10 @@ namespace ChapeauDAL
             return tables;
         }
 
-        public void UpdateTable(Table table)
+        public void UpdateTable(int tableNr, bool tableAvailability)
         {
-            string query = $"UPDATE [TABLES] SET TABLE_AVAILABILITY = '{table.Table_Availability}' WHERE TABLE_ID = {table.Table_Number}";
-            SqlParameter[] sqlParameter = new SqlParameter[0];
+            string query = $"UPDATE [TABLES] SET TABLE_AVAILABILITY = '@TABLE_AVAILABILITY' WHERE TABLE_ID = '@TABLE_ID'";
+            SqlParameter[] sqlParameter = { new SqlParameter("@TABLE_AVAILABILITY", (bool)tableAvailability), new SqlParameter("@TABLE_ID", (int)tableNr) };
             ExecuteEditQuery(query, sqlParameter);
         }
     }
