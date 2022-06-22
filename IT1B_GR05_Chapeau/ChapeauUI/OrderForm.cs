@@ -29,7 +29,7 @@ namespace ChapeauUI
         //storing the table that was clicked in tableView
         private Table currentTable;
 
-        //storing the waiter who is login
+        //storing the waiter who is logged in
         private Employee currentWaiter;
 
         //storing the tableView in order to show it after closing 
@@ -51,7 +51,14 @@ namespace ChapeauUI
 
             //insert the table number and order number in the labels
             lblTable.Text = $"Table {currentTable.Table_Number}";
-            lblOrder.Text = $"Order {GetNextOrderID()}";
+            string orderID = GetNextOrderID().ToString();
+            string shortOrderID;
+            if (GetNextOrderID() < 10)
+                shortOrderID = orderID;
+            else
+                shortOrderID = orderID.Substring(orderID.Length - 2);
+
+            lblOrder.Text = $"Order {shortOrderID}";
 
             //show the menu
             ShowPanel("Menu");

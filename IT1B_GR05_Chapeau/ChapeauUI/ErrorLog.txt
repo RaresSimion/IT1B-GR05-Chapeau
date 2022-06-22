@@ -475,3 +475,33 @@ Time: 10/06/2022 10:27:37 PM
 Message: Incorrect credentials entered
 -----------------------------------------------------------
 
+Time: 13/06/2022 03:21:31 PM
+-----------------------------------------------------------
+Message: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+-----------------------------------------------------------
+
+Time: 13/06/2022 03:21:34 PM
+-----------------------------------------------------------
+Message: Unable to execute edit query, check the syntax
+-----------------------------------------------------------
+
+Time: 20/06/2022 05:40:03 PM
+-----------------------------------------------------------
+Message: Conversion failed when converting the varchar value '@status' to data type bit.
+-----------------------------------------------------------
+
+Time: 20/06/2022 05:40:06 PM
+-----------------------------------------------------------
+Message: Unable to execute edit query, check the syntax
+-----------------------------------------------------------
+
+Time: 20/06/2022 05:40:11 PM
+-----------------------------------------------------------
+Message: Conversion failed when converting the varchar value '@status' to data type bit.
+-----------------------------------------------------------
+
+Time: 20/06/2022 05:40:12 PM
+-----------------------------------------------------------
+Message: Unable to execute edit query, check the syntax
+-----------------------------------------------------------
+

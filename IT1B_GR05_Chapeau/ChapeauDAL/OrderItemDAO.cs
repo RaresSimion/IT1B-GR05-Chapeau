@@ -16,16 +16,16 @@ namespace ChapeauDAL
         //inserting a new order item
         public void InsertOrderItem(OrderItem orderItem)
         {
-            string query = $"INSERT INTO ORDER_ITEM (ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT, ORDER_ITEM_IS_READY) VALUES ({orderItem.OrderID}, {orderItem.MenuItem.Menu_Item_Id}, {orderItem.Order_Item_Quantity}, '{orderItem.Order_Item_Comment}', '{orderItem.Is_Ready}');";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"INSERT INTO ORDER_ITEM (ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT, ORDER_ITEM_IS_READY) VALUES (@orderID, @menuItemID, @quantity, @comment, @status);";
+            SqlParameter[] sqlParameters = { new SqlParameter("@orderID", orderItem.OrderID), new SqlParameter("@menuItemID", orderItem.MenuItem.Menu_Item_Id), new SqlParameter("@quantity", orderItem.Order_Item_Quantity), new SqlParameter("@comment", orderItem.Order_Item_Comment), new SqlParameter("@status", orderItem.Is_Ready) };
             ExecuteEditQuery(query, sqlParameters);
         }
 
         //updating an order item if the quantity or comment changed
         public void UpdateOrderItem(OrderItem orderItem)
         {
-            string query = $"UPDATE ORDER_ITEM SET ORDER_ITEM_QUANTITY = {orderItem.Order_Item_Quantity}, ORDER_ITEM_COMMENT = '{orderItem.Order_Item_Comment}' WHERE ORDER_ID = {orderItem.OrderID} AND MENU_ITEM_ID = {orderItem.MenuItem.Menu_Item_Id};";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"UPDATE ORDER_ITEM SET ORDER_ITEM_QUANTITY = @quantity, ORDER_ITEM_COMMENT = @comment WHERE ORDER_ID = @orderID AND MENU_ITEM_ID = @menuItemID;";
+            SqlParameter[] sqlParameters = { new SqlParameter("@quantity", orderItem.Order_Item_Quantity), new SqlParameter("@comment", orderItem.Order_Item_Comment), new SqlParameter("@orderID", orderItem.OrderID), new SqlParameter("@menuItemID", orderItem.MenuItem.Menu_Item_Id) };
             ExecuteEditQuery(query, sqlParameters);
         }
 
@@ -37,15 +37,13 @@ namespace ChapeauDAL
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //get the order items from a specific order
         public List<OrderItem> GetOrderItemsByOrderID(int ID)
         {
-            string query = $"SELECT ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT FROM ORDER_ITEM WHERE ORDER_ID = {ID}";
+            string query = $"SELECT ORDER_ID, MENU_ITEM_ID, ORDER_ITEM_QUANTITY, ORDER_ITEM_COMMENT, ORDER_ITEM_IS_READY FROM ORDER_ITEM WHERE ORDER_ID = {ID}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //get all order items from a table
         public List<OrderItem> GetAllOrderItemsFromTable(Table table)
         {
             string query = $"SELECT ORDER_ITEM.ORDER_ID, ORDER_ITEM.MENU_ITEM_ID, ORDER_ITEM.ORDER_ITEM_QUANTITY, ORDER_ITEM.ORDER_ITEM_COMMENT FROM ORDER_ITEM JOIN[ORDER] ON ORDER_ITEM.ORDER_ID = [ORDER].ORDER_ID WHERE[ORDER].TABLE_ID = {table.Table_Number}  AND[ORDER].IS_PAID = 'false'";
@@ -53,7 +51,6 @@ namespace ChapeauDAL
             return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //mark item as complete
         public void MarkOrderItemComplete(int orderid, int menuitemid)
         {
             string query = $"UPDATE ORDER_ITEM SET ORDER_ITEM_IS_READY = 1 WHERE ORDER_ID = {orderid} AND MENU_ITEM_ID = {menuitemid};";
@@ -61,15 +58,12 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        //method for reading multiple order items from the data table
         private List<OrderItem> ReadTables(DataTable dataTable)
         {
-            //create list to store values
             List<OrderItem> orderItem = new List<OrderItem>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                //insert values into object
                 OrderItem item = new OrderItem()
                 {
                     OrderID = (int)(dr["ORDER_ID"]),
@@ -83,7 +77,6 @@ namespace ChapeauDAL
             return orderItem;
         }
 
-        //method for reading one order item from the data table
         private MenuItem ReadTable(DataTable dataTable)
         {
             DataRow dr = dataTable.Rows[0];

@@ -14,32 +14,32 @@ namespace ChapeauDAL
         //get the submenu depending on the category
         public List<MenuItem> GetSubmenu(Category category)
         {
-            string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID = {(int)category}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE CATEGORY_ID = @category";
+            SqlParameter[] sqlParameters = { new SqlParameter("@category", (int)category) };
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
         //get a menu item depending on the id
         public MenuItem GetMenuItemByID(int menuItemID)
         {
-            string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE MENU_ITEM_ID = {menuItemID}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT MENU_ITEM_ID, MENU_ITEM_NAME, MENU_ITEM_STOCK, MENU_ITEM_PRICE, CATEGORY_ID FROM MENU_ITEM WHERE MENU_ITEM_ID = @menuItemID";
+            SqlParameter[] sqlParameters = {new SqlParameter("@menuItemID", menuItemID)};
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
         //update the stock
         public void UpdateMenuItemStock(OrderItem orderItem)
         {
-            string query = $"UPDATE MENU_ITEM SET MENU_ITEM_STOCK = MENU_ITEM_STOCK - {orderItem.Order_Item_Quantity} WHERE MENU_ITEM_ID = {orderItem.MenuItem.Menu_Item_Id};";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"UPDATE MENU_ITEM SET MENU_ITEM_STOCK = MENU_ITEM_STOCK - @quantity WHERE MENU_ITEM_ID = @menuItemID;";
+            SqlParameter[] sqlParameters = {new SqlParameter("@quantity", orderItem.Order_Item_Quantity), new SqlParameter("@menuItemID", orderItem.MenuItem.Menu_Item_Id)};
             ExecuteEditQuery(query, sqlParameters);
         }
 
         //get the stock amount of a specific item
         public int GetStockOfMenuItem(MenuItem menuItem)
         {
-            string query = $"SELECT MENU_ITEM_STOCK FROM MENU_ITEM WHERE MENU_ITEM_ID = {menuItem.Menu_Item_Id}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT MENU_ITEM_STOCK FROM MENU_ITEM WHERE MENU_ITEM_ID = @menuItemID";
+            SqlParameter[] sqlParameters = {new SqlParameter("@menuItemID", menuItem.Menu_Item_Id)};
             return ReadStock(ExecuteSelectQuery(query, sqlParameters));
         }
 

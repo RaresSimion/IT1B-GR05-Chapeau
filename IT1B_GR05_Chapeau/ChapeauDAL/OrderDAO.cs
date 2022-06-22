@@ -17,8 +17,8 @@ namespace ChapeauDAL
         //inserting an order into the database
         public void InsertOrder(Order order)
         {
-            string query = $"INSERT INTO [ORDER] VALUES ('{order.Order_Time:yyyy-MM-dd HH:mm:ss}', '{order.Is_Paid}', {order.Table.Table_Number}, {order.Employee.Employee_Number}, {order.Item_Count}, {(int)order.Order_Status});";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"INSERT INTO [ORDER] VALUES (@orderTime, @isPaid, @tableNumber, @employeeNumber, @itemCount, @status);";
+            SqlParameter[] sqlParameters = { new SqlParameter("@orderTime", order.Order_Time), new SqlParameter("@isPaid", order.Is_Paid), new SqlParameter("@tableNumber", order.Table.Table_Number), new SqlParameter("@employeeNumber", order.Employee.Employee_Number), new SqlParameter("@itemCount", order.Item_Count), new SqlParameter("@status", (int)order.Order_Status) };
             ExecuteEditQuery(query, sqlParameters);
         }
         public void UpdateOrder() { }
@@ -52,12 +52,11 @@ namespace ChapeauDAL
             return ReadOrder(ExecuteSelectQuery(query, sqlParameters));
         }
 
-
+        //get the id of the last order
         public int GetLastOrderID()
         {
             string query = $"SELECT MAX(ORDER_ID) AS LAST_ORDER_ID FROM [ORDER]";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadLastOrderID(ExecuteSelectQuery(query, sqlParameters));
+            return ReadLastOrderID(ExecuteSelectQuery(query));
         }
         private List<Order> ReadTables(DataTable dataTable)
         {
@@ -78,10 +77,15 @@ namespace ChapeauDAL
             return orders;
         }
 
+        //reading the id of the last order
         private int ReadLastOrderID(DataTable dataTable)
         {
+            int lastOrderID = 0;
             DataRow dr = dataTable.Rows[0];
-            int lastOrderID = (int)dr["LAST_ORDER_ID"];
+
+            if(dr["LAST_ORDER_ID"] != DBNull.Value)
+               lastOrderID = (int)dr["LAST_ORDER_ID"];
+
             return lastOrderID;
         }
         private Order ReadOrder(DataTable dataTable)

@@ -140,7 +140,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             //gets all order items for this table
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable2_Click(object sender, EventArgs e)
@@ -150,7 +150,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable3_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable4_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable5_Click(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable6_Click(object sender, EventArgs e)
@@ -190,7 +190,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable7_Click(object sender, EventArgs e)
@@ -200,7 +200,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable8_Click(object sender, EventArgs e)
@@ -210,7 +210,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
 
         }
 
@@ -221,7 +221,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         private void buttonTable10_Click(object sender, EventArgs e)
@@ -231,7 +231,7 @@ namespace ChapeauUI
             labelTableNumberCreateOrder1.Text = $"Table #{table.Table_Number}";
             labelTableNumberCreateOrderViewBill.Text = $"Table #{table.Table_Number}";
             List<OrderItem> orderedItems = OrderItemService.GetAllOrderItemsFromTable(table);
-            PanelUpdater(table);
+            PanelUpdater(table, orderedItems);
         }
 
         //this function is used to choose the right panel to display when the user clicks on a table
@@ -240,7 +240,7 @@ namespace ChapeauUI
         //if the table is not available, the function determines if the table has one (or more) order items on it already
         //if the table has one or more order items on it, the function shows a panel that says the table has an order already, and would user like to make another order or view the bill
         //if the table has no order items on it, panel displays asking user if they want to create an order
-        private void PanelUpdater(Table table)
+        private void PanelUpdater(Table table, List<OrderItem> orderedItems)
         {
             HidePanels();
 

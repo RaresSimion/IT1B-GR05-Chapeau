@@ -50,7 +50,9 @@ namespace ChapeauUI
                 {
                     MessageBox.Show($"Welcome Back, {user.Employee_Name}! Let's go take some orders.");
                     this.Hide();
-                    new TableOverView(user).Show();
+                   // new TableOverView(user).Show();
+                    new KitchenViewForm(user).Show();
+
                 }
                 else if (user.Employee_Role == EmployeeRole.Bartender)
                 {
@@ -135,6 +137,7 @@ namespace ChapeauUI
                     {
                         MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some drinks.");
                         this.Hide();
+                        new KitchenViewForm(user).Show();
                         //updated when Matthias' form is added
                         //new BarView().Show();
                     }
@@ -142,6 +145,7 @@ namespace ChapeauUI
                     {
                         MessageBox.Show($"Welcome Back, {user.Employee_Name} Let's go make some meals.");
                         this.Hide();
+                        new KitchenViewForm(user).Show();
                         //updated when Matthias' form is added
                         //new KItchenView().Show();
                     }

@@ -125,5 +125,36 @@ namespace ChapeauDAL
             }
             return dataTable;
         }
+
+        /* For Select Queries without parameters*/
+        protected DataTable ExecuteSelectQuery(string query)
+        {
+            SqlCommand command = new SqlCommand();
+            DataTable dataTable;
+            DataSet dataSet = new DataSet();
+
+
+
+            try
+            {
+                command.Connection = OpenConnection();
+                command.CommandText = query;
+                command.ExecuteNonQuery();
+                adapter.SelectCommand = command;
+                adapter.Fill(dataSet);
+                dataTable = dataSet.Tables[0];
+            }
+            catch (SqlException e)
+            {
+                ErrorLogger.LogError(e); //error log
+                throw new Exception("Unable to execute select query, check the syntax");
+                //return null;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return dataTable;
+        }
     }
 }
