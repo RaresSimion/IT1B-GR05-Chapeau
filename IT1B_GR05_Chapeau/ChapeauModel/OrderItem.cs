@@ -33,7 +33,7 @@ namespace ChapeauModel
 		public bool Is_Ready { get; set; } //0 = not ready, 1 = ready
 
 		//calculated property to tell if the item is alcoholic
-		private bool Is_Alcoholic
+		public bool Is_Alcoholic
 		{
 			get
 			{
